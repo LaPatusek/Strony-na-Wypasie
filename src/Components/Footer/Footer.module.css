@@ -1,50 +1,117 @@
 .footer {
-    padding: 3rem;
-    width: 100%;
-    background-color: rgb(26, 26, 26);
-    color: white;
+  padding: 3rem;
+  width: 100%;
+  background-color: rgb(26, 26, 26);
+  color: white;
 }
 
 .footer > .upper-footer {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 20px;
+  margin-bottom: 50px;
 }
 
 .footer > .upper-footer h3 {
-    font-size: 20px;
-    margin-bottom: 20px;
-    color: #46E311;
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #46e311;
+  font-weight: bold;
+  letter-spacing: .7px;
 }
 
-.strony {
-    display:grid;
+.konakt {
+    display: grid;
 }
 
-.strony a {
-    color: white;
-    margin-bottom: 8px;
-    font-size: 16px;
+.container {
+    display: flex;
+    padding-bottom: 40px;
 }
 
-.faq li {
-    margin-bottom: 8px;
-    cursor: pointer;
-}
-
-.faq svg {
-    margin-bottom: -5px;
-    margin-right: 5px;
-}
-
-.footer > .down-footer {
-    font-size: 18px;
-}
-
-.copyright a {
+.container a {
     color: white;
     text-decoration: underline;
 }
 
+.container svg {
+    margin-top: -7px;
+    margin-right: 6px;
+}
+
+.strony li,
+.strony a {
+    color: white;
+    margin-bottom: 8px;
+    font-size: 18px;
+    transition: .3s;
+}
+
+.strony a:hover {
+    color:#37b60c
+}
+
+.strony svg {
+    margin-bottom: -4px;
+    margin-right: 3px;
+}
+
+.faq li {
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.faq li:hover {
+  color: #37b60c;
+}
+
+.faq svg {
+  margin-bottom: -5px;
+  margin-right: 5px;
+}
+
+.socials {
+    text-align: center;
+}
+
+.socials svg {
+  margin-right: 4px;
+  transition: 0.5s;
+  color: white;
+}
+
+.Linkedin svg,
+.Twitter svg,
+.Instagram svg {
+  fill: white;
+}
+
+.Linkedin svg:hover {
+  fill: #0077b5;
+}
+
+.Twitter svg:hover {
+  fill: #1da1f2;
+}
+
+.Facebook svg:hover {
+  color: #3b5998;
+}
+
+.Instagram svg:hover {
+  fill: #f15245;
+}
+
+.footer > .down-footer {
+  font-size: 18px;
+}
+
+.copyright a {
+  color: white;
+  text-decoration: underline;
+}
+
 .icon {
-    margin-bottom: -2px;
+  margin-bottom: -2px;
 }
