@@ -1,0 +1,44 @@
+.privacy {
+  padding: 4rem 2rem;
+  display: grid;
+  position: relative;
+}
+
+.privacy h3,
+.privacy p,
+.privacy h4,
+.privacy hr,
+.title {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.privacy h2 {
+  font-size: 35px;
+  letter-spacing: 0.7px;
+  font-weight: bolder;
+}
+
+.privacy hr {
+  width: 45px;
+  margin: 8px 0 40px 0;
+  border: 2px solid var(--bright-mid-green);
+}
+
+.privacy h3 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.privacy p {
+  font-size: 18px;
+  letter-spacing: .6px;
+  margin-bottom: 30px;
+  color: rgb(26, 26, 26);
+}
+
+.privacy h4 {
+  font-size: 20px;
+}

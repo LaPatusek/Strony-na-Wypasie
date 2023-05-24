@@ -1,5 +1,10 @@
 @import './css-reset.css';
 
+:root {
+  --bright-green: #46e311;
+  --bright-mid-green: #37b60c;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

@@ -15,45 +15,58 @@
 .footer > .upper-footer h3 {
   font-size: 20px;
   margin-bottom: 20px;
-  color: #46e311;
+  color: var(--bright-green);
   font-weight: bold;
-  letter-spacing: .7px;
+  letter-spacing: 0.7px;
 }
 
 .konakt {
-    display: grid;
+  display: grid;
+}
+
+.kontakt a {
+  color: white;
+  text-decoration: underline;
 }
 
 .container {
-    display: flex;
-    padding-bottom: 40px;
-}
-
-.container a {
-    color: white;
-    text-decoration: underline;
+  display: flex;
+  padding-bottom: 20px;
+  position: relative;
 }
 
 .container svg {
-    margin-top: -7px;
-    margin-right: 6px;
+  margin-top: -7px;
+  margin-right: 6px;
+}
+
+.pin-container {
+  width: 32px;
+  display: block;
+}
+
+.pin-container svg {
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-70%);
+  transform: translateY(-70%);
 }
 
 .strony li,
 .strony a {
-    color: white;
-    margin-bottom: 8px;
-    font-size: 18px;
-    transition: .3s;
+  color: white;
+  margin-bottom: 8px;
+  font-size: 18px;
+  transition: 0.3s;
 }
 
 .strony a:hover {
-    color:#37b60c
+  color: var(--bright-mid-green);
 }
 
 .strony svg {
-    margin-bottom: -4px;
-    margin-right: 3px;
+  margin-bottom: -4px;
+  margin-right: 3px;
 }
 
 .faq li {
@@ -62,8 +75,15 @@
   transition: 0.3s;
 }
 
-.faq li:hover {
-  color: #37b60c;
+.book {
+  fill: white;
+  transition: 0.3s;
+}
+
+.faq li:hover,
+.faq li:hover .book {
+  color: var(--bright-mid-green);
+  fill: var(--bright-mid-green);
 }
 
 .faq svg {
@@ -72,7 +92,7 @@
 }
 
 .socials {
-    text-align: center;
+  text-align: center;
 }
 
 .socials svg {

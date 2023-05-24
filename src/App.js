@@ -2,6 +2,7 @@ import { Fragment } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import Footer from './Components/Footer/Footer';
 import Header from './Components/Header/Header';
+import Privacy from './Components/Privacy/Privacy';
 import Kontakt from './Pages/Kontakt';
 import Main from './Pages/Main';
 import Onas from './Pages/O nas';
@@ -29,6 +30,9 @@ const App = () => {
           </Route>
           <Route path='/kontakt'>
             <Kontakt />
+          </Route>
+          <Route path='/polityka-prywatnosci'>
+            <Privacy />
           </Route>
           <Route path='*'>
             <Main />
