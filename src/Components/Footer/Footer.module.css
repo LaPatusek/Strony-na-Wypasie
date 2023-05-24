@@ -1,0 +1,50 @@
+.footer {
+    padding: 3rem;
+    width: 100%;
+    background-color: rgb(26, 26, 26);
+    color: white;
+}
+
+.footer > .upper-footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.footer > .upper-footer h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #46E311;
+}
+
+.strony {
+    display:grid;
+}
+
+.strony a {
+    color: white;
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+.faq li {
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+
+.faq svg {
+    margin-bottom: -5px;
+    margin-right: 5px;
+}
+
+.footer > .down-footer {
+    font-size: 18px;
+}
+
+.copyright a {
+    color: white;
+    text-decoration: underline;
+}
+
+.icon {
+    margin-bottom: -2px;
+}
