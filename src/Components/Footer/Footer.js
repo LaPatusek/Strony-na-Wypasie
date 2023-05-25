@@ -16,7 +16,7 @@ const Footer = () => {
           <h3>Kontakt</h3>
           <div className={styles.container}>
             <div className={styles['pin-container']}>
-              <Location size='26px' />
+              <Location variant='Bold' size='26px' />
             </div>
             <p>
               Strony Na Wypasie
@@ -26,7 +26,7 @@ const Footer = () => {
             </p>
           </div>
           <div className={styles.container}>
-            <Call size='26px' /> <p> +48 531 771 944</p>
+            <Call variant='Bold' size='26px' /> <p> +48 531 771 944</p>
           </div>
           <div className={styles.container}>
             <svg
@@ -49,27 +49,72 @@ const Footer = () => {
           <ul>
             <li>
               <Link to='/main'>
-                <ArrowRight3 variant='Broken' size='20' /> Strona główna
+                <ArrowRight3 variant='Broken' size='20' /> Strona główna{' '}
+                <svg
+                  viewBox='0 0 13 10'
+                  height='10px'
+                  width='15px'
+                  className={styles['arrow-on-hover']}
+                >
+                  <path d='M1,5 L11,5'></path>
+                  <polyline points='8 1 12 5 8 9'></polyline>
+                </svg>
               </Link>
             </li>
             <li>
               <Link to='/oferta'>
-                <ArrowRight3 variant='Broken' size='20' /> Oferta
+                <ArrowRight3 variant='Broken' size='20' /> Oferta{' '}
+                <svg
+                  viewBox='0 0 13 10'
+                  height='10px'
+                  width='15px'
+                  className={styles['arrow-on-hover']}
+                >
+                  <path d='M1,5 L11,5'></path>
+                  <polyline points='8 1 12 5 8 9'></polyline>
+                </svg>
               </Link>
             </li>
             <li>
               <Link to='/projekty'>
-                <ArrowRight3 variant='Broken' size='20' /> Projekty
+                <ArrowRight3 variant='Broken' size='20' /> Projekty{' '}
+                <svg
+                  viewBox='0 0 13 10'
+                  height='10px'
+                  width='15px'
+                  className={styles['arrow-on-hover']}
+                >
+                  <path d='M1,5 L11,5'></path>
+                  <polyline points='8 1 12 5 8 9'></polyline>
+                </svg>
               </Link>
             </li>
             <li>
               <Link to='/o-nas'>
-                <ArrowRight3 variant='Broken' size='20' /> O nas
+                <ArrowRight3 variant='Broken' size='20' /> O nas{' '}
+                <svg
+                  viewBox='0 0 13 10'
+                  height='10px'
+                  width='15px'
+                  className={styles['arrow-on-hover']}
+                >
+                  <path d='M1,5 L11,5'></path>
+                  <polyline points='8 1 12 5 8 9'></polyline>
+                </svg>
               </Link>
             </li>
             <li>
               <Link to='/kontakt'>
-                <ArrowRight3 variant='Broken' size='20' /> Kontakt
+                <ArrowRight3 variant='Broken' size='20' /> Kontakt{' '}
+                <svg
+                  viewBox='0 0 13 10'
+                  height='10px'
+                  width='15px'
+                  className={styles['arrow-on-hover']}
+                >
+                  <path d='M1,5 L11,5'></path>
+                  <polyline points='8 1 12 5 8 9'></polyline>
+                </svg>
               </Link>
             </li>
           </ul>
@@ -79,17 +124,24 @@ const Footer = () => {
           <h3>FAQ </h3>
           <ul>
             <li>
-              <ArrowRight3 variant='Broken' size='22' />
-              Co to jest hosting?
+              <Link to='/faq'>
+                <ArrowRight3 variant='Broken' size='22' />
+                Co to jest hosting?
+              </Link>
             </li>
             <li>
-              <ArrowRight3 variant='Broken' size='22' />
-              Na czym polega utrzymanie strony?
+              <Link to='/faq'>
+                <ArrowRight3 variant='Broken' size='22' />
+                Na czym polega utrzymanie strony?
+              </Link>
             </li>
             <li>
-              <ArrowRight3 variant='Broken' size='22' />
-              Czym jest domena?
+              <Link to='/faq'>
+                <ArrowRight3 variant='Broken' size='22' />
+                Czym jest domena?
+              </Link>
             </li>
+
             <li>
               <ArrowRight3 variant='Broken' size='22' />
               Regulamin{' '}

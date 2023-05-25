@@ -1,5 +1,6 @@
 import { Fragment } from 'react';
 import { Route, Switch } from 'react-router-dom';
+import Faquestions from './Components/FAQ/Faquestions';
 import Footer from './Components/Footer/Footer';
 import Header from './Components/Header/Header';
 import Privacy from './Components/Privacy/Privacy';
@@ -33,6 +34,9 @@ const App = () => {
           </Route>
           <Route path='/polityka-prywatnosci'>
             <Privacy />
+          </Route>
+          <Route path='/faq'>
+            <Faquestions />
           </Route>
           <Route path='*'>
             <Main />

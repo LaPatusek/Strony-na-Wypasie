@@ -1,6 +1,14 @@
+import { useHistory } from 'react-router-dom';
+import GoBackButton from '../Elements/GoBackButton';
 import styles from './Privacy.module.css';
 
 const Privacy = () => {
+  const history = useHistory();
+
+  const navigationFunction = () => {
+    history.goBack();
+  };
+
   return (
     <div className={styles.privacy}>
       <div className={styles.title}>
@@ -64,7 +72,7 @@ const Privacy = () => {
         Wszelkie zmiany w naszej polityce prywatności zostaną opublikowane na
         naszej stronie internetowej.
       </h4>
-      {/* Zrobić przycisk powrotu wykorzystując lokację przeglądarki */}
+      <div onClick={navigationFunction} className={styles['back-button']}><GoBackButton /></div>
     </div>
   );
 };
