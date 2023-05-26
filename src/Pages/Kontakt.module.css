@@ -1,0 +1,214 @@
+.title {
+  background-color: rgb(0, 89, 0);
+  color: white;
+  padding: 4rem 2rem;
+  height: 80vh;
+  max-height: 650px;
+}
+
+.title h2 {
+  text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+  padding-bottom: 100px;
+}
+
+.title h3 {
+  font-weight: bold;
+  font-size: 23px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+}
+
+.first-section {
+  grid-template-columns: repeat(3, 1fr);
+  text-align: center;
+  padding-bottom: 40px;
+  line-height: 28px;
+}
+
+.first-section svg {
+  margin-bottom: 5px;
+}
+
+.container a {
+  color: white;
+  text-decoration: underline;
+}
+
+.kontakt {
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 20px;
+}
+
+.left-section,
+.right-section {
+  padding: 3rem 2rem;
+}
+
+.left-section {
+  padding-left: 6rem;
+  width: 90%;
+}
+
+.left-section h3 {
+  color: green;
+  margin-bottom: 50px;
+  margin-top: 30px;
+  font-weight: bold;
+  font-size: 35px;
+}
+
+.left-section h4 {
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 60px;
+}
+
+.right-section h4 {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  margin-bottom: 30px;
+}
+
+.group {
+  position: relative;
+  margin-bottom: 35px;
+}
+
+.input {
+  font-size: 16px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 90%;
+  border-bottom: 1px solid #515151;
+}
+
+textarea {
+  resize: none;
+}
+
+.input:focus {
+  outline: none;
+}
+
+label {
+  color: #999;
+  font-size: 18px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 10px;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+
+.input:focus ~ label,
+.input:valid ~ label {
+  top: -20px;
+  font-size: 14px;
+  color: var(--bright-mid-green);
+}
+
+.bar {
+  position: relative;
+  display: block;
+  width: 90%;
+}
+
+.bar:before,
+.bar:after {
+  content: '';
+  height: 2px;
+  width: 0;
+  bottom: 1px;
+  position: absolute;
+  background: var(--bright-mid-green);
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+
+.bar:before {
+  left: 50%;
+}
+
+.bar:after {
+  right: 50%;
+}
+
+.input:focus ~ .bar:before,
+.input:focus ~ .bar:after {
+  width: 50%;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  width: 90%;
+}
+
+.right-section button {
+  --color: var(--bright-mid-green);
+  font-family: inherit;
+  font-weight: bold;
+  width: 8em;
+  height: 2.6em;
+  line-height: 2.5em;
+  margin: 20px;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid var(--color);
+  transition: color 0.5s;
+  z-index: 1;
+  font-size: 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  color: var(--color);
+}
+
+.right-section button:before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  background: var(--color);
+  height: 150px;
+  width: 200px;
+  border-radius: 50%;
+  transition: all 0.7s;
+  top: 100%;
+}
+
+.submit-button::before {
+  left: 100%;
+}
+
+.submit-button:hover::before {
+  top: -30px;
+  left: -30px;
+}
+
+.reset-button::before {
+  right: 100%;
+}
+
+.reset-button:hover::before {
+  top: -30px;
+  right: -30px;
+}
+
+.right-section button:hover {
+  color: #fff;
+}
+
+.right-section button:active:before {
+  background: green;
+  transition: background 0s;
+}

@@ -1,5 +1,6 @@
 import { useHistory } from 'react-router-dom';
 import GoBackButton from '../Elements/GoBackButton';
+import Card from '../UI/Card';
 import styles from './Privacy.module.css';
 
 const Privacy = () => {
@@ -10,7 +11,7 @@ const Privacy = () => {
   };
 
   return (
-    <div className={styles.privacy}>
+    <Card className={`${styles.privacy} grid`}>
       <div className={styles.title}>
         <h2>Polityka prywatności</h2>
         <hr />
@@ -73,7 +74,7 @@ const Privacy = () => {
         naszej stronie internetowej.
       </h4>
       <div onClick={navigationFunction} className={styles['back-button']}><GoBackButton /></div>
-    </div>
+    </Card>
   );
 };
 

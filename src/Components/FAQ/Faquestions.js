@@ -1,4 +1,5 @@
 import { ArrowDown2 } from 'iconsax-react';
+import Card from '../UI/Card';
 import styles from './Faquestions.module.css';
 
 const Faquestions = () => {
@@ -8,7 +9,7 @@ const Faquestions = () => {
     // rozsuwanie się paragrafów od góry
 
   return (
-    <div className={styles.faq}>
+    <Card className={styles.faq}>
       <h2>Najczęsciej zadawane pytania</h2>
       <h3>
         Co to jest hosting <ArrowDown2 variant='Bold' />
@@ -42,7 +43,7 @@ const Faquestions = () => {
         sapien, nec convallis sem lectus ut odio. Sed accumsan imperdiet ipsum
         sit amet egestas.
       </p>
-    </div>
+    </Card>
   );
 };
 

@@ -5,7 +5,7 @@ import Nav from './Nav/Nav';
 
 const Header = () => {
   return (
-    <div className={styles.header}>
+    <div className={`${styles.header} grid`}>
       <div className={styles.logo}>
         <Link to='/main'>
           {/* <img src={logo} alt='logo' /> */}
