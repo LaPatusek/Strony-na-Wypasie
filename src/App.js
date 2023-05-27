@@ -4,6 +4,7 @@ import Faquestions from './Components/FAQ/Faquestions';
 import Footer from './Components/Footer/Footer';
 import Header from './Components/Header/Header';
 import Privacy from './Components/Privacy/Privacy';
+import Formularz from './Pages/Formularz';
 import Kontakt from './Pages/Kontakt';
 import Main from './Pages/Main';
 import Onas from './Pages/O nas';
@@ -31,6 +32,9 @@ const App = () => {
           </Route>
           <Route path='/kontakt'>
             <Kontakt />
+          </Route>
+          <Route path='/formularz-kontaktowy'>
+            <Formularz />
           </Route>
           <Route path='/polityka-prywatnosci'>
             <Privacy />

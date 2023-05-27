@@ -2,11 +2,72 @@ import { Call, Location } from 'iconsax-react';
 import { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import Card from '../Components/UI/Card';
+import useInput from '../Components/hooks/useInput';
 import styles from './Kontakt.module.css';
 
 const Kontakt = () => {
+  const {
+    value: enteredName,
+    isValid: nameIsValid,
+    valueChangeHandler: nameChangeHandler,
+    inputBlurHandler: nameBlurHandler,
+    hasError: nameHasError,
+    reset: nameReset,
+  } = useInput((value) => value.trim() !== '');
+
+  const {
+    value: enteredTopic,
+    isValid: topicIsValid,
+    valueChangeHandler: topicChangeHandler,
+    inputBlurHandler: topicBlurHandler,
+    hasError: topicHasError,
+    reset: topicReset,
+  } = useInput((value) => value.trim() !== '');
+
+  const {
+    value: enteredMail,
+    isValid: mailIsValid,
+    valueChangeHandler: mailChangeHandler,
+    inputBlurHandler: mailBlurHandler,
+    hasError: mailHasError,
+    reset: mailReset,
+  } = useInput((value) => value.trim().includes('@'));
+
+  const {
+    value: enteredMessage,
+    isValid: messageIsValid,
+    valueChangeHandler: messageChangeHandler,
+    inputBlurHandler: messageBlurHandler,
+    hasError: messageHasError,
+    reset: messageReset,
+  } = useInput((value) => value.trim() !== '');
+
+  let formIsValid = false;
+
+  if (messageIsValid && topicIsValid && nameIsValid && mailIsValid) {
+    formIsValid = true;
+  }
+
   const formHandler = (e) => {
     e.preventDefault();
+
+    if (!formIsValid) {
+      return;
+    }
+
+    nameReset();
+    topicReset();
+    mailReset();
+    messageReset();
+  };
+
+  const resetHandler = (e) => {
+    e.preventDefault();
+
+    nameReset();
+    topicReset();
+    mailReset();
+    messageReset();
   };
 
   return (
@@ -59,7 +120,7 @@ const Kontakt = () => {
               Chcesz aby Twoja strona internetowa była naprawdę efektywna?
               Zapraszamy do kontaktu, napisz czego potrzebujesz! My zajmiemy się
               resztą. Prośby o wycenę prosimy kierować{' '}
-              <Link to='/wycena'>Tutaj</Link>
+              <Link to='/formularz-kontaktowy'>tutaj</Link>
             </h4>
           </section>
 
@@ -70,40 +131,69 @@ const Kontakt = () => {
                 <input
                   required='Imie i nazwisko'
                   type='text'
+                  id='name'
+                  value={enteredName}
                   className={styles.input}
+                  onChange={nameChangeHandler}
+                  onBlur={nameBlurHandler}
                 />
                 <span className={styles.bar}></span>
-                <label>Imie i nazwisko </label>
+                <label htmlFor='name'>Imie i nazwisko </label>
+                {nameHasError && <p>Wprowadź imie i nazwisko</p>}
+              </div>
+
+              <div className={styles.group}>
+                <input
+                  required='Temat'
+                  id='topic'
+                  type='text'
+                  value={enteredTopic}
+                  className={styles.input}
+                  onChange={topicChangeHandler}
+                  onBlur={topicBlurHandler}
+                />
+                <span className={styles.bar}></span>
+                <label htmlFor='topic'>Temat</label>
+                {topicHasError && <p>Wprowadź temat</p>}
               </div>
 
               <div className={styles.group}>
                 <input
                   required='Adres email'
+                  id='mail'
+                  value={enteredMail}
                   type='text'
                   className={styles.input}
+                  onChange={mailChangeHandler}
+                  onBlur={mailBlurHandler}
                 />
                 <span className={styles.bar}></span>
-                <label>Adres email </label>
-              </div>
-
-              <div className={styles.group}>
-                <input required='Temat' type='text' className={styles.input} />
-                <span className={styles.bar}></span>
-                <label>Temat</label>
+                <label htmlFor='mail'>Adres email </label>
+                {mailHasError && <p>Wprowadź prawidłowy mail</p>}
               </div>
 
               <div className={styles.group}>
                 <textarea
                   required='Twoja wiadomość'
+                  id='message'
+                  value={enteredMessage}
                   className={styles.input}
                   rows='6'
+                  onChange={messageChangeHandler}
+                  onBlur={messageBlurHandler}
                 />
                 <span className={styles.bar}></span>
-                <label>Twoja wiadomość</label>
+                <label htmlFor='message'>Twoja wiadomość</label>
+                {messageHasError && <p>Wprowadź wiadomość</p>}
               </div>
 
               <div className={styles.buttons}>
-                <button className={styles['reset-button']}>Reset</button>
+                <button
+                  className={styles['reset-button']}
+                  onClick={resetHandler}
+                >
+                  Reset
+                </button>
                 <button className={styles['submit-button']}>Wyślij</button>
               </div>
             </form>

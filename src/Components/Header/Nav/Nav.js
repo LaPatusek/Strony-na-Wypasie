@@ -1,5 +1,5 @@
 import { Fragment } from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import styles from './Nav.module.css';
 
 const Nav = () => {
@@ -13,7 +13,9 @@ const Nav = () => {
         <NavLink to='/kontakt'>Kontakt</NavLink>
       </div>
       <div>
-        <div className={styles['right-button']}>wyceń projekt</div>
+        <Link to='/formularz-kontaktowy'>
+          <div className={styles['right-button']}>wyceń projekt</div>
+        </Link>
       </div>
     </Fragment>
   );
