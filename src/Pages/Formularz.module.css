@@ -246,3 +246,38 @@ textarea {
   transition: 0.25s ease;
   box-shadow: inset 0 0 0 0.125em green;
 }
+
+.right-section {
+  padding: 0 1rem;
+}
+
+.right-section h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  color: #1a1a1a;
+}
+
+.right-section h3 {
+  width: 400px;
+  font-size: 22px;
+  letter-spacing: 0.6px;
+  color: #8d8d8d;
+  line-height: 25px;
+}
+
+.mess-after-form {
+  text-align: center;
+  width: 90%;
+}
+
+.mess-after-form svg {
+  color: var(--bright-mid-green);
+  margin-bottom: 5px;
+}
+
+.mess-after-form p {
+  font-size: 20px;
+  color: var(--bright-mid-green);
+  font-weight: bold;
+  letter-spacing: .7px;
+}

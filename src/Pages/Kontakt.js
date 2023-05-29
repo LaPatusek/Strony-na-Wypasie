@@ -1,11 +1,13 @@
-import { Call, Location } from 'iconsax-react';
-import { Fragment } from 'react';
+import { Call, Location, TickCircle } from 'iconsax-react';
+import { Fragment, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Card from '../Components/UI/Card';
 import useInput from '../Components/hooks/useInput';
 import styles from './Kontakt.module.css';
 
 const Kontakt = () => {
+  const [formIsSent, setFormIsSent] = useState(false);
+
   const {
     value: enteredName,
     isValid: nameIsValid,
@@ -55,6 +57,7 @@ const Kontakt = () => {
       return;
     }
 
+    setFormIsSent(true);
     nameReset();
     topicReset();
     mailReset();
@@ -98,8 +101,8 @@ const Kontakt = () => {
             >
               <path d='M424 80H88a56.06 56.06 0 00-56 56v240a56.06 56.06 0 0056 56h336a56.06 56.06 0 0056-56V136a56.06 56.06 0 00-56-56zm-14.18 92.63l-144 112a16 16 0 01-19.64 0l-144-112a16 16 0 1119.64-25.26L256 251.73l134.18-104.36a16 16 0 0119.64 25.26z' />
             </svg>
+            <h3>eMail</h3>
             <p>
-              <h3>eMail</h3>
               <a href='mailto:stronynawypasie@gmail.com'>
                 stronynawypasie@gmail.com
               </a>
@@ -132,6 +135,7 @@ const Kontakt = () => {
                   required='Imie i nazwisko'
                   type='text'
                   id='name'
+                  autoComplete='false'
                   value={enteredName}
                   className={styles.input}
                   onChange={nameChangeHandler}
@@ -147,6 +151,7 @@ const Kontakt = () => {
                   required='Temat'
                   id='topic'
                   type='text'
+                  autoComplete='false'
                   value={enteredTopic}
                   className={styles.input}
                   onChange={topicChangeHandler}
@@ -163,6 +168,7 @@ const Kontakt = () => {
                   id='mail'
                   value={enteredMail}
                   type='text'
+                  autoComplete='false'
                   className={styles.input}
                   onChange={mailChangeHandler}
                   onBlur={mailBlurHandler}
@@ -177,6 +183,7 @@ const Kontakt = () => {
                   required='Twoja wiadomość'
                   id='message'
                   value={enteredMessage}
+                  autoComplete='false'
                   className={styles.input}
                   rows='6'
                   onChange={messageChangeHandler}
@@ -196,6 +203,12 @@ const Kontakt = () => {
                 </button>
                 <button className={styles['submit-button']}>Wyślij</button>
               </div>
+              {formIsSent && (
+                <div className={styles['mess-after-form']}>
+                  <TickCircle variant='Bold' size='32' />
+                  <p>Dziękujemy za kontakt!</p>
+                </div>
+              )}
             </form>
           </section>
         </div>

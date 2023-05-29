@@ -1,4 +1,4 @@
-import { ArrowUp2 } from 'iconsax-react';
+import { ArrowUp2, TickCircle } from 'iconsax-react';
 import { useEffect, useRef, useState } from 'react';
 import Card from '../Components/UI/Card';
 import useInput from '../Components/hooks/useInput';
@@ -12,6 +12,7 @@ const Formularz = () => {
   const [enteredGraphs, setEnteredGraphs] = useState('');
   const [enteredBudget, setEnteredBudget] = useState('');
   const [enteredFind, setEnteredFind] = useState('');
+  const [formIsSent, setFormIsSent] = useState(false);
   const iconRef = useRef();
 
   const typeChangeFunction = (e) => {
@@ -92,6 +93,7 @@ const Formularz = () => {
       return;
     }
 
+    setFormIsSent(true);
     nameReset();
     topicReset();
     mailReset();
@@ -120,13 +122,13 @@ const Formularz = () => {
   return (
     <Card className={`${styles.wrap} grid`}>
       <section className={styles['left-section']}>
-        <h2>Formularz kontaktowy</h2>
         <form onSubmit={formHandler}>
           <div className={styles.group}>
             <input
               required='Imie i nazwisko'
               type='text'
               id='name'
+              autoComplete='false'
               value={enteredName}
               className={styles.input}
               onChange={nameChangeHandler}
@@ -142,6 +144,7 @@ const Formularz = () => {
               required='Temat'
               id='topic'
               type='text'
+              autoComplete='false'
               value={enteredTopic}
               className={styles.input}
               onChange={topicChangeHandler}
@@ -158,6 +161,7 @@ const Formularz = () => {
               id='mail'
               value={enteredMail}
               type='text'
+              autoComplete='false'
               className={styles.input}
               onChange={mailChangeHandler}
               onBlur={mailBlurHandler}
@@ -171,6 +175,7 @@ const Formularz = () => {
             <textarea
               required='Twoja wiadomość'
               id='message'
+              autoComplete='false'
               value={enteredMessage}
               className={styles.input}
               rows='6'
@@ -405,16 +410,30 @@ const Formularz = () => {
           )}
 
           <div className={styles.buttons}>
-            <button className={styles['reset-button']} onClick={resetHandler}>
+            <button
+              type='reset'
+              className={styles['reset-button']}
+              onClick={resetHandler}
+            >
               Reset
             </button>
-            <button className={styles['submit-button']}>Wyślij</button>
+            <button type='submit' className={styles['submit-button']}>
+              Wyślij
+            </button>
           </div>
+          {formIsSent && <div className={styles['mess-after-form']}>
+            <TickCircle variant='Bold' size='32'/>
+             <p>Dziękujemy za kontakt!</p></div>}
         </form>
       </section>
 
       <section className={styles['right-section']}>
-        <h1>Formularz</h1>
+        <h2>Skontaktuj się z nami!</h2>
+        <h3>
+          Tworzymy strony internetowe z myślą o Tobie i Twoim biznesie. <br />{' '}
+          Opowiedz nam o swoim projekcie,
+          <br /> a my przygotujemy wycenę dla Ciebie.
+        </h3>
       </section>
     </Card>
   );

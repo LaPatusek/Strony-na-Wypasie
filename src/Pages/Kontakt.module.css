@@ -220,3 +220,20 @@
   margin-left: 4px;
   color: red;
 }
+
+.mess-after-form {
+  text-align: center;
+  width: 90%;
+}
+
+.mess-after-form svg {
+  color: var(--bright-mid-green);
+  margin-bottom: 5px;
+}
+
+.mess-after-form p {
+  font-size: 20px;
+  color: var(--bright-mid-green);
+  font-weight: bold;
+  letter-spacing: .7px;
+}
