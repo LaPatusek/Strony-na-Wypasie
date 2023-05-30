@@ -1,22 +1,36 @@
 .header {
-  grid-template-columns: 25% 60% 15%;
-  padding: 2rem;
-  padding-left: 0;
-  column-count: 3;
+  height: 80vh;
+  justify-content: center;
+  align-content: center;
+
+  /* Tu będzie ładne ciemne tło */
+  background-color: #6d523c;
 }
 
-.logo {
-    text-align: center;
-    font-size: 40px;
-}
-
-.first-piece-logo {
-  background-color: black;
-  width: 300px;
+.header h1 {
+  font-size: 50px;
+  transform: translateY(-50px);
   color: white;
-  padding: 10px;
 }
 
-.second-piece-logo {
-  color: black;
+.header a {
+  --color: var(--bright-mid-green);
+  padding: 10px 30px;
+  font-size: 20px;
+  border: 1px solid var(--color);
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 20px;
+  width: fit-content;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.6px;
+  background-color: var(--color);
+  color: white;
+  transition: 0.5s;
+}
+
+.header a:hover {
+  background-color: transparent;
+  color: var(--bright-green);
 }

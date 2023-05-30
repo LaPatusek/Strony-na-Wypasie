@@ -20,10 +20,6 @@
   user-select: none;
 }
 
-.konakt {
-  display: grid;
-}
-
 .kontakt a {
   color: white;
   text-decoration: underline;

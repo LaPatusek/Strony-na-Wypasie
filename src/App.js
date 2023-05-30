@@ -2,7 +2,7 @@ import { Fragment } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import Faquestions from './Components/FAQ/Faquestions';
 import Footer from './Components/Footer/Footer';
-import Header from './Components/Header/Header';
+import Nav from './Components/Nav/Nav';
 import Privacy from './Components/Privacy/Privacy';
 import Formularz from './Pages/Formularz';
 import Kontakt from './Pages/Kontakt';
@@ -14,7 +14,7 @@ import Projekty from './Pages/Projekty';
 const App = () => {
   return (
     <Fragment>
-      <Header />
+      <Nav />
 
       <main>
         <Switch>
