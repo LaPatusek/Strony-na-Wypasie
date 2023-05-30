@@ -66,12 +66,15 @@ const Main = () => {
         </section>
 
         <section className={`${styles['o-nas']} grid`}>
-            <img src={codingImg} alt='' width='100%'/>
-          <p>
-            Jesteśmy młodym i kreatywnym zespołem programistów oraz grafików.
-            Wierzymy, że dzięki współpracy stworzymy coś wartościowego.<br /> Razem
-            możemy więcej!
-          </p>
+          <img src={codingImg} alt='' width='100%' />
+          <div className={styles.wrap}>
+            <p>
+              Jesteśmy młodym i kreatywnym zespołem programistów oraz grafików.
+              Wierzymy, że dzięki współpracy stworzymy coś wartościowego.
+              <br /> Razem możemy więcej!
+            </p>
+            <Link to='/o-nas'>Więcej o nas</Link>
+          </div>
         </section>
       </div>
     </Fragment>
