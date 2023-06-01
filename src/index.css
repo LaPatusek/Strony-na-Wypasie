@@ -3,9 +3,14 @@
 :root {
   --bright-green: #46e311;
   --bright-mid-green: #37b60c;
+
+  --sidebar-width: 160px;
+  --menu-height: 240px;
+  scroll-behavior: smooth;
 }
 
 body {
+  background: #f1f0fa;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -21,6 +26,10 @@ code {
 
 .grid {
   display: grid;
+}
+
+.flex {
+  display: flex;
 }
 
 .font-center {

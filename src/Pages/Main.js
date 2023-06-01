@@ -59,9 +59,9 @@ const Main = () => {
           </div>
         </section>
 
-        <section className={`${styles.konsultacje} grid`}>
+        <section className={`${styles['offer-section']} grid`}>
           <div></div>
-
+          {/* Przykładowa strona */}
           <div></div>
         </section>
 

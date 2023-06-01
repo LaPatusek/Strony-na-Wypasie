@@ -13,17 +13,27 @@
 }
 
 .timeline-content {
+  display: flex;
   background: #1f1f1f;
   box-shadow: 4px 4px 10px #1a1a1a;
   color: white;
   padding: 1.5rem;
-  margin: 1rem;
-  margin-bottom: 20px;
   border-radius: 6px;
+  transform: translateY(-33px);
+}
+
+.number span {
+  color: gray;
+  font-size: 33px;
+  margin-right: 10px;
+}
+
+.right {
+  justify-content: space-between;
 }
 
 .timeline-component {
-  margin: 0px 25px 20px 25px;
+  margin: 0px 25px 50px 25px;
 }
 
 .timeline-middle {
@@ -43,4 +53,8 @@
   background-color: var(--bright-green);
   box-shadow: 0 0 0 7px rgba(0, 206, 34, 0.1);;
   transform: translateX(-50%);
+}
+
+.last-child {
+  background-color: transparent;
 }
