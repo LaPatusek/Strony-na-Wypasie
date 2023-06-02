@@ -36,26 +36,26 @@ const App = () => {
           <Route path='/main'>
             <Main />
           </Route>
-          <Route exact path='/oferta'>
+          <Route path='/oferta'>
             <Oferta />
           </Route>
-          <Route exact path='/projekty'>
+          <Route path='/projekty'>
             <Projekty />
           </Route>
-          <Route exact path='/o-nas'>
+          <Route path='/o-nas'>
             <Onas />
           </Route>
-          <Route exact path='/kontakt'>
+          <Route path='/kontakt'>
             <Kontakt />
           </Route>
-          <Route exact path='/formularz-kontaktowy'>
+          <Route path='/formularz-kontaktowy'>
             <Formularz />
           </Route>
-          <Route exact path='/polityka-prywatnosci'>
+          <Route path='/polityka-prywatnosci'>
             <Privacy />
           </Route>
-          <Route exact path='/'>
-            <Oferta />
+          <Route path='/'>
+            <Main />
           </Route>
           <Route path='*'>
             <Main />

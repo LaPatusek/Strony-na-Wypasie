@@ -11,7 +11,6 @@ const buttons = [
 
 const Faquestions = () => {
   const [activeBlock, setActiveBlock] = useState(0);
-  console.log(activeBlock);
 
   const toggleMenuBlock = (index) => {
     setActiveBlock(index);

@@ -124,21 +124,27 @@ const Footer = () => {
           <h3>FAQ </h3>
           <ul>
             <li>
-              <Link to='/#faq'>
+              <Link to='/oferta#faq'>
                 <ArrowRight3 variant='Broken' size='22' />
                 Co to jest hosting?
               </Link>
             </li>
             <li>
-              <Link to='/#faq'>
+              <Link to='/oferta#faq'>
                 <ArrowRight3 variant='Broken' size='22' />
                 Na czym polega utrzymanie strony?
               </Link>
             </li>
             <li>
-              <Link to='/#faq'>
+              <Link to='/oferta#faq'>
                 <ArrowRight3 variant='Broken' size='22' />
                 Czym jest domena?
+              </Link>
+            </li>
+            <li>
+              <Link to='/oferta#faq'>
+                <ArrowRight3 variant='Broken' size='22' />
+                Ile kosztuje utrzymanie strony?
               </Link>
             </li>
 
