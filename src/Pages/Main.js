@@ -1,10 +1,21 @@
-import { Fragment } from 'react';
+import { Fragment, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import codingImg from '../Assets/coding.jpg';
 import Header from '../Components/Header/Header';
+import hexagones from '../Components/JSON/hexagones.json';
 import styles from './Main.module.css';
 
 const Main = () => {
+  const hexRef = useRef([]);
+
+  const hexagonFunction = () => {
+    const hex = hexRef.current;
+
+    console.log(hexRef.current);
+
+    hex.classList.toggle(styles.active);
+  };
+
   return (
     <Fragment>
       <Header />
@@ -60,9 +71,52 @@ const Main = () => {
         </section>
 
         <section className={`${styles['offer-section']} grid`}>
-          <div></div>
-          {/* Przykładowa strona */}
-          <div></div>
+          <div className={styles['offer-section-left']}>
+            <h3>
+              Tworzymy <span> skuteczne </span> strony{' '}
+            </h3>
+          </div>
+          <div className={styles['offer-section-right']}>
+            <h3>
+              Tworzymy strony <br /> zgodnie z SEO
+            </h3>
+            <hr />
+            <h4>Poprawimy widoczność Twojej strony w wyniakch wyszukiwania!</h4>
+
+            <div className={`${styles['seo-hexagones']} grid`}>
+              <div className={styles['three-hexagones']}>
+                {hexagones.hexagones.FirstRow.map((hex) => {
+                  let klucz = hex.id;
+                  return (
+                    <div
+                      className={`${styles.hexagon} ${klucz}`}
+                      onClick={hexagonFunction}
+                      key={klucz}
+                      ref={hexRef}
+                    >
+                      <div className={styles['hexagon-tekst']}>{hex.icon}</div>
+                    </div>
+                  );
+                })}
+              </div>
+
+              <div className={styles['two-hexagones']}>
+                {hexagones.hexagones.SecondRow.map((hex) => {
+                  let klucz = hex.id;
+                  return (
+                    <div
+                      className={`${styles.hexagon} ${klucz}`}
+                      onClick={hexagonFunction}
+                      key={klucz}
+                      id={klucz}
+                    >
+                      <div className={styles['hexagon-tekst']}>{hex.icon}</div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
         </section>
 
         <section className={`${styles['o-nas']} grid`}>

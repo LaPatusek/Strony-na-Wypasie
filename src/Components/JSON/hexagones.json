@@ -1,0 +1,34 @@
+{
+  "hexagones": {
+    "FirstRow": [
+      {
+        "id": "first-hex",
+        "icon": "Test icon",
+        "tekst": "przykładowy opis"
+      },
+      {
+        "id": "second-hex",
+        "icon": "Test icon",
+        "tekst": "przykładowy opis"
+      },
+      {
+        "id": "third-hex",
+        "icon": "Test icon",
+        "tekst": "przykładowy opis"
+      }
+    ],
+
+    "SecondRow": [
+      {
+        "id": "forth-hex",
+        "icon": "Test icon",
+        "tekst": "przykładowy opis"
+      },
+      {
+        "id": "fifth-hex",
+        "icon": "Test icon",
+        "tekst": "przykładowy opis"
+      }
+    ]
+  }
+}

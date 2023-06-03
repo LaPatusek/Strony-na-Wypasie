@@ -159,6 +159,128 @@
   font-size: 18px;
 }
 
+.offer-section {
+  grid-template-columns: repeat(2, 1fr);
+  height: 600px;
+  margin-bottom: 2rem;
+}
+
+.offer-section-left {
+  height: 100%;
+  background-color: gray;
+  color: white;
+  position: relative;
+}
+
+.offer-section-left h3 {
+  position: absolute;
+  bottom: 10%;
+  left: 5%;
+  display: grid;
+  font-size: 50px;
+  letter-spacing: 0.6px;
+  user-select: none;
+}
+
+.offer-section-left span {
+  color: var(--bright-green);
+}
+
+.offer-section-right {
+  background-color: #006d5a;
+}
+
+.offer-section-right h3 {
+  color: var(--bright-green);
+  font-size: 40px;
+  letter-spacing: 0.6px;
+  padding-top: 4.5%;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  user-select: none;
+}
+
+.offer-section-right hr {
+  border: 0;
+  background-color: var(--bright-green);
+  height: 2px;
+  width: 80%;
+  margin: 20px auto;
+}
+
+.offer-section-right h4 {
+  color: var(--bright-green);
+  width: 80%;
+  margin: 0 auto;
+  letter-spacing: 0.6px;
+  line-height: 24px;
+  font-size: 1.5rem;
+}
+
+.seo-hexagones {
+  margin-top: 50px;
+  position: relative;
+}
+
+.three-hexagones {
+  position: relative;
+  display: inherit;
+  grid-template-columns: repeat(3, 0fr);
+  justify-content: center;
+}
+
+.two-hexagones {
+  position: relative;
+  transform: translateY(-20px);
+  display: inherit;
+  grid-template-columns: repeat(2, 0fr);
+  justify-content: center;
+}
+
+.hexagon {
+  rotate: 90deg;
+  display: inherit;
+  justify-content: center;
+  align-content: center;
+  width: 140px;
+  height: 140px;
+  background: linear-gradient(
+    135deg,
+    rgba(185, 139, 102, 1) 0%,
+    rgba(147, 110, 81, 1) 50%,
+    rgba(109, 82, 60, 1) 100%
+  );
+  -webkit-clip-path: polygon(
+    25% 5%,
+    75% 5%,
+    100% 50%,
+    75% 95%,
+    25% 95%,
+    0% 50%
+  );
+  clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+  cursor: pointer;
+  transition: all 1s;
+  z-index: 2;
+}
+
+.hexagon.active {
+  z-index: 5;
+}
+
+.hexagon.active {
+  transform: scale(1.9) translateX(30px) translateY(-38px);
+}
+
+.hexagon #third-hex {
+  background: blue !important;
+}
+
+.hexagon-tekst {
+  rotate: -90deg;
+}
+
 .o-nas {
   background-color: #1a1a1a;
   grid-template-columns: repeat(2, 1fr);
@@ -170,9 +292,9 @@
 }
 
 .wrap {
-    place-self: center;
-    height: 80%;
-    width: 80%;
+  place-self: center;
+  height: 80%;
+  width: 80%;
 }
 
 .wrap p {
@@ -197,16 +319,16 @@
 }
 
 .wrap a {
-    background-color: var(--bright-green);
-    color: white;
-    font-weight: bold;
-    text-transform: uppercase;
-    padding: 15px;
-    border: 1px solid var(--bright-green);
-    border-radius: 25px;
-    transition: .5s;
+  background-color: var(--bright-green);
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 15px;
+  border: 1px solid var(--bright-green);
+  border-radius: 25px;
+  transition: 0.5s;
 }
 
 .wrap a:hover {
-    background-color: transparent;
+  background-color: transparent;
 }

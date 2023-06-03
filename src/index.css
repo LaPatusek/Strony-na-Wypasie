@@ -35,3 +35,7 @@ code {
 .font-center {
   text-align: center;
 }
+
+.third-hex.active {
+  background: blue !important;
+}
