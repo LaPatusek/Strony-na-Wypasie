@@ -218,6 +218,16 @@
   font-size: 1.5rem;
 }
 
+.seo-title {
+  position: relative;
+}
+
+.seo-title img {
+  position: absolute;
+  top: 20%;
+  right: 10%;
+}
+
 .seo-hexagones {
   margin-top: 50px;
   position: relative;
@@ -232,10 +242,11 @@
 
 .two-hexagones {
   position: relative;
-  transform: translateY(-20px);
+  transform: translateY(-24px);
   display: inherit;
   grid-template-columns: repeat(2, 0fr);
   justify-content: center;
+  z-index: 3;
 }
 
 .hexagon {
@@ -265,20 +276,48 @@
   z-index: 2;
 }
 
+.hexagon img {
+  transition: all 1s;
+}
+
 .hexagon.active {
   z-index: 5;
 }
 
-.hexagon.active {
-  transform: scale(1.9) translateX(30px) translateY(-38px);
+.hex1.active {
+  transform: scale(1.9) translateX(28px) translateY(-38px);
 }
 
-.hexagon #third-hex {
-  background: blue !important;
+.hex2.active {
+  transform: scale(1.9) translateX(28px)
 }
 
-.hexagon-tekst {
+.hex3.active {
+  transform: scale(1.9) translateX(28px) translateY(38px);
+}
+
+.hex4.active {
+  transform: scale(1.9) translateY(-38px) translateX(-33px);
+}
+
+.hex5.active {
+  transform: scale(1.9) translateY(38px) translateX(-33px);
+}
+
+.hexagon-icon,
+.hexagon-text {
   rotate: -90deg;
+  color: white;
+}
+
+.hexagon:hover img {
+  transform: scale(1.4);
+}
+
+.hexagon-text {
+  transform: scale(.75);
+  text-align: center;
+  line-height: 18px;
 }
 
 .o-nas {

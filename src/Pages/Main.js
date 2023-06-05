@@ -1,5 +1,6 @@
-import { Fragment, useRef } from 'react';
+import { Fragment, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
+import stonks from '../Assets/TrendUp-Bulk.svg';
 import codingImg from '../Assets/coding.jpg';
 import Header from '../Components/Header/Header';
 import hexagones from '../Components/JSON/hexagones.json';
@@ -7,13 +8,17 @@ import styles from './Main.module.css';
 
 const Main = () => {
   const hexRef = useRef([]);
+  const [hexActive, setHexActive] = useState(null);
+  const [hexHelper, setHexHelper] = useState(false);
 
-  const hexagonFunction = () => {
-    const hex = hexRef.current;
-
-    console.log(hexRef.current);
-
+  const hexagonFunction = (nr) => (e) => {
+    const hex = hexRef.current[nr];
     hex.classList.toggle(styles.active);
+
+    setHexActive(nr);
+    setHexHelper((s) => !s);
+
+    if (hexHelper) setHexActive(0);
   };
 
   return (
@@ -77,24 +82,44 @@ const Main = () => {
             </h3>
           </div>
           <div className={styles['offer-section-right']}>
-            <h3>
-              Tworzymy strony <br /> zgodnie z SEO
-            </h3>
-            <hr />
-            <h4>Poprawimy widoczność Twojej strony w wyniakch wyszukiwania!</h4>
+            <div className={styles['seo-title']}>
+              <img src={stonks} alt='' width='66px'/>
+              <h3>
+                Tworzymy strony <br /> zgodnie z SEO
+              </h3>
+              <hr />
+              <h4>
+                Poprawimy widoczność Twojej strony w wyniakch wyszukiwania!
+              </h4>
+            </div>
 
             <div className={`${styles['seo-hexagones']} grid`}>
               <div className={styles['three-hexagones']}>
                 {hexagones.hexagones.FirstRow.map((hex) => {
                   let klucz = hex.id;
+                  let styleId = 'hex' + [hex.nr];
                   return (
                     <div
-                      className={`${styles.hexagon} ${klucz}`}
-                      onClick={hexagonFunction}
+                      className={`${styles.hexagon} ${styles[styleId]}`}
+                      onClick={hexagonFunction(hex.nr)}
                       key={klucz}
-                      ref={hexRef}
+                      ref={(el) => (hexRef.current[hex.nr] = el)}
                     >
-                      <div className={styles['hexagon-tekst']}>{hex.icon}</div>
+                      {hexActive !== hex.nr && (
+                        <div className={styles['hexagon-icon']}>
+                          <img
+                            src={hex.icon}
+                            alt=''
+                            width='50px'
+                            height='50px'
+                          />
+                        </div>
+                      )}
+                      {hexActive === hex.nr && (
+                        <div className={styles['hexagon-text']}>
+                          {hex.tekst}
+                        </div>
+                      )}
                     </div>
                   );
                 })}
@@ -103,14 +128,29 @@ const Main = () => {
               <div className={styles['two-hexagones']}>
                 {hexagones.hexagones.SecondRow.map((hex) => {
                   let klucz = hex.id;
+                  let styleId = 'hex' + [hex.nr];
                   return (
                     <div
-                      className={`${styles.hexagon} ${klucz}`}
-                      onClick={hexagonFunction}
+                      className={`${styles.hexagon} ${styles[styleId]}`}
+                      onClick={hexagonFunction(hex.nr)}
                       key={klucz}
-                      id={klucz}
+                      ref={(el) => (hexRef.current[hex.nr] = el)}
                     >
-                      <div className={styles['hexagon-tekst']}>{hex.icon}</div>
+                      {hexActive !== hex.nr && (
+                        <div className={styles['hexagon-icon']}>
+                          <img
+                            src={hex.icon}
+                            alt=''
+                            width='50px'
+                            height='50px'
+                          />
+                        </div>
+                      )}
+                      {hexActive === hex.nr && (
+                        <div className={styles['hexagon-text']}>
+                          {hex.tekst}
+                        </div>
+                      )}
                     </div>
                   );
                 })}
