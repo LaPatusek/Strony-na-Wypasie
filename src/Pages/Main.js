@@ -2,6 +2,7 @@ import { Fragment, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import stonks from '../Assets/TrendUp-Bulk.svg';
 import codingImg from '../Assets/coding.jpg';
+import dev from '../Assets/software-developer.jpg';
 import Header from '../Components/Header/Header';
 import hexagones from '../Components/JSON/hexagones.json';
 import styles from './Main.module.css';
@@ -77,6 +78,7 @@ const Main = () => {
 
         <section className={`${styles['offer-section']} grid`}>
           <div className={styles['offer-section-left']}>
+            <img src={dev} alt='' width='100%' height='100%'/>
             <h3>
               Tworzymy <span> skuteczne </span> strony{' '}
             </h3>

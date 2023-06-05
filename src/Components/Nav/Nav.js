@@ -13,10 +13,34 @@ const Nav = () => {
       </div>
 
       <div className={styles.nav}>
-        <NavLink to='/oferta'>Oferta</NavLink>
-        <NavLink to='/projekty'>Projekty</NavLink>
-        <NavLink to='/o-nas'>O nas</NavLink>
-        <NavLink to='/kontakt'>Kontakt</NavLink>
+        <NavLink
+          to='/oferta'
+          className={styles['nav-link']}
+          activeClassName={styles['active-nav-link']}
+        >
+          Oferta
+        </NavLink>
+        <NavLink
+          to='/projekty'
+          className={styles['nav-link']}
+          activeClassName={styles['active-nav-link']}
+        >
+          Projekty
+        </NavLink>
+        <NavLink
+          to='/o-nas'
+          className={styles['nav-link']}
+          activeClassName={styles['active-nav-link']}
+        >
+          O nas
+        </NavLink>
+        <NavLink
+          to='/kontakt'
+          className={styles['nav-link']}
+          activeClassName={styles['active-nav-link']}
+        >
+          Kontakt
+        </NavLink>
       </div>
       <div>
         <Link to='/formularz-kontaktowy'>
