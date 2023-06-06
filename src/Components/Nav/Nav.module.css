@@ -1,34 +1,24 @@
 .navbar {
-  grid-template-columns: 25% 60% 15%;
+  grid-template-columns: 25% 50% 25%;
+  padding-left: 4rem;
   padding: 2rem;
   padding-left: 0;
   column-count: 3;
 }
 
 .logo {
-  text-align: center;
-  font-size: 40px;
-}
-
-.first-piece-logo {
-  background-color: black;
-  width: 300px;
-  color: white;
-  padding: 10px;
-}
-
-.second-piece-logo {
-  color: black;
+  transform: translateY(-2rem);
+  max-width: 350px;
 }
 
 .nav {
-  margin-top: 30px;
+  margin-top: 2.5rem;
 }
 
 .nav-link {
   color: black;
   margin: 0 15px 15px;
-  font-size: 15px;
+  font-size: 18px;
   font-weight: bold;
   letter-spacing: 0.7px;
   transition: all 0.4s;
@@ -37,7 +27,6 @@
 }
 
 .nav-link:hover {
-  /* color: var(--bright-mid-green); */
   border-bottom: 1px solid black;
 }
 
@@ -48,17 +37,21 @@
 }
 
 .right-button {
+  margin-top: 2.5rem;
+  margin-right: 30px;
+  float: right;
+  max-width: 200px;
+}
+
+.right-button span {
   user-select: none;
   text-transform: uppercase;
   font-weight: bold;
   letter-spacing: 0.7px;
-  margin-top: 15px;
   text-align: center;
-  padding: 5px;
-  padding-left: 10px;
-  padding-right: 10px;
-  background-color: green;
-  border: 1px solid green;
+  padding: 8px 20px;
+  background-color: #006d5a;
+  border: 1px solid #006d5a;
   color: white;
   border-radius: 50px;
   width: 80%;
@@ -66,7 +59,7 @@
   transition: all 0.5s ease-in-out;
 }
 
-.right-button:hover {
+.right-button:hover span{
   background-color: transparent;
-  color: green;
+  color: #006d5a;
 }

@@ -1,8 +1,8 @@
 import { Fragment, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import stonks from '../Assets/TrendUp-Bulk.svg';
-import codingImg from '../Assets/coding.jpg';
-import dev from '../Assets/software-developer.jpg';
+import codingImg from '../Assets/coding.webp';
+import dev from '../Assets/software-developer.webp';
 import Header from '../Components/Header/Header';
 import hexagones from '../Components/JSON/hexagones.json';
 import styles from './Main.module.css';

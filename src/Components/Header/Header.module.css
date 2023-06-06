@@ -1,20 +1,30 @@
 .header {
-  height: 80vh;
+  height: 100vh;
+  max-height: 850px;
   justify-content: center;
   align-content: center;
-
-  /* Tu będzie ładne ciemne tło */
   background-color: #6d523c;
+  position: relative;
+}
+
+.header video {
+  position: absolute;
+  width: 100%;
+  max-height: 850px;
+  height: 100vh;
+  filter: brightness(53%);
+  object-fit: cover;
 }
 
 .header h1 {
   font-size: 50px;
   transform: translateY(-50px);
   color: white;
+  z-index: 2;
 }
 
 .header a {
-  --color: var(--bright-mid-green);
+  --color: #006d5a;
   padding: 10px 30px;
   font-size: 20px;
   border: 1px solid var(--color);
@@ -28,9 +38,10 @@
   background-color: var(--color);
   color: white;
   transition: 0.5s;
+  z-index: 2;
 }
 
 .header a:hover {
-  background-color: transparent;
-  color: var(--bright-green);
+  background-color: white;
+  color: var(--color);
 }

@@ -328,11 +328,12 @@
 .o-nas {
   background-color: #1a1a1a;
   grid-template-columns: repeat(2, 1fr);
-  padding-right: 4rem;
+  /* padding-right: 4rem; */
 }
 
 .o-nas img {
   height: 80%;
+  object-fit: cover;
 }
 
 .wrap {
@@ -343,6 +344,7 @@
 
 .wrap p {
   padding-top: 2rem;
+  padding-right: 4rem;
   margin-bottom: 40px;
   font-size: 20px;
   letter-spacing: 0.6px;
@@ -358,17 +360,17 @@
   height: 1px;
   width: 50px;
   transform: translateY(20px);
-  background-color: var(--bright-green);
-  border: 1px solid var(--bright-green);
+  background-color: var(--bright-mid-green);
+  border: 1px solid var(--bright-mid-green);
 }
 
 .wrap a {
-  background-color: var(--bright-green);
+  background-color: var(--bright-mid-green);
   color: white;
   font-weight: bold;
   text-transform: uppercase;
   padding: 15px;
-  border: 1px solid var(--bright-green);
+  border: 1px solid var(--bright-mid-green);
   border-radius: 25px;
   transition: 0.5s;
 }

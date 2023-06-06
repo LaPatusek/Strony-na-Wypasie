@@ -1,4 +1,5 @@
 import { Link, NavLink } from 'react-router-dom';
+import logo from '../../Assets/logo.webp';
 import styles from './Nav.module.css';
 
 const Nav = () => {
@@ -6,9 +7,10 @@ const Nav = () => {
     <div className={`${styles.navbar} grid`}>
       <div className={styles.logo}>
         <Link to='/main'>
-          <span className={styles['first-piece-logo']}>Strony </span>
+          {/* <span className={styles['first-piece-logo']}>Strony </span>
           <br />
-          <span className={styles['second-piece-logo']}> na wypasie</span>
+          <span className={styles['second-piece-logo']}> na wypasie</span> */}
+          <img src={logo} alt='' width='100%' height=''/>
         </Link>
       </div>
 
@@ -44,7 +46,9 @@ const Nav = () => {
       </div>
       <div>
         <Link to='/formularz-kontaktowy'>
-          <div className={styles['right-button']}>wyceń projekt</div>
+          <div className={styles['right-button']}>
+            <span> wyceń projekt </span>
+          </div>
         </Link>
       </div>
     </div>
