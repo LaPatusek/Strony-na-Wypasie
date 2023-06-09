@@ -5,7 +5,6 @@
 }
 
 .footer > .upper-footer {
-  display: grid;
   grid-template-columns: repeat(4, 1fr);
   column-gap: 20px;
   margin-bottom: 50px;
@@ -26,7 +25,6 @@
 }
 
 .container {
-  display: flex;
   padding-bottom: 20px;
   position: relative;
 }
@@ -108,10 +106,6 @@
   margin-right: 5px;
 }
 
-.socials {
-  text-align: center;
-}
-
 .socials svg {
   margin-right: 4px;
   transition: 0.5s;
@@ -151,4 +145,68 @@
 
 .icon {
   margin-bottom: -2px;
+}
+
+@media screen and (max-width: 800px) {
+  .footer > .upper-footer {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 35px;
+  }
+
+  .socials {
+    text-align: unset !important;
+    display: grid;
+    width: fit-content;
+    row-gap: 5px;
+  }
+
+  .socials svg {
+    transform: translateY(7px);
+  }
+
+  .Twitter::after,
+  .Facebook::after,
+  .Instagram::after,
+  .Linkedin::after {
+    color: white;
+    font-size: 22px;
+    margin-left: 5px;
+    letter-spacing: 0.7px;
+  }
+
+  .Linkedin svg {
+    fill: #0077b5;
+  }
+
+  .Twitter svg {
+    fill: #1da1f2;
+  }
+
+  .Facebook svg {
+    color: #3b5998;
+  }
+
+  .Instagram svg {
+    fill: #f15245;
+  }
+
+  .Twitter::after {
+    content: 'Twitter';
+  }
+
+  .Facebook::after {
+    content: 'FaceBook';
+  }
+
+  .Instagram::after {
+    content: 'Instagram';
+  }
+
+  .Linkedin::after {
+    content: 'Linkedin';
+  }
+
+  .copyright a {
+    display: grid;
+  }
 }

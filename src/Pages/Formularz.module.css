@@ -281,3 +281,22 @@ textarea {
   font-weight: bold;
   letter-spacing: .7px;
 }
+
+@media screen and (max-width: 800px) {
+  .wrap {
+    grid-template-columns: repeat(1, 1fr);
+    grid-row-start: 3;
+  }
+
+  .left-section {
+    padding: 0;
+  }
+
+  .right-section {
+    padding: 0;
+  }
+
+  .right-section h3 {
+    width: fit-content;
+  }
+}

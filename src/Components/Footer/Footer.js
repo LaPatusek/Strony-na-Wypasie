@@ -11,10 +11,10 @@ import styles from './Footer.module.css';
 const Footer = () => {
   return (
     <div className={styles.footer}>
-      <div className={styles['upper-footer']}>
+      <div className={`${styles['upper-footer']} grid`}>
         <div className={styles.kontakt}>
           <h3>Kontakt</h3>
-          <div className={styles.container}>
+          <div className={`${styles.container} flex`}>
             <div className={styles['pin-container']}>
               <Location variant='Bold' size='26px' />
             </div>
@@ -25,10 +25,10 @@ const Footer = () => {
               38-114 Niebylec
             </p>
           </div>
-          <div className={styles.container}>
+          <div className={`${styles.container} flex`}>
             <Call variant='Bold' size='26px' /> <p> +48 531 771 944</p>
           </div>
-          <div className={styles.container}>
+          <div className={`${styles.container} flex`}>
             <svg
               xmlns='http://www.w3.org/2000/svg'
               width='26'
@@ -164,7 +164,7 @@ const Footer = () => {
           </ul>
         </div>
 
-        <div className={styles.socials}>
+        <div className={`${styles.socials} font-center`}>
           <h3>Social media</h3>
           <a href='asd' className={styles.Facebook}>
             <Facebook size='32' />

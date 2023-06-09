@@ -235,5 +235,43 @@
   font-size: 20px;
   color: var(--bright-mid-green);
   font-weight: bold;
-  letter-spacing: .7px;
+  letter-spacing: 0.7px;
+}
+
+@media screen and (max-width: 800px) {
+  .title {
+    height: fit-content;
+    max-height: unset;
+  }
+
+  .title h2 {
+    padding-bottom: 50px;
+  }
+
+  .first-section {
+    width: 100%;
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 50px;
+  }
+
+  .kontakt {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .left-section {
+    padding-left: 2rem;
+    padding-bottom: 0;
+  }
+
+  .left-section h4 {
+    margin-bottom: 25px;
+  }
+
+  .buttons,
+  .left-section,
+  .bar,
+  .input,
+  .mess-after-form  {
+    width: 100%;
+  }
 }
