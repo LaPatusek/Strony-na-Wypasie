@@ -430,9 +430,9 @@ const Formularz = () => {
       <section className={styles['right-section']}>
         <h2>Skontaktuj się z nami!</h2>
         <h3>
-          Tworzymy strony internetowe z myślą o Tobie i Twoim biznesie. <br />{' '}
+          Tworzymy strony internetowe z myślą o Tobie i Twoim biznesie.
           Opowiedz nam o swoim projekcie,
-          <br /> a my przygotujemy wycenę dla Ciebie.
+         a my przygotujemy wycenę dla Ciebie.
         </h3>
       </section>
     </Card>

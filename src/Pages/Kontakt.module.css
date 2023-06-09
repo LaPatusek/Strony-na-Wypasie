@@ -249,13 +249,13 @@
   }
 
   .first-section {
-    width: 100%;
     grid-template-columns: repeat(1, 1fr);
     row-gap: 50px;
   }
 
   .kontakt {
     grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
   }
 
   .left-section {
@@ -263,15 +263,16 @@
     padding-bottom: 0;
   }
 
+  .left-section h3 {
+    margin-bottom: 20px;
+  }
+
   .left-section h4 {
     margin-bottom: 25px;
   }
 
-  .buttons,
-  .left-section,
-  .bar,
-  .input,
-  .mess-after-form  {
-    width: 100%;
+  .right-section {
+    padding-right: 0;
+    padding-left: 1rem;
   }
 }
