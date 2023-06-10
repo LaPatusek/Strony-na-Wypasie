@@ -75,32 +75,35 @@
 
   .navbar-800 {
     display: grid;
-    position: relative;
   }
 
   .logo {
-    max-width: none;
+    max-width: 400px;
     transform: translateY(-20px);
     justify-self: center;
   }
 
   .nav {
     display: grid;
-
+    margin: 0;
+    padding: 0;
     width: 100%;
-    height: 80vh;
+    height: 100%;
     position: absolute;
-    top: 20vh;
     z-index: 3;
   }
 
-  .nav-link {
-    align-self: center;
-    font-size: 40px;
-    height: 100%;
-    width: 100%;
+  .link-container {
+    display: grid;
+    align-content: center;
     background-color: #006d5a;
+    border-bottom: 2px solid black;
+  }
+
+  .nav-link {
+    font-size: 33px;
     margin: 0;
+    padding-left: 20px;
   }
 
   .nav-link:hover {
@@ -120,13 +123,13 @@
 
   .right-button {
     background-color: #006d5a;
-    width: 100%;
     float: none;
     max-width: none;
-    justify-self: center;
     margin-top: 0;
     margin-left: auto;
     margin-right: auto;
+    z-index: 5;
+    justify-self: center;
   }
 
   .right-button span {

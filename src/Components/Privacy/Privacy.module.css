@@ -29,7 +29,7 @@
 
 .privacy p {
   font-size: 18px;
-  letter-spacing: .6px;
+  letter-spacing: 0.6px;
   margin-bottom: 30px;
   color: rgb(26, 26, 26);
 }
@@ -41,4 +41,22 @@
 
 .back-button {
   text-align: right;
+}
+
+@media screen and (max-width: 800px) {
+  .privacy h3,
+  .privacy p,
+  .privacy h4,
+  .title,
+  .back-button {
+    width: 80%;
+  }
+
+  .privacy hr {
+    width: 100%;
+  }
+
+  .privacy h2 {
+    text-align: center;
+  }
 }

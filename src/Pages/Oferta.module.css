@@ -51,10 +51,26 @@
   height: 15px;
   border-radius: 50%;
   background-color: var(--bright-green);
-  box-shadow: 0 0 0 7px rgba(0, 206, 34, 0.1);;
+  box-shadow: 0 0 0 7px rgba(0, 206, 34, 0.1);
   transform: translateX(-50%);
 }
 
 .last-child {
   background-color: transparent;
+}
+
+@media screen and (max-width: 800px) {
+  .design-section {
+    grid-template-columns: 1fr;
+    /* padding-bottom: 20px; */
+  }
+
+  .timeline-circle {
+    display: grid;
+  }
+
+  .timeline-circle-800 {
+    position: absolute;
+    top: -131px;
+  }
 }

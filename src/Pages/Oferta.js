@@ -39,7 +39,7 @@ const Oferta = () => {
             </div>
           </div>
           <div className={styles['timeline-middle']}>
-            <div className={styles['timeline-circle']} />
+            <div className={`${styles['timeline-circle']} ${styles['timeline-circle-800']}`} />
           </div>
           <div className={styles['timeline-empty']} />
 
@@ -71,7 +71,7 @@ const Oferta = () => {
             </div>
           </div>
           <div className={styles['timeline-middle']}>
-            <div className={styles['timeline-circle']} />
+            <div  className={`${styles['timeline-circle']} ${styles['timeline-circle-800']}`} />
           </div>
           <div className={styles['timeline-empty']} />
 

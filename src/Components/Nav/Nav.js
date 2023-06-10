@@ -70,9 +70,7 @@ const Nav = () => {
 
       <div className={`${styles['navbar-800']}`}>
         <div className={styles.logo}>
-          <Link to='/main'>
-            <img src={logo} alt='' width='100%' height='' />
-          </Link>
+          <img src={logo} alt='' width='100%' height='' />
         </div>
 
         <div className={styles['ham-menu']}>
@@ -81,43 +79,63 @@ const Nav = () => {
         {menuState && (
           <Fragment>
             <div className={`${styles.nav}`}>
-              <NavLink
-                to='/oferta'
-                className={styles['nav-link']}
-                activeClassName={styles['active-nav-link']}
-                onClick={menuHandler}
-              >
-                Oferta
-              </NavLink>
-              <NavLink
-                to='/projekty'
-                className={styles['nav-link']}
-                activeClassName={styles['active-nav-link']}
-                onClick={menuHandler}
-              >
-                Projekty
-              </NavLink>
-              <NavLink
-                to='/o-nas'
-                className={styles['nav-link']}
-                activeClassName={styles['active-nav-link']}
-                onClick={menuHandler}
-              >
-                O nas
-              </NavLink>
-              <NavLink
-                to='/kontakt'
-                className={styles['nav-link']}
-                activeClassName={styles['active-nav-link']}
-                onClick={menuHandler}
-              >
-                Kontakt
-              </NavLink>
-
-              <div className={`${styles['right-button']}`}>
-                <Link to='/formularz-kontaktowy' onClick={menuHandler}>
-                  <span> wyceń projekt </span>
-                </Link>
+            <div className={styles['link-container']} />
+              <div className={styles['link-container']}>
+                <NavLink
+                  to='/main'
+                  className={styles['nav-link']}
+                  activeClassName={styles['active-nav-link']}
+                  onClick={menuHandler}
+                >
+                  Strona główna
+                </NavLink>
+              </div>
+              <div className={styles['link-container']}>
+                <NavLink
+                  to='/oferta'
+                  className={styles['nav-link']}
+                  activeClassName={styles['active-nav-link']}
+                  onClick={menuHandler}
+                >
+                  Oferta
+                </NavLink>
+              </div>
+              <div className={styles['link-container']}>
+                <NavLink
+                  to='/projekty'
+                  className={styles['nav-link']}
+                  activeClassName={styles['active-nav-link']}
+                  onClick={menuHandler}
+                >
+                  Projekty
+                </NavLink>
+              </div>
+              <div className={styles['link-container']}>
+                <NavLink
+                  to='/o-nas'
+                  className={styles['nav-link']}
+                  activeClassName={styles['active-nav-link']}
+                  onClick={menuHandler}
+                >
+                  O nas
+                </NavLink>
+              </div>
+              <div className={styles['link-container']}>
+                <NavLink
+                  to='/kontakt'
+                  className={styles['nav-link']}
+                  activeClassName={styles['active-nav-link']}
+                  onClick={menuHandler}
+                >
+                  Kontakt
+                </NavLink>
+              </div>
+              <div className={styles['link-container']}>
+                <div className={`${styles['right-button']}`}>
+                  <Link to='/formularz-kontaktowy' onClick={menuHandler}>
+                    <span> wyceń projekt </span>
+                  </Link>
+                </div>
               </div>
             </div>
           </Fragment>
