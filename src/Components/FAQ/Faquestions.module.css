@@ -8,7 +8,7 @@
   color: #ffffff;
   margin-bottom: 3rem;
   font-size: 25px;
-  letter-spacing: .7px;
+  letter-spacing: 0.7px;
   font-weight: 600;
 }
 
@@ -84,4 +84,31 @@
   margin: 0 0 6px;
   font-size: 20px;
   font-weight: bold;
+}
+
+@media screen and (max-width: 800px) {
+  .faq {
+    padding-top: 2rem;
+  }
+
+  .faq h2 {
+    font-size: 24px;
+  }
+
+  .card {
+    display: grid !important;
+    grid-template-rows: 25% 75%;
+    width: 100%;
+  }
+
+  .buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .buttons button {
+    text-align: center;
+    padding: 3px;
+    height: 100%;
+  }
 }

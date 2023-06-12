@@ -35,3 +35,10 @@ code {
 .font-center {
   text-align: center;
 }
+
+@media screen and (max-width: 800px) {
+  :root {
+    --menu-height: 360px;
+    --sidebar-width: 100%;
+  }
+}

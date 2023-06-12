@@ -258,6 +258,12 @@
     justify-content: center;
   }
 
+  .right-section {
+    width: 90%;
+    padding: 0 !important;
+    justify-self: center;
+  }
+
   .left-section {
     padding-left: 2rem;
     padding-bottom: 0;

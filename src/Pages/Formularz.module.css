@@ -290,7 +290,9 @@ textarea {
   }
 
   .left-section {
-    padding-left: 1.5rem;
+    width: 90%;
+    padding: 0 !important;
+    justify-self: center;
     order: 2;
   }
 

@@ -294,7 +294,7 @@
 }
 
 .hex2.active {
-  transform: scale(1.9) translateX(28px)
+  transform: scale(1.9) translateX(28px);
 }
 
 .hex3.active {
@@ -302,11 +302,11 @@
 }
 
 .hex4.active {
-  transform: scale(1.9) translateY(-38px) translateX(-33px);
+  transform: scale(1.9) translateX(-33px) translateY(-38px);
 }
 
 .hex5.active {
-  transform: scale(1.9) translateY(38px) translateX(-33px);
+  transform: scale(1.9) translateX(-33px) translateY(38px);
 }
 
 .hexagon-icon,
@@ -320,7 +320,7 @@
 }
 
 .hexagon-text {
-  transform: scale(.75);
+  transform: scale(0.75);
   text-align: center;
   line-height: 18px;
 }
@@ -328,7 +328,6 @@
 .o-nas {
   background-color: #1a1a1a;
   grid-template-columns: repeat(2, 1fr);
-  /* padding-right: 4rem; */
 }
 
 .o-nas img {
@@ -377,4 +376,122 @@
 
 .wrap a:hover {
   background-color: transparent;
+}
+
+@media screen and (max-width: 800px) {
+  .main-offer {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .left-main-offer {
+    margin-left: 1rem;
+  }
+
+  .left-main-offer h3 {
+    text-align: left;
+  }
+
+  .button-container {
+    justify-content: left;
+  }
+
+  .background {
+    transform: translateY(0);
+  }
+
+  .offer-section {
+    grid-template-columns: repeat(1, 1fr);
+    min-height: 800px;
+    margin: 0;
+  }
+
+  .offer-section-left h3 {
+    font-size: 35px;
+  }
+
+  .offer-section-right {
+    min-height: 450px;
+  }
+
+  .seo-hexagones {
+    height: 200px;
+  }
+
+  .two-hexagones,
+  .three-hexagones {
+    height: 100px;
+  }
+
+  .seo-title h3 {
+    font-size: 33px;
+  }
+
+  .seo-title img {
+    top: 10%;
+    right: 5%;
+  }
+
+  .seo-hexagones {
+    margin-top: 25px;
+  }
+
+  .two-hexagones {
+    transform: translateY(-17px);
+  }
+
+  .hexagon {
+    width: 100px;
+    height: 100px;
+  }
+
+  .hexagon-text {
+    font-size: 0.8rem;
+    line-height: normal;
+  }
+
+  .hexagon:hover img {
+    transform: none;
+  }
+
+  .hex1.active {
+    transform: scale(1.8) translateX(24px) translateY(-28px);
+  }
+
+  .hex2.active {
+    transform: scale(1.8) translateX(24px);
+  }
+
+  .hex3.active {
+    transform: scale(1.8) translateX(24px) translateY(28px);
+  }
+
+  .hex4.active {
+    transform: scale(1.8) translateX(-24px) translateY(-28px);
+  }
+
+  .hex5.active {
+    transform: scale(1.8) translateX(-24px) translateY(28px);
+  }
+
+  .o-nas {
+    display: inline-block !important;
+  }
+
+  .o-nas img {
+    height: 300px;
+  }
+
+  .wrap {
+    width: 90%;
+    padding: 50px 20px;
+  }
+
+  .wrap p {
+    padding-right: 0;
+    padding-top: 0;
+  }
+
+  .wrap p::before {
+    transform: translateY(-5px);
+  }
 }

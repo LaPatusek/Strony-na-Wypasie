@@ -61,12 +61,12 @@
 
 @media screen and (max-width: 800px) {
   .design-section {
-    grid-template-columns: 1fr;
-    /* padding-bottom: 20px; */
+    margin-left: 20px;
+    padding-bottom: 0;
   }
 
-  .timeline-circle {
-    display: grid;
+  .timeline {
+    display: block !important;
   }
 
   .timeline-circle-800 {
