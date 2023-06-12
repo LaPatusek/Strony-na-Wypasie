@@ -1,3 +1,29 @@
+.title {
+  padding: 2rem 0;
+  margin: 0 0 100px 12%;
+}
+
+.title h2 {
+  font-size: 32px;
+  letter-spacing: 0.6px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.title h3 {
+  width: 50%;
+  font-size: 20px;
+  letter-spacing: 0.5px;
+}
+
+.heading {
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  letter-spacing: 0.6px;
+  margin-bottom: 20px;
+}
+
 .design-section {
   display: flex;
   flex-direction: column;
@@ -60,6 +86,25 @@
 }
 
 @media screen and (max-width: 800px) {
+  .title {
+    margin: 50px 20px;
+  }
+
+  .title h2 {
+    text-align: center;
+  }
+
+  .title h3 {
+    width: 100%;
+  }
+
+  .heading {
+    width: 50%;
+    line-height: 25px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .design-section {
     margin-left: 20px;
     padding-bottom: 0;

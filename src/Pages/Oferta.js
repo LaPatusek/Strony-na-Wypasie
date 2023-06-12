@@ -7,8 +7,19 @@ const Oferta = () => {
 
   return (
     <Fragment>
-      <h1>Oferta</h1>
-
+      <div className={styles.title}>
+        <h2>Tworzymy aplikację frontend</h2>
+        <h3>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+          varius finibus varius. Sed pulvinar tempus blandit. Pellentesque sed
+          lacus posuere velit posuere consectetur id eu nibh. In id justo eros.
+          Vivamus vel sodales ex. Praesent bibendum convallis sagittis. Interdum
+          et malesuada fames ac ante ipsum primis in faucibus.
+        </h3>
+      </div>
+      <div className={styles.heading}>
+        <h4> Rozwój strony krok po kroku</h4>
+      </div>
       <section className={styles['design-section']}>
         <div className={`${styles.timeline} grid`}>
           <div className={styles['timeline-empty']} />
@@ -39,7 +50,9 @@ const Oferta = () => {
             </div>
           </div>
           <div className={styles['timeline-middle']}>
-            <div className={`${styles['timeline-circle']} ${styles['timeline-circle-800']}`} />
+            <div
+              className={`${styles['timeline-circle']} ${styles['timeline-circle-800']}`}
+            />
           </div>
           <div className={styles['timeline-empty']} />
 
@@ -71,13 +84,17 @@ const Oferta = () => {
             </div>
           </div>
           <div className={styles['timeline-middle']}>
-            <div  className={`${styles['timeline-circle']} ${styles['timeline-circle-800']}`} />
+            <div
+              className={`${styles['timeline-circle']} ${styles['timeline-circle-800']}`}
+            />
           </div>
           <div className={styles['timeline-empty']} />
 
           <div className={styles['timeline-empty']} />
 
-          <div className={`${styles['timeline-middle']} ${styles['last-child']}`}>
+          <div
+            className={`${styles['timeline-middle']} ${styles['last-child']}`}
+          >
             <div className={styles['timeline-circle']} />
           </div>
           <div

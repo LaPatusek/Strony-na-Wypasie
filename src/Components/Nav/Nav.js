@@ -1,11 +1,12 @@
 import { HambergerMenu } from 'iconsax-react';
-import { Fragment, useEffect, useState } from 'react';
+import { Fragment, useEffect, useRef, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import logo from '../../Assets/logo.webp';
 import styles from './Nav.module.css';
 
 const Nav = () => {
   const [menuState, setMenuState] = useState(false);
+  const menuRef = useRef(null);
 
   const menuHandler = () => {
     setMenuState((s) => !s);
@@ -17,6 +18,13 @@ const Nav = () => {
     }
     if (!menuState) {
       document.body.style.overflowY = 'scroll';
+    }
+
+    if (menuState) {
+      const menu = menuRef?.current;
+      setTimeout(() => {
+        menu.classList.toggle(styles.active);
+      });
     }
   }, [menuState]);
 
@@ -60,11 +68,9 @@ const Nav = () => {
           </NavLink>
         </div>
         <div>
-          <Link to='/formularz-kontaktowy'>
-            <div className={styles['right-button']}>
-              <span> wyceń projekt </span>
-            </div>
-          </Link>
+          <div className={styles['right-button']}>
+            <Link to='/formularz-kontaktowy'>wyceń projekt </Link>
+          </div>
         </div>
       </div>
 
@@ -78,8 +84,10 @@ const Nav = () => {
         </div>
         {menuState && (
           <Fragment>
-            <div className={`${styles.nav}`}>
-            <div className={styles['link-container']} />
+            <div className={`${styles.nav}`} ref={menuRef}>
+              <div className={`${styles['link-container']}`}>
+                <img src={logo} height='70px' alt=''/>
+              </div>
               <div className={styles['link-container']}>
                 <NavLink
                   to='/main'
@@ -90,17 +98,7 @@ const Nav = () => {
                   Strona główna
                 </NavLink>
               </div>
-              <div className={styles['link-container']}>
-                <NavLink
-                  to='/oferta'
-                  className={styles['nav-link']}
-                  activeClassName={styles['active-nav-link']}
-                  onClick={menuHandler}
-                >
-                  Oferta
-                </NavLink>
-              </div>
-              <div className={styles['link-container']}>
+              <div className={`${styles['link-container']} ${styles.second}`}>
                 <NavLink
                   to='/projekty'
                   className={styles['nav-link']}
@@ -110,7 +108,27 @@ const Nav = () => {
                   Projekty
                 </NavLink>
               </div>
-              <div className={styles['link-container']}>
+              <div className={`${styles['link-container']} ${styles.third}`}>
+                <NavLink
+                  to='/kontakt'
+                  className={styles['nav-link']}
+                  activeClassName={styles['active-nav-link']}
+                  onClick={menuHandler}
+                >
+                  Kontakt
+                </NavLink>
+              </div>
+              <div className={`${styles['link-container']} ${styles.forth}`}>
+                <NavLink
+                  to='/oferta'
+                  className={styles['nav-link']}
+                  activeClassName={styles['active-nav-link']}
+                  onClick={menuHandler}
+                >
+                  Oferta
+                </NavLink>
+              </div>
+              <div className={`${styles['link-container']} ${styles.fifth}`}>
                 <NavLink
                   to='/o-nas'
                   className={styles['nav-link']}
@@ -121,19 +139,9 @@ const Nav = () => {
                 </NavLink>
               </div>
               <div className={styles['link-container']}>
-                <NavLink
-                  to='/kontakt'
-                  className={styles['nav-link']}
-                  activeClassName={styles['active-nav-link']}
-                  onClick={menuHandler}
-                >
-                  Kontakt
-                </NavLink>
-              </div>
-              <div className={styles['link-container']}>
                 <div className={`${styles['right-button']}`}>
                   <Link to='/formularz-kontaktowy' onClick={menuHandler}>
-                    <span> wyceń projekt </span>
+                    wyceń projekt
                   </Link>
                 </div>
               </div>
