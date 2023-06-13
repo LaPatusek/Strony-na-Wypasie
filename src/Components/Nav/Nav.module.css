@@ -11,8 +11,15 @@
 }
 
 .logo {
-  transform: translateY(-2rem);
-  max-width: 350px;
+  display: grid;
+  justify-content: center;
+  max-height: 150px;
+}
+
+.logo img {
+  height: fit-content;
+  max-height: 50%;
+  width: fit-content;
 }
 
 .nav {
@@ -53,6 +60,10 @@
   user-select: none;
 }
 
+.right-button:hover {
+  background-color: transparent;
+}
+
 .right-button a {
   text-transform: uppercase;
   font-weight: bold;
@@ -62,7 +73,6 @@
 }
 
 .right-button:hover a {
-  background-color: transparent;
   color: #006d5a;
 }
 
@@ -76,10 +86,9 @@
   }
 
   .logo {
-    max-width: 400px;
-    max-height: 300px;
-    transform: translateY(-20px);
     justify-self: center;
+    transform: translateY(10px);
+    max-height: 170px
   }
 
   .nav {

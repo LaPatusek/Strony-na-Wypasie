@@ -1,7 +1,7 @@
 import { HambergerMenu } from 'iconsax-react';
 import { Fragment, useEffect, useRef, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import logo from '../../Assets/logo.webp';
+import logo from '../../Assets/logo3.webp';
 import styles from './Nav.module.css';
 
 const Nav = () => {
@@ -32,8 +32,8 @@ const Nav = () => {
     <Fragment>
       <div className={`${styles.navbar} grid`}>
         <div className={styles.logo}>
-          <Link to='/main'>
-            <img src={logo} alt='' width='100%' height='' />
+          <Link to='/main'  aria-label='Strona Główna'>
+            <img src={logo} alt='' width='100%' height='100%' />
           </Link>
         </div>
 
@@ -76,7 +76,7 @@ const Nav = () => {
 
       <div className={`${styles['navbar-800']}`}>
         <div className={styles.logo}>
-          <img src={logo} alt='' width='100%' height='' />
+          <img src={logo} alt='' height='50%' />
         </div>
 
         <div className={styles['ham-menu']}>

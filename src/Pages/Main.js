@@ -45,7 +45,8 @@ const Main = () => {
             </div>
           </div>
           <div className={styles['right-main-offer']}>
-            <div className={styles.background} />
+            {/* zmienić tło tak, aby przypominało łaty krowy */}
+            <div className={styles.background} /> 
             <div className={styles['offers-container']}>
               <div className={styles.container}>
                 Icon
@@ -78,14 +79,14 @@ const Main = () => {
 
         <section className={`${styles['offer-section']} grid`}>
           <div className={styles['offer-section-left']}>
-            <img src={dev} alt='' width='100%' height='100%'/>
+            <img src={dev} alt='' width='100%' height='100%' />
             <h3>
               Tworzymy <span> skuteczne </span> strony{' '}
             </h3>
           </div>
           <div className={styles['offer-section-right']}>
             <div className={styles['seo-title']}>
-              <img src={stonks} alt='' width='66px'/>
+              <img src={stonks} alt='' width='66px' />
               <h3>
                 Tworzymy strony <br /> zgodnie z SEO
               </h3>
