@@ -102,7 +102,7 @@
     right: -15px;
     background: #006d5a;
     transform-origin: 0 0;
-    transform: skew(-14deg) translateX(-100%);
+    transform: skew(-14deg) translateX(-120%);
     transition: all 0.3s 0.4s;
     z-index: 2;
   }
@@ -116,7 +116,7 @@
     width: 100%;
     height: 100%;
     background: white;
-    transform: skew(-14deg) translateX(100%);
+    transform: skew(-14deg) translateX(120%);
     transition: all 0.3s 0.1s;
     z-index: 1;
   }
@@ -124,22 +124,6 @@
   .nav.active::before,
   .nav.active::after {
     transform: skew(-14deg) translateX(0%);
-  }
-
-  .second {
-    margin-right: 30px;
-  }
-
-  .third {
-    margin-right: 54px;
-  }
-
-  .forth {
-    margin-right: 75px;
-  }
-
-  .fifth {
-    margin-right: 105px;
   }
 
   .link-container {
@@ -150,23 +134,30 @@
 
   .link-container img {
     position: absolute;
-    z-index: 8;
+    z-index: 4;
     top: 5px;
     left: 15px;
+    transform: translateX(-300%);
+    transition: all 0.3s 0.4s;
+  }
+
+  .nav.active .link-container img {
+    transform: translateX(0%);
   }
 
   .nav-link {
     display: block;
     font-size: 33px;
     margin: 0;
-    padding-left: 20px;
     z-index: 5;
     text-align: right;
-    transform: skew(-16deg);
+    transform: skew(-16deg) translateX(-300%);
+    transition: all 0.3s 0.4s;
+    justify-self: center;
   }
 
-  .nav-link {
-    margin-right: 20px;
+  .nav.active .nav-link {
+    transform: skew(-16deg) translateX(0%);
   }
 
   .nav-link:hover {
@@ -185,6 +176,10 @@
     right: 15px;
   }
 
+  .nav.active .right-button {
+    transform: translateX(0%);
+  }
+
   .right-button {
     float: none;
     max-width: none;
@@ -194,6 +189,8 @@
     max-width: 200px;
     padding: 10px 15px;
     background-color: white;
+    transform: translateX(300%);
+    transition: all 0.3s 0.1s;
   }
 
   .right-button a {
