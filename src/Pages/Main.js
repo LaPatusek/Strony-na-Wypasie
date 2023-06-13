@@ -1,5 +1,6 @@
 import { Fragment, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
+import cowBackground from '../Assets/Cow Pattern-01.svg';
 import stonks from '../Assets/TrendUp-Bulk.svg';
 import codingImg from '../Assets/coding.webp';
 import dev from '../Assets/software-developer.webp';
@@ -45,8 +46,9 @@ const Main = () => {
             </div>
           </div>
           <div className={styles['right-main-offer']}>
-            {/* zmienić tło tak, aby przypominało łaty krowy */}
-            <div className={styles.background} /> 
+            <div className={styles.background}>
+              <img src={cowBackground} alt='' width='100%'/>
+            </div>
             <div className={styles['offers-container']}>
               <div className={styles.container}>
                 Icon
@@ -161,7 +163,7 @@ const Main = () => {
             </div>
           </div>
         </section>
-
+          <div className={styles.spacer}/>
         <section className={`${styles['o-nas']} grid`}>
           <img src={codingImg} alt='' width='100%' />
           <div className={styles.wrap}>
