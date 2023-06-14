@@ -32,7 +32,7 @@ const Nav = () => {
     <Fragment>
       <div className={`${styles.navbar} grid`}>
         <div className={styles.logo}>
-          <Link to='/main'  aria-label='Strona Główna'>
+          <Link to='/main' aria-label='Strona Główna'>
             <img src={logo} alt='' width='100%' height='100%' />
           </Link>
         </div>
@@ -45,6 +45,7 @@ const Nav = () => {
           >
             Oferta
           </NavLink>
+
           <NavLink
             to='/projekty'
             className={styles['nav-link']}
@@ -52,6 +53,7 @@ const Nav = () => {
           >
             Projekty
           </NavLink>
+
           <NavLink
             to='/o-nas'
             className={styles['nav-link']}
@@ -59,6 +61,7 @@ const Nav = () => {
           >
             O nas
           </NavLink>
+
           <NavLink
             to='/kontakt'
             className={styles['nav-link']}
@@ -86,7 +89,7 @@ const Nav = () => {
           <Fragment>
             <div className={`${styles.nav}`} ref={menuRef}>
               <div className={`${styles['link-container']}`}>
-                <img src={logo} height='70px' alt=''/>
+                <img src={logo} height='70px' alt='' />
               </div>
               <div className={styles['link-container']}>
                 <NavLink

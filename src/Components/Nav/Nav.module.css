@@ -1,5 +1,5 @@
 .navbar {
-  grid-template-columns: 25% 50% 250px;
+  grid-template-columns: 250px calc(100% - 500px) 250px;
   padding-left: 4rem;
   padding: 2rem;
   padding-left: 0;
@@ -23,12 +23,20 @@
 }
 
 .nav {
-  margin-top: 2.5rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-content: center;
+  width: fit-content;
+  position: relative;
 }
 
 .nav-link {
+  position: relative;
+  place-self: center;
+  width: fit-content;
+  height: fit-content;
   color: black;
-  margin: 0 15px 15px;
+  margin-left: 15px;
   font-size: 18px;
   font-weight: bold;
   letter-spacing: 0.7px;
@@ -37,18 +45,50 @@
   user-select: none;
 }
 
-.nav-link:hover {
-  border-bottom: 1px solid black;
+.nav-link::before {
+  position: absolute;
+  content: '';
+  bottom: -20px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #006d5a;
+  border: 0px solid #006d5a;
+  border-radius: 5px;
+  transform: translateX(-1px);
+  transition: bottom 0.2s, filter ease-out 0.8s;
+  filter: blur(2.5px);
+  box-shadow: 5px 4px 10px 0px;
+}
+
+.nav-link:hover::before {
+  bottom: -10px;
+  width: 100%;
+  border: 1px solid #006d5a;
+  filter: blur(0.7px);
 }
 
 .active-nav-link {
-  position: relative;
-  color: var(--bright-mid-green);
-  border-bottom: 1px solid var(--bright-mid-green);
+  color: #006d5a;
+}
+
+.active-nav-link::before {
+  position: absolute;
+  content: '';
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #006d5a;
+  border: 1px solid #006d5a;
+  border-radius: 5px;
+  transform: translateX(-1px);
+  filter: none;
+  box-shadow: 5px 4px 10px 0px;
 }
 
 .right-button {
-  margin-top: 2rem;
+  margin-top: 3.1rem;
   margin-right: 30px;
   float: right;
   text-align: center;
@@ -58,6 +98,7 @@
   transition: all 0.5s ease-in-out;
   border-radius: 50px;
   user-select: none;
+  cursor: pointer;
 }
 
 .right-button:hover {
@@ -69,14 +110,14 @@
   font-weight: bold;
   letter-spacing: 0.7px;
   color: white;
-  cursor: pointer;
+  transition: all 0.5s ease-in-out;
 }
 
 .right-button:hover a {
   color: #006d5a;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 950px) {
   .navbar {
     display: none !important;
   }
@@ -88,7 +129,7 @@
   .logo {
     justify-self: center;
     transform: translateY(10px);
-    max-height: 170px
+    max-height: 170px;
   }
 
   .nav {
@@ -100,6 +141,8 @@
     position: absolute;
     overflow: hidden;
     z-index: 3;
+    grid-template-columns: repeat(1, 1fr);
+    align-content: unset;
   }
 
   .nav::before {
@@ -146,7 +189,7 @@
     z-index: 4;
     top: 5px;
     left: 15px;
-    transform: translateX(-300%);
+    transform: translateX(-500%);
     transition: all 0.3s 0.4s;
   }
 
@@ -160,9 +203,13 @@
     margin: 0;
     z-index: 5;
     text-align: right;
-    transform: skew(-16deg) translateX(-300%);
+    transform: skew(-16deg) translateX(-500%);
     transition: all 0.3s 0.4s;
     justify-self: center;
+  }
+
+  .nav-link::before {
+    display: none;
   }
 
   .nav.active .nav-link {

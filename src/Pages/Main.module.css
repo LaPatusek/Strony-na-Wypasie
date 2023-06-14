@@ -129,6 +129,7 @@
   height: 132%;
   width: 100%;
   transform: translateY(-12.5%);
+  background-image: url('../Assets/Cow Pattern-01.svg');
 }
 
 .offers-container {
