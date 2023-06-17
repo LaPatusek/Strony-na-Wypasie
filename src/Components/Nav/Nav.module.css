@@ -105,7 +105,7 @@
   background-color: transparent;
 }
 
-.right-button a {
+.right-button span {
   text-transform: uppercase;
   font-weight: bold;
   letter-spacing: 0.7px;
@@ -113,7 +113,7 @@
   transition: all 0.5s ease-in-out;
 }
 
-.right-button:hover a {
+.right-button:hover span {
   color: #006d5a;
 }
 
@@ -173,9 +173,12 @@
     z-index: 1;
   }
 
-  .nav.active::before,
-  .nav.active::after {
+  .nav.active::before {
     transform: skew(-14deg) translateX(0%);
+  }
+
+  .nav.active::after {
+    transform: skew(-14deg) translateX(10%);
   }
 
   .link-container {
@@ -226,10 +229,15 @@
   }
 
   .ham-menu {
+    cursor: pointer;
     z-index: 5;
     position: absolute;
     top: 15px;
     right: 15px;
+  }
+
+  .exit-button {
+    transform: rotate(45deg) translateX(-13px);
   }
 
   .nav.active .right-button {
@@ -249,9 +257,20 @@
     transition: all 0.3s 0.1s;
   }
 
+  .right-button:hover {
+    border: 1px solid white;
+  }
+
   .right-button a {
     text-align: center;
     color: #006d5a;
     font-size: 25px;
+    text-transform: uppercase;
+    font-weight: 700;
+    transition: all 0.3s 0.1s;
+  }
+
+  .right-button:hover a {
+    color:white;
   }
 }

@@ -1,4 +1,4 @@
-import { HambergerMenu } from 'iconsax-react';
+import { Add, HambergerMenu } from 'iconsax-react';
 import { Fragment, useEffect, useRef, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import logo from '../../Assets/logo3.webp';
@@ -71,9 +71,11 @@ const Nav = () => {
           </NavLink>
         </div>
         <div>
-          <div className={styles['right-button']}>
-            <Link to='/formularz-kontaktowy'>wyceń projekt </Link>
-          </div>
+          <Link to='/formularz-kontaktowy'>
+            <div className={styles['right-button']}>
+              <span>wyceń projekt</span>
+            </div>
+          </Link>
         </div>
       </div>
 
@@ -83,7 +85,8 @@ const Nav = () => {
         </div>
 
         <div className={styles['ham-menu']}>
-          <HambergerMenu size='40' onClick={menuHandler} />
+          {!menuState && <HambergerMenu size='40' onClick={menuHandler} />}
+          {menuState && <Add size='60' className={styles['exit-button']} onClick={menuHandler}/>}
         </div>
         {menuState && (
           <Fragment>

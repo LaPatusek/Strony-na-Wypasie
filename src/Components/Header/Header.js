@@ -5,7 +5,7 @@ import styles from './Header.module.css';
 const Header = () => {
   return (
     <div className={`${styles.header} grid font-center`}>
-      <video src={laptop} muted loop autoPlay/>
+      <video src={laptop} muted loop autoPlay />
       <h1>
         Tworzymy strony, <br /> które przyciągają wzrok <br /> i przyciągają
         klientów
