@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react';
 import { Fragment, useEffect } from 'react';
 import { Route, Switch, useLocation } from 'react-router-dom';
 import Footer from './Components/Footer/Footer';
@@ -64,6 +65,7 @@ const App = () => {
       </main>
 
       <Footer />
+      <Analytics />
     </Fragment>
   );
 };
