@@ -25,7 +25,7 @@
 }
 
 .header a {
-  --color: #006d5a;
+  --color: var(--bright-mid-green);
   padding: 10px 30px;
   font-size: 20px;
   border: 1px solid var(--color);
@@ -44,8 +44,8 @@
 }
 
 .header a:hover {
-  background-color: white;
-  color: var(--color);
+  background-color: #6f533d;
+  border: 1px solid white;
 }
 
 @media screen and (max-width: 800px) {
