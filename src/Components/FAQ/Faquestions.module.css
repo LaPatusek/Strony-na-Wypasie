@@ -8,8 +8,8 @@
   color: #ffffff;
   margin-bottom: 3rem;
   font-size: 25px;
-  letter-spacing: 0.7px;
-  font-weight: 600;
+  font-family: "Pou" !important;
+  letter-spacing: .7px;
 }
 
 .card {

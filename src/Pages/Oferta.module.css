@@ -18,10 +18,14 @@
 
 .heading {
   text-align: center;
-  font-size: 25px;
-  font-weight: bold;
-  letter-spacing: 0.6px;
   margin-bottom: 20px;
+}
+
+.heading h4 {
+  font-family: 'Pou' !important;
+  font-size: 27px;
+  font-weight: bold;
+  letter-spacing: 1px;
 }
 
 .design-section {
@@ -50,6 +54,7 @@
 
 .number span {
   color: gray;
+  font-family: 'Pou' !important;
   font-size: 33px;
   margin-right: 10px;
 }

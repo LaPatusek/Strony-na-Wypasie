@@ -33,7 +33,7 @@ const Nav = () => {
       <div className={`${styles.navbar} grid`}>
         <div className={styles.logo}>
           <Link to='/main' aria-label='Strona Główna'>
-            <img src={logo} alt='' width='100%' height='100%' />
+            <img src={logo} alt='' width='100%' height='150px' />
           </Link>
         </div>
 

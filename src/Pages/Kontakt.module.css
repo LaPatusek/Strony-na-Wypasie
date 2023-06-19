@@ -10,8 +10,9 @@
   text-align: center;
   font-size: 36px;
   font-weight: bold;
+  font-family: "Pou" !important;
   text-transform: uppercase;
-  letter-spacing: 0.7px;
+  letter-spacing: 1px;
   padding-bottom: 100px;
 }
 
@@ -20,7 +21,8 @@
   font-size: 23px;
   margin-bottom: 10px;
   text-transform: uppercase;
-  letter-spacing: 0.7px;
+  letter-spacing: 1px;
+  font-family: "Pou" !important;
 }
 
 .first-section {
@@ -56,10 +58,10 @@
 
 .left-section h3 {
   color: green;
+  font-family: "Pou" !important;
   margin-bottom: 50px;
   margin-top: 30px;
-  font-weight: bold;
-  font-size: 35px;
+  font-size: 33px;
 }
 
 .left-section h4 {
@@ -74,6 +76,7 @@
   font-weight: bold;
   letter-spacing: 0.5px;
   margin-bottom: 30px;
+  width: 90%;
 }
 
 .group {
