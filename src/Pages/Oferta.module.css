@@ -22,7 +22,7 @@
 }
 
 .heading h4 {
-  font-family: 'Pou' !important;
+  font-family: 'Pou';
   font-size: 27px;
   font-weight: bold;
   letter-spacing: 1px;
@@ -54,7 +54,7 @@
 
 .number span {
   color: gray;
-  font-family: 'Pou' !important;
+  font-family: 'Pou';
   font-size: 33px;
   margin-right: 10px;
 }

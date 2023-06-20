@@ -39,7 +39,7 @@
   color: black;
   margin-left: 15px;
   font-size: 22px;
-  font-family: 'Pou' !important;
+  font-family: 'Pou';
   font-weight: bold;
   letter-spacing: 0.7px;
   transition: all 0.4s;
@@ -208,7 +208,7 @@
   .nav-link {
     display: block;
     font-size: 33px;
-    font-family: 'Pou' !important;
+    font-family: 'Pou';
     margin: 0;
     z-index: 5;
     transform: skew(-16deg) translateX(-500%);

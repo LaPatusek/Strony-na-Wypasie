@@ -18,17 +18,16 @@
 
 .header h1 {
   font-size: 50px;
-  font-family: "Pou" !important;
+  font-family: 'Pou';
   transform: translateY(-60px);
   color: white;
   z-index: 2;
 }
 
 .header a {
-  --color: var(--bright-mid-green);
   padding: 10px 30px;
   font-size: 20px;
-  border: 1px solid var(--color);
+  border: 1px solid white;
   margin-left: auto;
   margin-right: auto;
   border-radius: 20px;
@@ -36,16 +35,17 @@
   text-transform: uppercase;
   font-weight: bold;
   letter-spacing: 0.6px;
-  background-color: var(--color);
+  background-color: #6f533d;
   transform: translateY(-15px);
   color: white;
-  transition: 0.5s;
+  transition: all 0.5s;
   z-index: 2;
 }
 
 .header a:hover {
-  background-color: #6f533d;
-  border: 1px solid white;
+  background-color: white;
+  border: 1px solid #6f533d;
+  color: #6f533d;
 }
 
 @media screen and (max-width: 800px) {

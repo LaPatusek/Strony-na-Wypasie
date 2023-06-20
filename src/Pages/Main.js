@@ -65,82 +65,80 @@ const Main = () => {
           </div>
         </section>
 
-        <section className={`${styles['offer-section']} grid`}>
-          <div className={styles['offer-section-right']}>
-            <div className={styles['seo-title']}>
-              <img src={stonks} alt='' width='66px' />
-              <h3>Tworzymy skuteczne strony</h3>
-              <hr />
-              <h4>Zoptymalizujemy Twoją stronę pod każdym względem!</h4>
+        <section className={styles['offer-section-right']}>
+          <div className={styles['seo-title']}>
+            <img src={stonks} alt='' width='66px' />
+            <h3>Tworzymy skuteczne strony</h3>
+            <hr />
+            <h4>Zoptymalizujemy Twoją stronę pod każdym względem!</h4>
+          </div>
+
+          <div className={`${styles['speed-circles']} grid`} ref={circleRef}>
+            <div
+              className={`${styles['circle-container']} ${
+                isVisible ? styles['active-circle'] : null
+              } grid`}
+            >
+              <span
+                className={`${styles.spin} ${styles['speed-circle']} 
+                ${isVisible ? styles['active-spin'] : null}`}
+              >
+                <div className={styles.number} />
+              </span>
+              <h5>Wydajność</h5>
             </div>
 
-            <div className={`${styles['speed-circles']} grid`} ref={circleRef}>
-              <div
-                className={`${styles['circle-container']} ${
-                  isVisible ? styles['active-circle'] : null
-                } grid`}
-              >
-                <button
-                  className={`${styles.spin} ${styles['speed-circle']} 
+            <div
+              className={`${styles['circle-container']} ${
+                isVisible ? styles['active-circle'] : null
+              } grid`}
+            >
+              <span
+                className={`${styles.spin} ${styles['speed-circle']} 
                 ${isVisible ? styles['active-spin'] : null}`}
-                >
-                  <div className={styles.number} />
-                </button>
-                <h5>Wydajność</h5>
-              </div>
-
-              <div
-                className={`${styles['circle-container']} ${
-                  isVisible ? styles['active-circle'] : null
-                } grid`}
               >
-                <button
-                  className={`${styles.spin} ${styles['speed-circle']} 
-                ${isVisible ? styles['active-spin'] : null}`}
-                >
-                  <div className={styles.number} />
-                </button>
-                <h5>
-                  Ułatwienia <br /> dostępu
-                </h5>
-              </div>
-
-              <div
-                className={`${styles['circle-container']} ${
-                  isVisible ? styles['active-circle'] : null
-                } grid`}
-              >
-                <button
-                  className={`${styles.spin} ${styles['speed-circle']} 
-                ${isVisible ? styles['active-spin'] : null}`}
-                >
-                  <div className={styles.number} />
-                </button>
-                <h5>
-                  Sprawdzone <br /> metody
-                </h5>
-              </div>
-
-              <div
-                className={`${styles['circle-container']} ${
-                  isVisible ? styles['active-circle'] : null
-                } grid`}
-              >
-                <button
-                  className={`${styles.spin} ${styles['speed-circle']} 
-                ${isVisible ? styles['active-spin'] : null}`}
-                >
-                  <div className={styles.number} />
-                </button>
-                <h5>SEO</h5>
-              </div>
+                <div className={styles.number} />
+              </span>
+              <h5>
+                Ułatwienia <br /> dostępu
+              </h5>
             </div>
-            <div className={`${styles['seo-link']} grid`}>
-              <Link to='/oferta'>Zobacz więcej</Link>
+
+            <div
+              className={`${styles['circle-container']} ${
+                isVisible ? styles['active-circle'] : null
+              } grid`}
+            >
+              <span
+                className={`${styles.spin} ${styles['speed-circle']} 
+                ${isVisible ? styles['active-spin'] : null}`}
+              >
+                <div className={styles.number} />
+              </span>
+              <h5>
+                Sprawdzone <br /> metody
+              </h5>
+            </div>
+
+            <div
+              className={`${styles['circle-container']} ${
+                isVisible ? styles['active-circle'] : null
+              } grid`}
+            >
+              <span
+                className={`${styles.spin} ${styles['speed-circle']} 
+                ${isVisible ? styles['active-spin'] : null}`}
+              >
+                <div className={styles.number} />
+              </span>
+              <h5>SEO</h5>
             </div>
           </div>
+          <div className={`${styles['seo-link']} grid`}>
+            <Link to='/oferta'>Zobacz więcej</Link>
+          </div>
         </section>
-        {/* <div className={styles.spacer} /> */}
+
         <section className={`${styles['o-nas']} grid`}>
           <img src={codingImg} alt='' width='100%' />
           <div className={styles.wrap}>

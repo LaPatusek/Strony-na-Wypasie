@@ -158,40 +158,9 @@
   font-size: 18px;
 }
 
-.offer-section {
-  grid-template-columns: repeat(1fr);
-  height: 540px;
-  margin-bottom: 60px;
-}
-
-.offer-section-left {
-  height: 100%;
-  color: white;
-  position: relative;
-}
-
-.offer-section-left img {
-  object-fit: cover;
-  filter: brightness(65%);
-}
-
-.offer-section-left h3 {
-  position: absolute;
-  bottom: 5%;
-  left: 5%;
-  display: grid;
-  font-size: 50px;
-  letter-spacing: 0.6px;
-  user-select: none;
-}
-
-.offer-section-left span {
-  color: var(--bright-green);
-  border-bottom: 2px solid var(--bright-green);
-}
-
 .offer-section-right {
   --background-color: #006d5a;
+  height: 580px;
   background-color: var(--background-color);
 }
 
@@ -231,14 +200,15 @@
   margin-right: auto;
 }
 
-.circle-container button {
+.circle-container span {
   justify-self: center;
   position: relative;
   background-color: #90ee90;
+  display: grid;
 }
 
-.circle-container button::before,
-.circle-container button::after {
+.circle-container span::before,
+.circle-container span::after {
   box-sizing: inherit;
   content: '';
   position: absolute;
@@ -302,7 +272,7 @@
   counter-set: num var(--num);
   font: 800 40px system-ui;
   place-self: center;
-  font-family: 'Pou' !important;
+  font-family: 'Pou';
   font-size: 30px;
   color: var(--bright-mid-green);
   user-select: none;
@@ -320,7 +290,7 @@
   padding-top: 20px;
   user-select: none;
   text-align: center;
-  font-family: 'Pou' !important;
+  font-family: 'Pou';
   color: var(--bright-green);
   letter-spacing: 1.5px;
   text-transform: uppercase;
@@ -338,7 +308,7 @@
 .seo-link a {
   justify-self: end;
   color: white;
-  font-family: 'Pou' !important;
+  font-family: 'Pou';
   text-transform: uppercase;
   font-size: 25px;
   border: 1px solid transparent;
@@ -361,107 +331,6 @@
   position: absolute;
   top: 20%;
   right: 10%;
-}
-
-.seo-hexagones {
-  margin-top: 50px;
-  position: relative;
-}
-
-.three-hexagones {
-  position: relative;
-  display: inherit;
-  grid-template-columns: repeat(3, 0fr);
-  justify-content: center;
-}
-
-.two-hexagones {
-  position: relative;
-  transform: translateY(-24px);
-  display: inherit;
-  grid-template-columns: repeat(2, 0fr);
-  justify-content: center;
-  z-index: 3;
-}
-
-.hexagon {
-  rotate: 90deg;
-  display: inherit;
-  justify-content: center;
-  align-content: center;
-  width: 140px;
-  height: 140px;
-  background: linear-gradient(
-    135deg,
-    rgba(185, 139, 102, 1) 0%,
-    rgba(147, 110, 81, 1) 50%,
-    rgba(109, 82, 60, 1) 100%
-  );
-  -webkit-clip-path: polygon(
-    25% 5%,
-    75% 5%,
-    100% 50%,
-    75% 95%,
-    25% 95%,
-    0% 50%
-  );
-  clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
-  cursor: pointer;
-  transition: all 1s;
-  z-index: 2;
-}
-
-.hexagon img {
-  transition: all 1s;
-}
-
-.hexagon.active {
-  z-index: 5;
-}
-
-.hex1.active {
-  transform: scale(1.9) translateX(28px) translateY(-38px);
-}
-
-.hex2.active {
-  transform: scale(1.9) translateX(28px);
-}
-
-.hex3.active {
-  transform: scale(1.9) translateX(28px) translateY(38px);
-}
-
-.hex4.active {
-  transform: scale(1.9) translateX(-33px) translateY(-38px);
-}
-
-.hex5.active {
-  transform: scale(1.9) translateX(-33px) translateY(38px);
-}
-
-.hexagon-icon,
-.hexagon-text {
-  rotate: -90deg;
-  color: white;
-}
-
-.hexagon:hover img {
-  transform: scale(1.4);
-}
-
-.hexagon-text {
-  transform: scale(0.75);
-  text-align: center;
-  line-height: 18px;
-}
-
-.spacer {
-  content: '';
-  position: relative;
-  display: inline-block;
-  background-color: #f1f0fa;
-  height: 0px;
-  width: 100%;
 }
 
 .o-nas {
@@ -539,10 +408,9 @@
     transform: translateY(0);
   }
 
-  .offer-section {
-    grid-template-columns: repeat(1, 1fr);
-    min-height: 800px;
-    margin: 0;
+  .offer-section-right {
+    min-height: fit-content;
+    height: 800px;
   }
 
   .speed-circles {
@@ -557,11 +425,6 @@
   .seo-link a {
     justify-self: center;
     font-size: 30px;
-  }
-
-  .offer-section-right {
-    min-height: 450px;
-    z-index: 3;
   }
 
   .seo-title h3 {

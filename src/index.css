@@ -38,7 +38,10 @@ code {
 
 @font-face {
   font-family: "Pou";
+  font-style: normal;
+  font-weight: 400;
   src: url(./Assets/Pou.ttf) format("truetype");
+  font-display: swap;
 }
 
 @media screen and (max-width: 800px) {
