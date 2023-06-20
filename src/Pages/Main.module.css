@@ -159,8 +159,8 @@
 }
 
 .offer-section {
-  grid-template-columns: repeat(2, 1fr);
-  height: 600px;
+  grid-template-columns: repeat(1fr);
+  height: 540px;
   margin-bottom: 60px;
 }
 
@@ -191,7 +191,8 @@
 }
 
 .offer-section-right {
-  background-color: #006d5a;
+  --background-color: #006d5a;
+  background-color: var(--background-color);
 }
 
 .offer-section-right h3 {
@@ -220,6 +221,136 @@
   letter-spacing: 0.6px;
   line-height: 24px;
   font-size: 1.5rem;
+}
+
+.speed-circles {
+  grid-template-columns: repeat(4, 1fr);
+  padding-top: 5rem;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.circle-container button {
+  justify-self: center;
+  position: relative;
+  background-color: #90ee90;
+}
+
+.circle-container button::before,
+.circle-container button::after {
+  box-sizing: inherit;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.spin {
+  height: 120px;
+  width: 120px;
+}
+
+.spin::before,
+.spin::after {
+  top: 0;
+  left: 0;
+}
+
+.spin::before {
+  border: 4px solid transparent;
+}
+
+.active-spin::before {
+  border-top-color: var(--bright-mid-green);
+  border-right-color: var(--bright-mid-green);
+  border-bottom-color: var(--bright-mid-green);
+  transition: border-top-color 0.3s linear 0s, border-right-color 1s linear 0.1s,
+    border-bottom-color 3.15s linear 0.2s;
+}
+
+.spin::after {
+  border: 0 solid transparent;
+}
+
+.active-spin::after {
+  border-top: 4px solid var(--bright-mid-green);
+  border-left-width: 4px;
+  border-right-width: 4px;
+  transform: rotate(270deg);
+  transition: transform 3s linear 0s, border-left-width 3s linear 0.35s,
+    -webkit-transform 3s linear 0s;
+}
+
+.speed-circle {
+  border-radius: 100%;
+}
+
+.speed-circle::before,
+.speed-circle::after {
+  border-radius: 100%;
+}
+
+@property --num {
+  syntax: '<integer>';
+  initial-value: 0;
+  inherits: false;
+}
+
+.number {
+  transition: --num 3s;
+  counter-set: num var(--num);
+  font: 800 40px system-ui;
+  place-self: center;
+  font-family: 'Pou' !important;
+  font-size: 30px;
+  color: var(--bright-mid-green);
+  user-select: none;
+}
+
+.active-circle .number {
+  --num: 100;
+}
+
+.number::after {
+  content: counter(num);
+}
+
+.circle-container h5 {
+  padding-top: 20px;
+  user-select: none;
+  text-align: center;
+  font-family: 'Pou' !important;
+  color: var(--bright-green);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.seo-link {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+}
+
+.seo-link a {
+  justify-self: end;
+  color: white;
+  font-family: 'Pou' !important;
+  text-transform: uppercase;
+  font-size: 25px;
+  border: 1px solid transparent;
+  background-color: rgba(240, 240, 240, 0.25);
+  padding: 8px 20px;
+  border-radius: 20px;
+  transition: all 0.3s;
+}
+
+.seo-link a:hover {
+  color: var(--bright-green);
+  background-color: rgba(240, 240, 240, 0.15);
 }
 
 .seo-title {
@@ -414,22 +545,23 @@
     margin: 0;
   }
 
-  .offer-section-left h3 {
-    font-size: 35px;
+  .speed-circles {
+    grid-template-columns: repeat(2, 1fr);
+    padding-top: 2rem;
+  }
+
+  .speed-circle {
+    margin-top: 30px;
+  }
+
+  .seo-link a {
+    justify-self: center;
+    font-size: 30px;
   }
 
   .offer-section-right {
     min-height: 450px;
     z-index: 3;
-  }
-
-  .seo-hexagones {
-    height: 200px;
-  }
-
-  .two-hexagones,
-  .three-hexagones {
-    height: 100px;
   }
 
   .seo-title h3 {
@@ -439,48 +571,6 @@
   .seo-title img {
     top: 10%;
     right: 5%;
-  }
-
-  .seo-hexagones {
-    margin-top: 25px;
-  }
-
-  .two-hexagones {
-    transform: translateY(-17px);
-  }
-
-  .hexagon {
-    width: 100px;
-    height: 100px;
-  }
-
-  .hexagon-text {
-    font-size: 0.8rem;
-    line-height: normal;
-  }
-
-  .hexagon:hover img {
-    transform: none;
-  }
-
-  .hex1.active {
-    transform: scale(1.8) translateX(24px) translateY(-28px);
-  }
-
-  .hex2.active {
-    transform: scale(1.8) translateX(24px);
-  }
-
-  .hex3.active {
-    transform: scale(1.8) translateX(24px) translateY(28px);
-  }
-
-  .hex4.active {
-    transform: scale(1.8) translateX(-24px) translateY(-28px);
-  }
-
-  .hex5.active {
-    transform: scale(1.8) translateX(-24px) translateY(28px);
   }
 
   .o-nas {

@@ -1,26 +1,15 @@
-import { Fragment, useRef, useState } from 'react';
+import { Fragment, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import stonks from '../Assets/TrendUp-Bulk.svg';
 import codingImg from '../Assets/coding.webp';
-import dev from '../Assets/software-developer.webp';
 import Header from '../Components/Header/Header';
-import hexagones from '../Components/JSON/hexagones.json';
+import useObserver from '../Components/hooks/useObserver';
 import styles from './Main.module.css';
 
 const Main = () => {
-  const hexRef = useRef([]);
-  const [hexActive, setHexActive] = useState(null);
-  const [hexHelper, setHexHelper] = useState(false);
+  const circleRef = useRef();
 
-  const hexagonFunction = (nr) => (e) => {
-    const hex = hexRef.current[nr];
-    hex.classList.toggle(styles.active);
-
-    setHexActive(nr);
-    setHexHelper((s) => !s);
-
-    if (hexHelper) setHexActive(0);
-  };
+  const isVisible = useObserver(circleRef);
 
   return (
     <Fragment>
@@ -77,90 +66,81 @@ const Main = () => {
         </section>
 
         <section className={`${styles['offer-section']} grid`}>
-          <div className={styles['offer-section-left']}>
-            <img src={dev} alt='' width='100%' height='100%' />
-            <h3>
-              Tworzymy <span> skuteczne </span> strony{' '}
-            </h3>
-          </div>
           <div className={styles['offer-section-right']}>
             <div className={styles['seo-title']}>
               <img src={stonks} alt='' width='66px' />
-              <h3>
-                Tworzymy strony <br /> zgodnie z SEO
-              </h3>
+              <h3>Tworzymy skuteczne strony</h3>
               <hr />
-              <h4>
-                Poprawimy widoczność Twojej strony w wyniakch wyszukiwania!
-              </h4>
+              <h4>Zoptymalizujemy Twoją stronę pod każdym względem!</h4>
             </div>
 
-            <div className={`${styles['seo-hexagones']} grid`}>
-              <div className={styles['three-hexagones']}>
-                {hexagones.hexagones.FirstRow.map((hex) => {
-                  let klucz = hex.id;
-                  let styleId = 'hex' + [hex.nr];
-                  return (
-                    <div
-                      className={`${styles.hexagon} ${styles[styleId]}`}
-                      onClick={hexagonFunction(hex.nr)}
-                      key={klucz}
-                      ref={(el) => (hexRef.current[hex.nr] = el)}
-                    >
-                      {hexActive !== hex.nr && (
-                        <div className={styles['hexagon-icon']}>
-                          <img
-                            src={hex.icon}
-                            alt=''
-                            width='50px'
-                            height='50px'
-                          />
-                        </div>
-                      )}
-                      {hexActive === hex.nr && (
-                        <div className={styles['hexagon-text']}>
-                          {hex.tekst}
-                        </div>
-                      )}
-                    </div>
-                  );
-                })}
+            <div className={`${styles['speed-circles']} grid`} ref={circleRef}>
+              <div
+                className={`${styles['circle-container']} ${
+                  isVisible ? styles['active-circle'] : null
+                } grid`}
+              >
+                <button
+                  className={`${styles.spin} ${styles['speed-circle']} 
+                ${isVisible ? styles['active-spin'] : null}`}
+                >
+                  <div className={styles.number} />
+                </button>
+                <h5>Wydajność</h5>
               </div>
 
-              <div className={styles['two-hexagones']}>
-                {hexagones.hexagones.SecondRow.map((hex) => {
-                  let klucz = hex.id;
-                  let styleId = 'hex' + [hex.nr];
-                  return (
-                    <div
-                      className={`${styles.hexagon} ${styles[styleId]}`}
-                      onClick={hexagonFunction(hex.nr)}
-                      key={klucz}
-                      ref={(el) => (hexRef.current[hex.nr] = el)}
-                    >
-                      {hexActive !== hex.nr && (
-                        <div className={styles['hexagon-icon']}>
-                          <img
-                            src={hex.icon}
-                            alt=''
-                            width='50px'
-                            height='50px'
-                          />
-                        </div>
-                      )}
-                      {hexActive === hex.nr && (
-                        <div className={styles['hexagon-text']}>
-                          {hex.tekst}
-                        </div>
-                      )}
-                    </div>
-                  );
-                })}
+              <div
+                className={`${styles['circle-container']} ${
+                  isVisible ? styles['active-circle'] : null
+                } grid`}
+              >
+                <button
+                  className={`${styles.spin} ${styles['speed-circle']} 
+                ${isVisible ? styles['active-spin'] : null}`}
+                >
+                  <div className={styles.number} />
+                </button>
+                <h5>
+                  Ułatwienia <br /> dostępu
+                </h5>
               </div>
+
+              <div
+                className={`${styles['circle-container']} ${
+                  isVisible ? styles['active-circle'] : null
+                } grid`}
+              >
+                <button
+                  className={`${styles.spin} ${styles['speed-circle']} 
+                ${isVisible ? styles['active-spin'] : null}`}
+                >
+                  <div className={styles.number} />
+                </button>
+                <h5>
+                  Sprawdzone <br /> metody
+                </h5>
+              </div>
+
+              <div
+                className={`${styles['circle-container']} ${
+                  isVisible ? styles['active-circle'] : null
+                } grid`}
+              >
+                <button
+                  className={`${styles.spin} ${styles['speed-circle']} 
+                ${isVisible ? styles['active-spin'] : null}`}
+                >
+                  <div className={styles.number} />
+                </button>
+                <h5>SEO</h5>
+              </div>
+            </div>
+            <div className={`${styles['seo-link']} grid`}>
+              <Link to='/oferta'>Zobacz więcej</Link>
             </div>
           </div>
         </section>
-        <div className={styles.spacer} />
+        {/* <div className={styles.spacer} /> */}
         <section className={`${styles['o-nas']} grid`}>
           <img src={codingImg} alt='' width='100%' />
           <div className={styles.wrap}>
