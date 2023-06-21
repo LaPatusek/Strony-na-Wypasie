@@ -3,7 +3,8 @@ import { Fragment, useEffect } from 'react';
 import { Route, Switch, useLocation } from 'react-router-dom';
 import Footer from './Components/Footer/Footer';
 import Nav from './Components/Nav/Nav';
-import Privacy from './Components/Privacy/Privacy';
+import Privacy from './Components/PrivacyAndStatue/Privacy';
+import Regulamin from './Components/PrivacyAndStatue/Regulamin';
 import Formularz from './Pages/Formularz';
 import Kontakt from './Pages/Kontakt';
 import Main from './Pages/Main';
@@ -54,6 +55,9 @@ const App = () => {
           </Route>
           <Route path='/polityka-prywatnosci'>
             <Privacy />
+          </Route>
+          <Route path='/regulamin'>
+            <Regulamin />
           </Route>
           <Route path='/'>
             <Main />

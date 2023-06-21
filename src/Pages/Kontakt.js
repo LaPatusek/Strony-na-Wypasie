@@ -119,12 +119,12 @@ const Kontakt = () => {
         <div className={`${styles.kontakt} grid`}>
           <section className={styles['left-section']}>
             <h3>Skontaktuj się z nami!</h3>
-            <h4>
+            <p>
               Chcesz aby Twoja strona internetowa była naprawdę efektywna?
               Zapraszamy do kontaktu, napisz czego potrzebujesz! My zajmiemy się
               resztą. Prośby o wycenę prosimy kierować{' '}
-              <Link to='/formularz-kontaktowy'>tutaj</Link>
-            </h4>
+              <Link to='/formularz-kontaktowy'>tutaj</Link>.
+            </p>
           </section>
 
           <section className={styles['right-section']}>

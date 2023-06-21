@@ -1,0 +1,91 @@
+.regulamin h3,
+.regulamin p,
+.regulamin h4,
+.regulamin hr,
+.regulamin li,
+.title,
+.back-button {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.regulamin h2 {
+  font-size: 35px;
+  letter-spacing: 0.7px;
+  font-weight: bolder;
+}
+
+.regulamin hr {
+  width: 45px;
+  margin: 8px 0 40px 0;
+  border: 2px solid var(--bright-mid-green);
+}
+
+.regulamin h3 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.regulamin p {
+  font-size: 18px;
+  letter-spacing: 0.6px;
+  margin-bottom: 30px;
+  color: rgb(26, 26, 26);
+  text-align: center;
+}
+
+.regulamin ol {
+  list-style-type: none;
+  counter-reset: item;
+}
+
+.regulamin ol > li {
+  display: table;
+  counter-increment: item;
+  color: rgb(26, 26, 26);
+  font-size: 18px;
+  letter-spacing: 0.6px;
+  margin-bottom: 3px;
+}
+
+.regulamin li ol > li {
+  width: 100%;
+}
+
+.regulamin li ol > li::before {
+  content: counters(item, '.') '. ';
+  display: table-cell;
+  padding-right: 0.6em;
+  width: 10px;
+}
+
+.regulamin h4 {
+  font-size: 20px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.back-button {
+  text-align: right;
+}
+
+@media screen and (max-width: 800px) {
+  .regulamin h3,
+  .regulamin p,
+  .regulamin h4,
+  .title,
+  .back-button {
+    width: 80%;
+  }
+
+  .regulamin hr {
+    width: 100%;
+  }
+
+  .regulamin h2 {
+    text-align: center;
+  }
+}

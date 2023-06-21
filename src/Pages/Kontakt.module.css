@@ -64,10 +64,11 @@
   font-size: 33px;
 }
 
-.left-section h4 {
+.left-section p {
   font-weight: bold;
   font-size: 24px;
   margin-bottom: 60px;
+  line-height: 26px;
 }
 
 .right-section h4 {

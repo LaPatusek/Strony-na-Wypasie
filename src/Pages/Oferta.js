@@ -3,18 +3,15 @@ import Faquestions from '../Components/FAQ/Faquestions';
 import styles from './Oferta.module.css';
 
 const Oferta = () => {
-  //dodać opisy frontendu
-
   return (
     <Fragment>
       <div className={styles.title}>
         <h2>Tworzymy aplikację frontend</h2>
         <h3>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-          varius finibus varius. Sed pulvinar tempus blandit. Pellentesque sed
-          lacus posuere velit posuere consectetur id eu nibh. In id justo eros.
-          Vivamus vel sodales ex. Praesent bibendum convallis sagittis. Interdum
-          et malesuada fames ac ante ipsum primis in faucibus.
+          Tworzenie aplikacji frontend polega na projektowaniu, implementacji i
+          utrzymaniu interfejsu użytkownika dla oprogramowania działającego na
+          stronach internetowych lub urządzeniach mobilnych. Aplikacje frontend
+          są responsywne, dostosowując się do różnych urządzeń.
         </h3>
       </div>
       <div className={styles.heading}>
@@ -35,7 +32,11 @@ const Oferta = () => {
             </div>
             <div>
               <h3>Przygotowanie</h3>
-              <p>Some Text</p>
+              <p>
+                Przygotowujemy materiały i organizujemy pracę w sposób staranny
+                i efektywny, aby zapewnić płynny przebieg procesu tworzenia
+                aplikacji frontend.
+              </p>
             </div>
           </div>
           <div
@@ -43,7 +44,10 @@ const Oferta = () => {
           >
             <div>
               <h3>Projektowanie graficzne</h3>
-              <p>Some Text.</p>
+              <p>
+                Projektujemy grafikę w sposób atrakcyjny, zwracając uwagę na
+                kompozycję, kolorystykę, typografię i układ elementów.
+              </p>
             </div>
             <div className={styles.number}>
               <span> 02</span>
@@ -69,7 +73,10 @@ const Oferta = () => {
             </div>
             <div>
               <h3>Development</h3>
-              <p>Some Text.</p>
+              <p>
+                Wdrażamy bezpieczną i wydajną aplikację frontend, dbając o
+                zastosowanie odpowiednich protokołów i zabezpieczeń.
+              </p>
             </div>
           </div>
           <div
@@ -77,7 +84,11 @@ const Oferta = () => {
           >
             <div>
               <h3>Testy i optymalizacja</h3>
-              <p>Some Text.</p>
+              <p>
+                Przegląd i testy wszystkich funkcji na różnych urządzeniach.
+                Sprawdzamy jakość kodu, rozwiązujemy błędy, optymalizujemy
+                działanie strony.
+              </p>
             </div>
             <div className={styles.number}>
               <span> 04</span>
@@ -105,7 +116,10 @@ const Oferta = () => {
             </div>
             <div>
               <h3>Publikacja</h3>
-              <p>Some Text.</p>
+              <p>
+                Zapewniamy użytkownikom dostęp do responsywnego intrefejsu
+                użytkownika oraz implementujemy narzędzie analityczne.
+              </p>
             </div>
           </div>
         </div>

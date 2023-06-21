@@ -52,6 +52,20 @@
   transform: translateY(-33px);
 }
 
+.timeline-content h3 {
+  color: var(--bright-green);
+  font-size: 25px;
+  margin-bottom: 24px;
+  letter-spacing: .6px;
+  font-weight: bold;
+}
+
+.timeline-content p {
+  font-size: 18px;
+  letter-spacing: .5px;
+  line-height: 20px;
+}
+
 .number span {
   color: gray;
   font-family: 'Pou';

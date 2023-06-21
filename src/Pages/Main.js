@@ -38,15 +38,15 @@ const Main = () => {
             <div className={styles['offers-container']}>
               <div className={styles.container}>
                 Icon
-                <h4>Oferta</h4>
+                <h4>MAŁA KRÓWKA</h4>
                 <p>Krótki opis oferty</p>
               </div>
               <div className={styles.container}>
-                Icon <h4>Oferta</h4>
+                Icon <h4>DOBRA KROWA</h4>
                 <p>Krótki opis oferty</p>
               </div>
               <div className={styles.container}>
-                Icon <h4>Oferta</h4>
+                Icon <h4>BYK NA WYPASIE</h4>
                 <p>Krótki opis oferty</p>
               </div>
               <div className={styles.container}>
