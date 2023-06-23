@@ -15,7 +15,7 @@
 
 .left-main-offer h2 {
   color: green;
-  font-size: 25px;
+  font-size: 28px;
   font-weight: bold;
   text-transform: uppercase;
   margin-bottom: 3px;
@@ -96,13 +96,14 @@
   left: 0;
   right: 0;
   bottom: 0;
-  padding: 0.75rem 0;
+  padding: 0.45rem 0;
   margin: 0 0 0 2.5rem;
   color: black;
   font-weight: bold;
   letter-spacing: 0.7px;
   line-height: 1.6;
   text-align: center;
+  font-size: 20px;
   text-transform: uppercase;
 }
 
@@ -147,20 +148,54 @@
   border-radius: 20px;
 }
 
-.offers-container > .container h4 {
-  margin: 10px 0;
-  font-size: 20px;
-  letter-spacing: 0.6px;
-  font-weight: bold;
+.container-title {
+  display: grid;
+  grid-template-columns: 45px calc(100% - 50px);
 }
 
-.offers-container > .container svg {
-  /* background: brown; */
-  object-fit: contain;
+.container-title h4 {
+  margin: 10px 0;
+  font-size: 24px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  font-family: 'Pou';
+  place-self: left;
+  text-transform: uppercase;
+  transform: translateY(-4px);
+}
+
+.three-bottles-in-row {
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: 100%;
+}
+
+.three-bottles-in-row  svg:first-child {
+  transform: translateX(10px);
+}
+
+.three-bottles-in-row svg:last-child {
+  transform: translateX(-10px);
+}
+
+.container ol > li {
+  position: relative;
+  font-size: 20px;
+  margin-bottom: 5px;
+  letter-spacing: .5px;
+}
+
+.container ol > li > svg {
+  transform: translateY(2px);
 }
 
 .offers-container > .container p {
-  font-size: 18px;
+  font-size: 20px;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+  text-align: center;
 }
 
 .offer-section-right {
@@ -398,7 +433,7 @@
   }
 
   .left-main-offer {
-    margin-left: 2rem;
+    margin-left: 0rem;
   }
 
   .left-main-offer h3 {
@@ -411,6 +446,14 @@
 
   .background {
     transform: translateY(0);
+  }
+
+  .offers-container  {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .button-container {
+    justify-self: center;
   }
 
   .offer-section-right {

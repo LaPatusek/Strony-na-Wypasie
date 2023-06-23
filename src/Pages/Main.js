@@ -1,14 +1,20 @@
+import { Milk } from 'iconsax-react';
 import { Fragment, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import stonks from '../Assets/TrendUp-Bulk.svg';
 import codingImg from '../Assets/coding.webp';
 import bronzeCow from '../Assets/cow-bronze.webp';
+import colorCow from '../Assets/cow-colors.webp';
+import goldCow from '../Assets/cow-gold.webp';
+import silverCow from '../Assets/cow-silver.webp';
+
 import Header from '../Components/Header/Header';
 import useObserver from '../Components/hooks/useObserver';
 import styles from './Main.module.css';
 
 const Main = () => {
   const circleRef = useRef();
+  const iconSize = 20;
 
   const isVisible = useObserver(circleRef);
 
@@ -38,24 +44,92 @@ const Main = () => {
             <div className={styles.background} />
             <div className={styles['offers-container']}>
               <div className={styles.container}>
-                <img src={bronzeCow} alt='' width='32px' height='32px' />
-                <h4>MAŁA KRÓWKA</h4>
-                <p>Krótki opis oferty</p>
+                <div className={styles['container-title']}>
+                  <img src={bronzeCow} alt='' width='32px' height='32px' />
+                  <h4>MAŁA KRÓWKA</h4>
+                </div>
+
+                <ol>
+                  <li>
+                    <Milk size={iconSize} color='#1a1a1a' variant='TwoTone' />{' '}
+                    Do 4 podstron
+                  </li>
+                  <li>
+                    <Milk size={iconSize} color='#1a1a1a' variant='TwoTone' />{' '}
+                    Poprawki w cenie
+                  </li>
+                  <li>
+                    <Milk size={iconSize} color='#1a1a1a' variant='TwoTone' />{' '}
+                    Hosting 6 miesięcy
+                  </li>
+                </ol>
               </div>
               <div className={styles.container}>
-                <img src={bronzeCow} alt='' width='32px' height='32px' />{' '}
-                <h4>DOBRA KROWA</h4>
-                <p>Krótki opis oferty</p>
+                <div className={styles['container-title']}>
+                  <img src={silverCow} alt='' width='32px' height='32px' />
+                  <h4>DOBRA KROWA</h4>
+                </div>
+                <ol>
+                  <li>
+                    <Milk size={iconSize} color='#1a1a1a' variant='TwoTone' />{' '}
+                    Do 6 podstron
+                  </li>
+                  <li>
+                    <Milk size={iconSize} color='#1a1a1a' variant='TwoTone' />{' '}
+                    Poprawki w cenie
+                  </li>
+                  <li>
+                    <Milk size={iconSize} color='#1a1a1a' variant='TwoTone' />{' '}
+                    Roczny hosting
+                  </li>
+                  <li>
+                    <Milk size={iconSize} color='#1a1a1a' variant='TwoTone' />{' '}
+                    Logo w cenie
+                  </li>
+                </ol>
               </div>
               <div className={styles.container}>
-                <img src={bronzeCow} alt='' width='32px' height='32px' />
-                <h4>BYK NA WYPASIE</h4>
-                <p>Krótki opis oferty</p>
+                <div className={styles['container-title']}>
+                  <img src={goldCow} alt='' width='32px' height='32px' />
+                  <h4>BYK NA WYPASIE</h4>
+                </div>
+                <ol>
+                  <li>
+                    <Milk size={iconSize} color='#1a1a1a' variant='TwoTone' />{' '}
+                    Do 10 podstron
+                  </li>
+                  <li>
+                    <Milk size={iconSize} color='#1a1a1a' variant='TwoTone' />{' '}
+                    Poprawki w cenie
+                  </li>
+                  <li>
+                    <Milk size={iconSize} color='#1a1a1a' variant='TwoTone' />{' '}
+                    Dwuletni hosting
+                  </li>
+                  <li>
+                    <Milk size={iconSize} color='#1a1a1a' variant='TwoTone' />{' '}
+                    Logo w cenie
+                  </li>
+                  <li>
+                    <Milk size={iconSize} color='#1a1a1a' variant='TwoTone' />{' '}
+                    Personalizowane grafiki
+                  </li>
+                </ol>
               </div>
               <div className={styles.container}>
-                <img src={bronzeCow} alt='' width='32px' height='32px' />{' '}
-                <h4>Oferta</h4>
-                <p>Krótki opis oferty</p>
+                <div className={styles['container-title']}>
+                  <img src={colorCow} alt='' width='32px' height='32px' />
+                  <h4>Oferta</h4>
+                </div>
+                <p>
+                  Kompletnie spersonalizowana strona, która usatysfakcjonuje
+                  każdego klienta!
+                </p>
+                <div className={styles['three-bottles-in-row']}>
+                  <Milk size='30px' color='#1a1a1a' variant='TwoTone' />
+                  <Milk size='30px' color='#1a1a1a' variant='TwoTone' />
+                  <Milk size='30px' color='#1a1a1a' variant='TwoTone' />
+                </div>
               </div>
             </div>
           </div>
