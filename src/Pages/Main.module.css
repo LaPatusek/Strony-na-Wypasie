@@ -154,6 +154,11 @@
   font-weight: bold;
 }
 
+.offers-container > .container svg {
+  /* background: brown; */
+  object-fit: contain;
+}
+
 .offers-container > .container p {
   font-size: 18px;
 }

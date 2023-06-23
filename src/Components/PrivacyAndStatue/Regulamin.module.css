@@ -1,6 +1,7 @@
+.regulamin h2,
 .regulamin h3,
-.regulamin p,
 .regulamin h4,
+.regulamin p,
 .regulamin hr,
 .regulamin li,
 .title,
@@ -10,7 +11,7 @@
   margin-right: auto;
 }
 
-.regulamin h2 {
+.regulamin h1 {
   font-size: 35px;
   letter-spacing: 0.7px;
   font-weight: bolder;
@@ -22,10 +23,20 @@
   border: 2px solid var(--bright-mid-green);
 }
 
+.regulamin h2 {
+  font-size: 18px;
+  letter-spacing: 0.6px;
+  color: rgb(26, 26, 26);
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
 .regulamin h3 {
   font-size: 22px;
   font-weight: bold;
   margin-bottom: 10px;
+  margin-top: 20px;
 }
 
 .regulamin p {
@@ -73,19 +84,30 @@
 }
 
 @media screen and (max-width: 800px) {
+  .regulamin h2,
   .regulamin h3,
-  .regulamin p,
   .regulamin h4,
+  .regulamin p,
   .title,
+  .regulamin li,
   .back-button {
     width: 80%;
   }
 
-  .regulamin hr {
-    width: 100%;
+  .regulamin h1 {
+    margin-top: 30px;
+    text-align: center;
   }
 
   .regulamin h2 {
-    text-align: center;
+    margin-bottom: 0;
+  }
+
+  .regulamin h3 {
+    margin-top: 20px;
+  }
+
+  .regulamin hr {
+    width: 100%;
   }
 }

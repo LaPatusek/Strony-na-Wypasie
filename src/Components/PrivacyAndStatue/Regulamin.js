@@ -13,13 +13,13 @@ const Regulamin = () => {
   return (
     <Card className={`${styles.regulamin} grid`}>
       <div className={styles.title}>
-        <h2>Regulamin</h2>
+        <h1>Regulamin</h1>
         <hr />
       </div>
-      <p>
+      <h2>
         Regulamin sklepu online pełniącego usługi projektowania stron
         internetowych StronyNaWypasie.pl:
-      </p>
+      </h2>
 
       <ol>
         <h3>Postanowienia ogólne</h3>

@@ -1,0 +1,32 @@
+.projekty {
+  height: 100vh;
+  position: relative;
+}
+
+.projekty img {
+  object-fit: cover;
+  object-position: 0 70%;
+}
+
+.projekty h2 {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-family: 'Pou';
+  font-size: 44px;
+  user-select: none;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-bottom: 5px solid white;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 800px) {
+  .projekty img {
+    object-fit: none;
+    object-position: -200px -200px;
+  }
+}

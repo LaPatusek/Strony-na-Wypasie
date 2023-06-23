@@ -2,6 +2,7 @@ import { Fragment, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import stonks from '../Assets/TrendUp-Bulk.svg';
 import codingImg from '../Assets/coding.webp';
+import bronzeCow from '../Assets/cow-bronze.webp';
 import Header from '../Components/Header/Header';
 import useObserver from '../Components/hooks/useObserver';
 import styles from './Main.module.css';
@@ -37,28 +38,23 @@ const Main = () => {
             <div className={styles.background} />
             <div className={styles['offers-container']}>
               <div className={styles.container}>
-                Icon
+                <img src={bronzeCow} alt='' width='32px' height='32px' />
                 <h4>MAŁA KRÓWKA</h4>
                 <p>Krótki opis oferty</p>
               </div>
               <div className={styles.container}>
-                Icon <h4>DOBRA KROWA</h4>
+                <img src={bronzeCow} alt='' width='32px' height='32px' />{' '}
+                <h4>DOBRA KROWA</h4>
                 <p>Krótki opis oferty</p>
               </div>
               <div className={styles.container}>
-                Icon <h4>BYK NA WYPASIE</h4>
+                <img src={bronzeCow} alt='' width='32px' height='32px' />
+                <h4>BYK NA WYPASIE</h4>
                 <p>Krótki opis oferty</p>
               </div>
               <div className={styles.container}>
-                Icon <h4>Oferta</h4>
-                <p>Krótki opis oferty</p>
-              </div>
-              <div className={styles.container}>
-                Icon <h4>Oferta</h4>
-                <p>Krótki opis oferty</p>
-              </div>
-              <div className={styles.container}>
-                Icon <h4>Oferta</h4>
+                <img src={bronzeCow} alt='' width='32px' height='32px' />{' '}
+                <h4>Oferta</h4>
                 <p>Krótki opis oferty</p>
               </div>
             </div>
