@@ -1,8 +1,13 @@
+import { Link21, PresentionChart } from 'iconsax-react';
 import { Fragment } from 'react';
+import seoIcon from '../Assets/seo-icon.webp';
+import targetIcon from '../Assets/target-icon.webp';
 import Faquestions from '../Components/FAQ/Faquestions';
 import styles from './Oferta.module.css';
 
 const Oferta = () => {
+  const iconSize = 76;
+
   return (
     <Fragment>
       <div className={styles.title}>
@@ -122,6 +127,48 @@ const Oferta = () => {
               </p>
             </div>
           </div>
+        </div>
+      </section>
+      <section id='seo' className={styles.seo}>
+        <h3>Tworzymy skuteczne strony</h3>
+        <div className={styles['seo-container']}>
+          <div className={styles['tekst-seo']}>
+            <h4>Wydajność</h4>
+            <p>
+              Doskonalimy Twoją stronę, by działała efektywniej niż kiedykolwiek
+            </p>
+          </div>
+          <PresentionChart variant='Bulk' size={iconSize}/>
+        </div>
+
+        <div className={styles['seo-container']}>
+          <div className={styles['tekst-seo']}>
+            <h4>Ułatwienia dostępu</h4>
+            <p>
+              Implementujemy ułatwienia dostępu do Twojej aplikacji internetowej
+            </p>
+          </div>
+
+          <Link21 size={iconSize} variant='Bold' />
+        </div>
+
+        <div className={styles['seo-container']}>
+          <div className={styles['tekst-seo']}>
+            <h4>Sprawdzone metody</h4>
+            <p>
+              Korzystamy z sprawdzonych metod, które zapewnią skuteczność Twojej
+              strony
+            </p>
+          </div>
+          <img src={targetIcon} width={iconSize} height={iconSize} alt='' />
+        </div>
+
+        <div className={styles['seo-container']}>
+          <div className={styles['tekst-seo']}>
+            <h4>SEO</h4>
+            <p>Poprawimy widoczność Twojej strony w wyniakch wyszukiwania</p>
+          </div>
+          <img src={seoIcon} width={iconSize} height={iconSize} alt='' />
         </div>
       </section>
 

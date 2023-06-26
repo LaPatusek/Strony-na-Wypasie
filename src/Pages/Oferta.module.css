@@ -1,19 +1,25 @@
 .title {
-  padding: 2rem 0;
-  margin: 0 0 100px 12%;
+  background-color: var(--bright-mid-green);
+  border-radius: 30px;
+  border: 2px solid #1a1a1a;
+  box-shadow: 4px 4px 10px #1a1a1a;
+  padding: 2.5rem;
+  margin: 35px 0 100px 12%;
+  max-width: 700px;
 }
 
 .title h2 {
-  font-size: 32px;
+  font-size: 34px;
   letter-spacing: 0.6px;
   font-weight: bold;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 .title h3 {
-  width: 50%;
-  font-size: 20px;
-  letter-spacing: 0.5px;
+  font-size: 22px;
+  line-height: 24px;
+  letter-spacing: 0.6px;
+  color: #1a1a1a;
 }
 
 .heading {
@@ -56,13 +62,13 @@
   color: var(--bright-green);
   font-size: 25px;
   margin-bottom: 24px;
-  letter-spacing: .6px;
+  letter-spacing: 0.6px;
   font-weight: bold;
 }
 
 .timeline-content p {
   font-size: 18px;
-  letter-spacing: .5px;
+  letter-spacing: 0.5px;
   line-height: 20px;
 }
 
@@ -102,6 +108,53 @@
 
 .last-child {
   background-color: transparent;
+}
+
+.seo {
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+}
+
+.seo h3 {
+  font-weight: bold;
+  font-family: 'Pou';
+  text-align: center;
+  letter-spacing: 1px;
+  margin-bottom: 50px;
+  font-size: 34px;
+  text-transform: uppercase;
+}
+
+.seo-container {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 45px;
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: calc(100% - 64px) 64px;
+}
+
+.seo-container img,
+.seo-container svg {
+  align-self: center;
+}
+
+.tekst-seo {
+  align-self: center;
+  width: fit-content;
+}
+
+.tekst-seo h4 {
+  font-family: 'Pou';
+  letter-spacing: 0.5px;
+  font-size: 27px;
+  margin-bottom: 7px;
+}
+
+.tekst-seo p {
+  font-size: 22px;
+  max-width: 400px;
 }
 
 @media screen and (max-width: 800px) {
