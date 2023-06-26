@@ -33,7 +33,7 @@ const Nav = () => {
       <div className={`${styles.navbar} grid`}>
         <div className={styles.logo}>
           <Link to='/main' aria-label='Strona Główna'>
-            <img src={logo} alt='' width='100%' height='150px' />
+            <img src={logo} alt=''/>
           </Link>
         </div>
 
@@ -81,7 +81,7 @@ const Nav = () => {
 
       <div className={`${styles['navbar-800']}`}>
         <div className={styles.logo}>
-          <img src={logo} alt='' height='50%' />
+          <img src={logo} alt='' />
         </div>
 
         <div className={styles['ham-menu']}>

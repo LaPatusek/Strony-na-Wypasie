@@ -131,11 +131,17 @@
     display: grid;
   }
 
-  .logo {
+.logo {
     justify-self: center;
     transform: translateY(10px);
     max-height: 200px;
+    height: 200px;
+  }
+
+  .logo img {
+    aspect-ratio: 84 / 100;
     height: 170px;
+    width: 100%;
   }
 
   .nav {

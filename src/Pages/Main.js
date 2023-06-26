@@ -205,7 +205,7 @@ const Main = () => {
             </div>
           </div>
           <div className={`${styles['seo-link']} grid`}>
-            <Link to='/oferta'>Zobacz więcej</Link>
+            <Link to='/oferta#seo'>Zobacz więcej</Link>
           </div>
         </section>
 

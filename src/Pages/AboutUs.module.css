@@ -1,0 +1,122 @@
+.aboutUs {
+  padding: 4rem;
+}
+
+.title-aboutUs {
+  margin-bottom: 4rem;
+}
+
+.title-aboutUs h1 {
+  font-size: 60px;
+  font-family: 'Pou';
+  margin-bottom: 40px;
+  text-align: center;
+  width: 660px;
+  user-select: none;
+}
+
+.title-aboutUs h2 {
+  font-size: 40px;
+  font-weight: bold;
+  width: 90%;
+  color: #1a1a1a;
+}
+
+.boxes-in-row {
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 50px;
+}
+
+.container {
+  border: 2px solid #010101;
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+  height: 400px;
+  box-shadow: 4px 4px 10px #1a1a1a;
+}
+
+.background {
+  background-repeat: no-repeat;
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image: url('../Assets/Cow Pattern-01.svg');
+  background-size: cover;
+}
+
+.filter {
+  z-index: 0;
+  background-color: rgba(240, 240, 240, 0.6);
+  height: 400px;
+}
+
+.container-content {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  height: 90%;
+  text-align: center;
+}
+
+.container-content img,
+.container-content svg {
+  justify-self: center;
+}
+
+.container-content h3 {
+  color: var(--bright-green);
+  font-family: 'Pou';
+  font-size: 40px;
+  font-weight: bolder;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+  margin: 20px 0;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  user-select: none;
+}
+
+.container-content p {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 800px) {
+  .aboutUs {
+    padding: 2rem;
+  }
+
+  .title-aboutUs h1 {
+    font-size: 40px;
+    width: fit-content;
+    margin-bottom: 20px;
+  }
+
+  .title-aboutUs h2 {
+    font-size: 25px;
+    width: 100%;
+  }
+
+  .boxes-in-row {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 50px;
+  }
+
+  .container-content img,
+  .container-content svg {
+    height: 64px;
+    width: 64px;
+  }
+
+  .container-content h3 {
+    font-size: 25px;
+  }
+  .container-content p {
+    width: 90%;
+  }
+}
