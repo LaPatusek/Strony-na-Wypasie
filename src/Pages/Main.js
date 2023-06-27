@@ -119,7 +119,7 @@ const Main = () => {
               <div className={styles.container}>
                 <div className={styles['container-title']}>
                   <img src={colorCow} alt='' width='32px' height='32px' />
-                  <h4>Oferta</h4>
+                  <h4>wypasiona</h4>
                 </div>
                 <p>
                   Kompletnie spersonalizowana strona, która usatysfakcjonuje

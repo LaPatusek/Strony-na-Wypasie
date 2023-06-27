@@ -137,6 +137,9 @@ textarea {
   border-radius: 6px;
   cursor: pointer;
   color: var(--color);
+  font-family: "Pou";
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
 }
 
 .buttons button:before {
