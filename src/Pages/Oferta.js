@@ -11,16 +11,16 @@ const Oferta = () => {
   return (
     <Fragment>
       <div className={styles.title}>
-        <h2>Tworzymy aplikację frontend</h2>
-        <h3>
+        <h1>Tworzymy aplikację frontend</h1>
+        <h2>
           Tworzenie aplikacji frontend polega na projektowaniu, implementacji i
           utrzymaniu interfejsu użytkownika dla oprogramowania działającego na
           stronach internetowych lub urządzeniach mobilnych. Aplikacje frontend
           są responsywne, dostosowując się do różnych urządzeń.
-        </h3>
+        </h2>
       </div>
       <div className={styles.heading}>
-        <h4> Rozwój strony krok po kroku</h4>
+        <h3> Rozwój strony krok po kroku</h3>
       </div>
       <section className={styles['design-section']}>
         <div className={`${styles.timeline} grid`}>

@@ -1,5 +1,6 @@
 import { Analytics } from '@vercel/analytics/react';
 import { Fragment, useEffect } from 'react';
+import { Helmet } from 'react-helmet';
 import { Route, Switch, useLocation } from 'react-router-dom';
 import Footer from './Components/Footer/Footer';
 import Nav from './Components/Nav/Nav';
@@ -31,6 +32,13 @@ const App = () => {
 
   return (
     <Fragment>
+      <Helmet>
+        <meta
+          name='keywords'
+          content='strony, web, www, Rzeszów, Strzyżów, tworzenie stron WWW, tworzenie stron'
+        />
+      </Helmet>
+
       <Nav />
 
       <main>
