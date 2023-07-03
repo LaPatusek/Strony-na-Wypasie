@@ -5,7 +5,8 @@ import targetIcon from '../Assets/target-icon.webp';
 import Faquestions from '../Components/FAQ/Faquestions';
 import styles from './Oferta.module.css';
 
-const Oferta = () => {
+const Oferta = (props) => {
+  
   const iconSize = 76;
 
   return (
@@ -138,7 +139,7 @@ const Oferta = () => {
               Doskonalimy Twoją stronę, by działała efektywniej niż kiedykolwiek
             </p>
           </div>
-          <PresentionChart variant='Bulk' size={iconSize}/>
+          <PresentionChart variant='Bulk' size={iconSize} />
         </div>
 
         <div className={styles['seo-container']}>
@@ -172,7 +173,7 @@ const Oferta = () => {
         </div>
       </section>
 
-      <Faquestions id='faq' />
+      <Faquestions id='faq' forwardMessage={props.message}/>
     </Fragment>
   );
 };

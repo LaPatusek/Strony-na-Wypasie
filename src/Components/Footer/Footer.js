@@ -8,7 +8,11 @@ import {
 import { Link } from 'react-router-dom';
 import styles from './Footer.module.css';
 
-const Footer = () => {
+const Footer = (props) => {
+  const pickIndexFunction = (index) => {
+    props.PassFunction(index);
+  };
+
   return (
     <div className={styles.footer}>
       <div className={`${styles['upper-footer']} grid`}>
@@ -124,25 +128,25 @@ const Footer = () => {
           <h3>FAQ </h3>
           <ul>
             <li>
-              <Link to='/oferta#faq'>
+              <Link to='/oferta#faq' onClick={() => pickIndexFunction(0)}>
                 <ArrowRight3 variant='Broken' size='22' />
                 Co to jest hosting?
               </Link>
             </li>
             <li>
-              <Link to='/oferta#faq'>
+              <Link to='/oferta#faq' onClick={() => pickIndexFunction(1)}>
                 <ArrowRight3 variant='Broken' size='22' />
                 Na czym polega utrzymanie strony?
               </Link>
             </li>
             <li>
-              <Link to='/oferta#faq'>
+              <Link to='/oferta#faq' onClick={() => pickIndexFunction(2)}>
                 <ArrowRight3 variant='Broken' size='22' />
                 Czym jest domena?
               </Link>
             </li>
             <li>
-              <Link to='/oferta#faq'>
+              <Link to='/oferta#faq' onClick={() => pickIndexFunction(3)}>
                 <ArrowRight3 variant='Broken' size='22' />
                 Ile kosztuje utrzymanie strony?
               </Link>

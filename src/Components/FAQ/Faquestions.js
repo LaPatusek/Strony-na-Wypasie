@@ -9,8 +9,13 @@ const buttons = [
   'Ile kosztuje utrzymanie strony?',
 ];
 
-const Faquestions = () => {
-  const [activeBlock, setActiveBlock] = useState(0);
+const Faquestions = (props) => {
+  let activeProp = +props.forwardMessage;
+  if (!activeProp) {
+    activeProp = 0;
+  }
+
+  const [activeBlock, setActiveBlock] = useState(activeProp);
 
   const toggleMenuBlock = (index) => {
     setActiveBlock(index);

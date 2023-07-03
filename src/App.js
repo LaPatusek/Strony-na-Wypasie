@@ -1,5 +1,5 @@
 import { Analytics } from '@vercel/analytics/react';
-import { Fragment, useEffect } from 'react';
+import { Fragment, useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { Route, Switch, useLocation } from 'react-router-dom';
 import Footer from './Components/Footer/Footer';
@@ -14,6 +14,12 @@ import Oferta from './Pages/Oferta';
 import Projekty from './Pages/Projekty';
 
 const App = () => {
+  const [passIndexForward, setPassIndexForward] = useState();
+
+  const PassForwardFunction = (index) => {
+    setPassIndexForward(index)
+  };
+
   const { pathname, hash, key } = useLocation();
 
   useEffect(() => {
@@ -47,7 +53,7 @@ const App = () => {
             <Main />
           </Route>
           <Route path='/oferta'>
-            <Oferta />
+            <Oferta message={passIndexForward}/>
           </Route>
           <Route path='/projekty'>
             <Projekty />
@@ -76,7 +82,7 @@ const App = () => {
         </Switch>
       </main>
 
-      <Footer />
+      <Footer PassFunction={PassForwardFunction} />
       <Analytics />
     </Fragment>
   );
