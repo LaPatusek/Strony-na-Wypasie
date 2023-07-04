@@ -30,7 +30,7 @@ const Oferta = (props) => {
         <h2>Oferowane pakiety</h2>
         <div className={`${styles['offer-wrap']} grid`}>
           <div className={styles['offer-box']}>
-            <img src={bronzeCow} alt='' width='64px' />
+            <img src={bronzeCow} alt='' width='64px' height='64px' />
             <h3>Mała krówka</h3>
             <h4>Opcja ekonomiczna</h4>
             <h5>Cena</h5>
@@ -54,7 +54,7 @@ const Oferta = (props) => {
             />
           </div>
           <div className={styles['offer-box']}>
-            <img src={silverCow} alt='' width='64px' />
+            <img src={silverCow} alt='' width='64px' height='64px' />
             <h3>Dobra krowa</h3>
             <h4>Opcja rekomendowana</h4>
             <h5>Cena</h5>
@@ -82,7 +82,7 @@ const Oferta = (props) => {
             />
           </div>
           <div className={styles['offer-box']}>
-            <img src={goldCow} alt='' width='64px' />
+            <img src={goldCow} alt='' width='64px' height='64px' />
             <h3>Byk na wypasie</h3>
             <h4>Opcja premium</h4>
             <h5>Cena</h5>
@@ -114,7 +114,7 @@ const Oferta = (props) => {
             />
           </div>
           <div className={styles['offer-box']}>
-            <img src={colorCow} alt='' width='64px' />
+            <img src={colorCow} alt='' width='64px' height='64px' />
             <h3>Wypasiona</h3>
             <h4>Opcja spersonalizowana</h4>
             <p>
