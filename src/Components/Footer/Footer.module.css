@@ -31,13 +31,12 @@
 }
 
 .container svg {
-  margin-top: -7px;
-  margin-right: 6px;
+  margin: -7px 6px 0 0;
 }
 
 .pin-container {
-  width: 32px;
   display: block;
+  width: 32px;
 }
 
 .pin-container svg {
@@ -49,11 +48,11 @@
 
 .strony li,
 .strony a {
+  position: relative;
   color: white;
   margin-bottom: 8px;
   font-size: 18px;
-  transition: 0.3s;
-  position: relative;
+  transition: color 0.3s;
 }
 
 .strony a:hover {
@@ -86,13 +85,13 @@
 .faq a {
   margin-bottom: 8px;
   cursor: pointer;
-  transition: 0.3s;
+  transition: color 0.3s;
   color: white;
 }
 
 .book {
   fill: white;
-  transition: 0.15s;
+  transition: fill 0.15s;
 }
 
 .faq a:hover,
@@ -109,7 +108,7 @@
 
 .socials svg {
   margin-right: 4px;
-  transition: 0.5s;
+  transition: all 0.5s;
   color: white;
 }
 

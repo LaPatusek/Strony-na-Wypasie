@@ -30,7 +30,7 @@ const Main = () => {
               i o Twoim biznesie
             </h3>
             <div className={`${styles['button-container']} grid`}>
-              <Link to='/oferta' className={styles['learn-more-button']}>
+              <Link to='/oferta#pakiety' className={styles['learn-more-button']}>
                 <span className={styles.circle} aria-hidden='true'>
                   <span className={`${styles.icon} ${styles.arrow}`}></span>
                 </span>
@@ -42,9 +42,9 @@ const Main = () => {
           </div>
           <div className={styles['right-main-offer']}>
             <div className={styles.background} />
-            <div className={styles['offers-container']}>
+            <div className={`${styles['offers-container']} grid`}>
               <div className={styles.container}>
-                <div className={styles['container-title']}>
+                <div className={`${styles['container-title']} grid`}>
                   <img src={bronzeCow} alt='' width='32px' height='32px' />
                   <h4>MAŁA KRÓWKA</h4>
                 </div>
@@ -65,7 +65,7 @@ const Main = () => {
                 </ol>
               </div>
               <div className={styles.container}>
-                <div className={styles['container-title']}>
+                <div className={`${styles['container-title']} grid`}>
                   <img src={silverCow} alt='' width='32px' height='32px' />
                   <h4>DOBRA KROWA</h4>
                 </div>
@@ -89,7 +89,7 @@ const Main = () => {
                 </ol>
               </div>
               <div className={styles.container}>
-                <div className={styles['container-title']}>
+                <div className={`${styles['container-title']} grid`}>
                   <img src={goldCow} alt='' width='32px' height='32px' />
                   <h4>BYK NA WYPASIE</h4>
                 </div>
@@ -117,7 +117,7 @@ const Main = () => {
                 </ol>
               </div>
               <div className={styles.container}>
-                <div className={styles['container-title']}>
+                <div className={`${styles['container-title']} grid`}>
                   <img src={colorCow} alt='' width='32px' height='32px' />
                   <h4>wypasiona</h4>
                 </div>

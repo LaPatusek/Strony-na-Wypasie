@@ -4,7 +4,7 @@
   border: 2px solid #1a1a1a;
   box-shadow: 4px 4px 10px #1a1a1a;
   padding: 2.5rem;
-  margin: 35px 0 100px 12%;
+  margin: 35px 0 60px 12%;
   max-width: 700px;
 }
 
@@ -20,6 +20,147 @@
   line-height: 24px;
   letter-spacing: 0.6px;
   color: #1a1a1a;
+}
+
+.offer-section {
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  padding: 4rem 0 6rem 0;
+}
+
+.offer-section h2 {
+  text-align: center;
+  font-size: 44px;
+  letter-spacing: 1px;
+  font-family: 'Pou';
+  padding-bottom: 40px;
+}
+
+.offer-wrap {
+  grid-template-columns: repeat(4, 300px);
+  column-gap: 20px;
+  justify-content: center;
+}
+
+.offer-box {
+  position: relative;
+  overflow: hidden;
+  border: 2px solid var(--secondary-brown);
+  border-radius: 20px;
+  padding: 25px;
+  max-width: 300px;
+  width: 100%;
+  box-shadow: 5px 5px 15px var(--secondary-brown);
+  z-index: 1;
+  transition: all 0.5s;
+}
+
+.blur-circle-shape {
+  position: absolute;
+  top: 0;
+  border-radius: 100%;
+  width: 120px;
+  height: 120px;
+  background: var(--secondary-brown);
+  z-index: -1;
+  filter: blur(60px);
+}
+
+.right-circle-shape {
+  right: 0;
+}
+
+.left-circle-shape {
+  left: 0;
+}
+
+.offer-box:hover {
+  transform: scale(1.05) translateY(-10px);
+  z-index: 5;
+}
+
+.offer-box img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+}
+
+.offer-box h3 {
+  text-align: center;
+  font-family: 'Pou';
+  font-size: 28px;
+  margin-bottom: 3px;
+  letter-spacing: 1px;
+}
+
+.offer-box h4 {
+  text-align: center;
+  font-size: 13px;
+  letter-spacing: 0.6px;
+  margin-bottom: 10px;
+}
+
+.offer-box h5 {
+  text-align: center;
+  font-size: 25px;
+  font-family: 'Pou';
+  margin-bottom: 10px;
+}
+
+.offer-box ol {
+  list-style-type: none;
+  margin-bottom: 35px;
+}
+
+.offer-box ol > li {
+  position: relative;
+  font-size: 20px;
+  margin-bottom: 5px;
+  letter-spacing: 0.5px;
+}
+
+.offer-box ol > li > svg {
+  transform: translateY(2px);
+  padding-right: 0.1em;
+}
+
+.offer-box > .order-button,
+.offer-box a {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  color: white;
+  cursor: pointer;
+  transform: translateX(-50%);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: 'Pou';
+  font-size: 18px;
+  padding: 5px 35px;
+  background-color: var(--secondary-brown);
+  border-radius: 15px;
+  border: 2px solid var(--secondary-brown);
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 15px;
+  transition: all 0.4s;
+}
+
+.offer-box > .order-button:hover,
+.offer-box a:hover {
+  background-color: transparent;
+  color: var(--secondary-brown);
+}
+
+.offer-box p {
+  text-align: center;
+  letter-spacing: 0.5px;
+  font-size: 20px;
+  line-height: 22px;
 }
 
 .heading {
@@ -157,6 +298,13 @@
   max-width: 400px;
 }
 
+@media screen and (max-width: 1200px) {
+  .offer-wrap {
+    grid-template-columns: repeat(2, 300px);
+    row-gap: 30px;
+  }
+}
+
 @media screen and (max-width: 800px) {
   .title {
     margin: 50px 20px;
@@ -168,6 +316,18 @@
 
   .title h2 {
     width: 100%;
+  }
+
+  .offer-wrap {
+    grid-template-columns: repeat(1, 100%);
+  }
+
+  .offer-box {
+    justify-self: center;
+  }
+
+  .offer-wrap p {
+    margin-bottom: 50px;
   }
 
   .heading {
@@ -186,8 +346,13 @@
     display: block !important;
   }
 
-  .timeline-circle-800 {
+  .second-circle-800 {
     position: absolute;
-    top: -131px;
+    top: -310px;
+  }
+
+  .forth-circle-800 {
+    position: absolute;
+    top: -355px;
   }
 }

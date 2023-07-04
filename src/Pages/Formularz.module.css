@@ -183,9 +183,8 @@ textarea {
 
 .group p {
   position: absolute;
-  margin-top: 4px;
+  margin: 4px 0 0 4px;
   font-size: 14px;
-  margin-left: 4px;
   color: red;
 }
 

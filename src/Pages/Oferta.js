@@ -1,13 +1,18 @@
-import { Link21, PresentionChart } from 'iconsax-react';
+import { Link21, Milk, PresentionChart } from 'iconsax-react';
 import { Fragment } from 'react';
+import { Link } from 'react-router-dom/cjs/react-router-dom.min';
+import bronzeCow from '../Assets/cow-bronze.webp';
+import colorCow from '../Assets/cow-colors.webp';
+import goldCow from '../Assets/cow-gold.webp';
+import silverCow from '../Assets/cow-silver.webp';
 import seoIcon from '../Assets/seo-icon.webp';
 import targetIcon from '../Assets/target-icon.webp';
 import Faquestions from '../Components/FAQ/Faquestions';
 import styles from './Oferta.module.css';
 
 const Oferta = (props) => {
-  
   const iconSize = 76;
+  const milkSize = 20;
 
   return (
     <Fragment>
@@ -20,6 +25,110 @@ const Oferta = (props) => {
           są responsywne, dostosowując się do różnych urządzeń.
         </h2>
       </div>
+
+      <section className={styles['offer-section']} id='pakiety'>
+        <h2>Oferowane pakiety</h2>
+        <div className={`${styles['offer-wrap']} grid`}>
+          <div className={styles['offer-box']}>
+            <img src={bronzeCow} alt='' width='64px' />
+            <h3>Mała krówka</h3>
+            <h4>Opcja ekonomiczna</h4>
+            <h5>Cena</h5>
+            <ol>
+              <li>
+                <Milk size={milkSize} color='#1a1a1a' variant='TwoTone' /> Do 4
+                podstron
+              </li>
+              <li>
+                <Milk size={milkSize} color='#1a1a1a' variant='TwoTone' />{' '}
+                Poprawki w cenie
+              </li>
+              <li>
+                <Milk size={milkSize} color='#1a1a1a' variant='TwoTone' />{' '}
+                Hosting 6 miesięcy
+              </li>
+            </ol>
+            <div className={styles['order-button']}>Zamów</div>
+            <div
+              className={`${styles['blur-circle-shape']} ${styles['left-circle-shape']}`}
+            />
+          </div>
+          <div className={styles['offer-box']}>
+            <img src={silverCow} alt='' width='64px' />
+            <h3>Dobra krowa</h3>
+            <h4>Opcja rekomendowana</h4>
+            <h5>Cena</h5>
+            <ol>
+              <li>
+                <Milk size={milkSize} color='#1a1a1a' variant='TwoTone' /> Do 6
+                podstron
+              </li>
+              <li>
+                <Milk size={milkSize} color='#1a1a1a' variant='TwoTone' />{' '}
+                Poprawki w cenie
+              </li>
+              <li>
+                <Milk size={milkSize} color='#1a1a1a' variant='TwoTone' />{' '}
+                Roczny hosting
+              </li>
+              <li>
+                <Milk size={milkSize} color='#1a1a1a' variant='TwoTone' /> Logo
+                w cenie
+              </li>
+            </ol>
+            <div className={styles['order-button']}>Zamów</div>
+            <div
+              className={`${styles['blur-circle-shape']} ${styles['left-circle-shape']}`}
+            />
+          </div>
+          <div className={styles['offer-box']}>
+            <img src={goldCow} alt='' width='64px' />
+            <h3>Byk na wypasie</h3>
+            <h4>Opcja premium</h4>
+            <h5>Cena</h5>
+            <ol>
+              <li>
+                <Milk size={milkSize} color='#1a1a1a' variant='TwoTone' /> Do 10
+                podstron
+              </li>
+              <li>
+                <Milk size={milkSize} color='#1a1a1a' variant='TwoTone' />{' '}
+                Poprawki w cenie
+              </li>
+              <li>
+                <Milk size={milkSize} color='#1a1a1a' variant='TwoTone' />{' '}
+                Dwuletni hosting
+              </li>
+              <li>
+                <Milk size={milkSize} color='#1a1a1a' variant='TwoTone' /> Logo
+                w cenie
+              </li>
+              <li>
+                <Milk size={milkSize} color='#1a1a1a' variant='TwoTone' />{' '}
+                Spersonalizowane grafiki
+              </li>
+            </ol>
+            <div className={styles['order-button']}>Zamów</div>
+            <div
+              className={`${styles['blur-circle-shape']} ${styles['right-circle-shape']}`}
+            />
+          </div>
+          <div className={styles['offer-box']}>
+            <img src={colorCow} alt='' width='64px' />
+            <h3>Wypasiona</h3>
+            <h4>Opcja spersonalizowana</h4>
+            <p>
+              Kompletnie spersonalizowana strona, która usatysfakcjonuje każdego
+              klienta!
+            </p>
+            <Link to='/formularz-kontaktowy'>Wyceń projekt</Link>
+            <div
+              className={`${styles['blur-circle-shape']} ${styles['right-circle-shape']}`}
+            />
+          </div>
+        </div>
+      </section>
+
       <div className={styles.heading}>
         <h3> Rozwój strony krok po kroku</h3>
       </div>
@@ -61,7 +170,7 @@ const Oferta = (props) => {
           </div>
           <div className={styles['timeline-middle']}>
             <div
-              className={`${styles['timeline-circle']} ${styles['timeline-circle-800']}`}
+              className={`${styles['timeline-circle']} ${styles['timeline-circle-800']} ${styles['second-circle-800']}`}
             />
           </div>
           <div className={styles['timeline-empty']} />
@@ -102,7 +211,7 @@ const Oferta = (props) => {
           </div>
           <div className={styles['timeline-middle']}>
             <div
-              className={`${styles['timeline-circle']} ${styles['timeline-circle-800']}`}
+              className={`${styles['timeline-circle']} ${styles['timeline-circle-800']} ${styles['forth-circle-800']}`}
             />
           </div>
           <div className={styles['timeline-empty']} />
@@ -173,7 +282,7 @@ const Oferta = (props) => {
         </div>
       </section>
 
-      <Faquestions id='faq' forwardMessage={props.message}/>
+      <Faquestions id='faq' forwardMessage={props.message} />
     </Fragment>
   );
 };

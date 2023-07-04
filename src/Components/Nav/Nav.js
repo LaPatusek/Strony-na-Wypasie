@@ -31,13 +31,13 @@ const Nav = () => {
   return (
     <Fragment>
       <div className={`${styles.navbar} grid`}>
-        <div className={styles.logo}>
+        <div className={`${styles.logo} grid`}>
           <Link to='/main' aria-label='Strona Główna'>
             <img src={logo} alt=''/>
           </Link>
         </div>
 
-        <div className={styles.nav}>
+        <div className={`${styles.nav} grid`}>
           <NavLink
             to='/oferta'
             className={styles['nav-link']}

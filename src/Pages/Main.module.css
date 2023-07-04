@@ -26,8 +26,8 @@
   position: absolute;
   top: 0;
   left: 0;
-  border-top: 1px solid #6d523c;
-  background-color: #6d523c;
+  border-top: 1px solid var(--secondary-brown);
+  background-color: var(--secondary-brown);
   height: 1px;
   width: 69px;
 }
@@ -56,7 +56,7 @@
   display: block;
   width: 3rem;
   height: 3rem;
-  background: #6d523c;
+  background: var(--secondary-brown);
   border-radius: 1.625rem;
 }
 
@@ -134,7 +134,6 @@
 }
 
 .offers-container {
-  display: grid;
   grid-template-columns: repeat(2, 1fr);
   row-gap: 25px;
   column-gap: 25px;
@@ -144,12 +143,11 @@
 .offers-container > .container {
   background-color: rgba(240, 240, 240, 0.9);
   padding: 1rem;
-  border: 1px solid #6d523c;
+  border: 1px solid var(--secondary-brown);
   border-radius: 20px;
 }
 
 .container-title {
-  display: grid;
   grid-template-columns: 45px calc(100% - 50px);
 }
 
@@ -165,9 +163,7 @@
 }
 
 .three-bottles-in-row {
-  margin-top: 10px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 10px auto 0 auto;
   text-align: center;
   width: 100%;
 }
@@ -199,9 +195,8 @@
 }
 
 .offer-section-right {
-  --background-color: #006d5a;
   height: 580px;
-  background-color: var(--background-color);
+  background-color: #006d5a;
 }
 
 .offer-section-right h3 {
@@ -263,8 +258,7 @@
 
 .spin::before,
 .spin::after {
-  top: 0;
-  left: 0;
+  inset: 0;
 }
 
 .spin::before {
@@ -341,9 +335,7 @@
 
 .seo-link {
   width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 40px;
+  margin: 40px auto 0 auto;
 }
 
 .seo-link a {
@@ -391,8 +383,7 @@
 }
 
 .wrap p {
-  padding-top: 2rem;
-  padding-right: 4rem;
+  padding: 2rem 4rem 0 0;
   margin-bottom: 40px;
   font-size: 20px;
   letter-spacing: 0.6px;
