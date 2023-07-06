@@ -12,7 +12,7 @@
 
 .footer > .upper-footer h3 {
   font-size: 22px;
-  font-family: "Pou" !important;
+  font-family: "Pou";
   margin-bottom: 20px;
   color: var(--bright-green);
   font-weight: bold;
