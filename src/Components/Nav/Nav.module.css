@@ -129,7 +129,7 @@
     display: grid;
   }
 
-.logo {
+  .logo {
     justify-self: center;
     transform: translateY(10px);
     max-height: 200px;
