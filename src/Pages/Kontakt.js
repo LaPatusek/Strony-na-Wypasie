@@ -1,5 +1,6 @@
+import emailjs from '@emailjs/browser';
 import { Call, Location, TickCircle } from 'iconsax-react';
-import { Fragment, useState } from 'react';
+import { Fragment, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Card from '../Components/UI/Card';
 import useInput from '../Components/hooks/useInput';
@@ -7,6 +8,7 @@ import styles from './Kontakt.module.css';
 
 const Kontakt = () => {
   const [formIsSent, setFormIsSent] = useState(false);
+  const formRef = useRef();
 
   const {
     value: enteredName,
@@ -56,6 +58,22 @@ const Kontakt = () => {
     if (!formIsValid) {
       return;
     }
+
+    emailjs
+      .sendForm(
+        process.env.REACT_APP_SERVICE_ID,
+        process.env.REACT_APP_TEMPLATE_ID,
+        formRef.current,
+        process.env.REACT_APP_PUBLIC_KEY,
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        },
+      );
 
     setFormIsSent(true);
     nameReset();
@@ -129,11 +147,12 @@ const Kontakt = () => {
 
           <section className={styles['right-section']}>
             <h4>Formularz kontaktowy</h4>
-            <form onSubmit={formHandler}>
+            <form onSubmit={formHandler} ref={formRef}>
               <div className={styles.group}>
                 <input
                   required='Imie i nazwisko'
                   type='text'
+                  name='user_name'
                   id='name'
                   autoComplete='false'
                   value={enteredName}
@@ -150,6 +169,7 @@ const Kontakt = () => {
                 <input
                   required='Temat'
                   id='topic'
+                  name='user_topic'
                   type='text'
                   autoComplete='false'
                   value={enteredTopic}
@@ -166,6 +186,7 @@ const Kontakt = () => {
                 <input
                   required='Adres email'
                   id='mail'
+                  name='user_email'
                   value={enteredMail}
                   type='text'
                   autoComplete='false'
@@ -182,6 +203,7 @@ const Kontakt = () => {
                 <textarea
                   required='Twoja wiadomość'
                   id='message'
+                  name='message'
                   value={enteredMessage}
                   autoComplete='false'
                   className={styles.input}
@@ -201,7 +223,13 @@ const Kontakt = () => {
                 >
                   Reset
                 </button>
-                <button className={styles['submit-button']}>Wyślij</button>
+                <button
+                  className={styles['submit-button']}
+                  value='Send'
+                  type='submit'
+                >
+                  Wyślij
+                </button>
               </div>
               {formIsSent && (
                 <div className={styles['mess-after-form']}>

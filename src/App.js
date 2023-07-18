@@ -1,4 +1,3 @@
-import { Analytics } from '@vercel/analytics/react';
 import { Fragment, useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { Route, Switch, useLocation } from 'react-router-dom';
@@ -83,7 +82,6 @@ const App = () => {
       </main>
 
       <Footer PassFunction={PassForwardFunction} />
-      <Analytics />
     </Fragment>
   );
 };

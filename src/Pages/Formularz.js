@@ -1,3 +1,4 @@
+import emailjs from '@emailjs/browser';
 import { ArrowUp2, TickCircle } from 'iconsax-react';
 import { useEffect, useRef, useState } from 'react';
 import Card from '../Components/UI/Card';
@@ -14,6 +15,7 @@ const Formularz = () => {
   const [enteredFind, setEnteredFind] = useState('');
   const [formIsSent, setFormIsSent] = useState(false);
   const iconRef = useRef();
+  const formRef = useRef();
 
   const typeChangeFunction = (e) => {
     setEnteredType(e.target.defaultValue);
@@ -93,11 +95,34 @@ const Formularz = () => {
       return;
     }
 
+    emailjs
+      .sendForm(
+        process.env.REACT_APP_SERVICE_ID,
+        process.env.REACT_APP_FORM_TEMPLATE_ID,
+        formRef.current,
+        process.env.REACT_APP_PUBLIC_KEY,
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        },
+      );
+
     setFormIsSent(true);
     nameReset();
     topicReset();
     mailReset();
     messageReset();
+    setEnteredBudget('');
+    setEnteredFind('');
+    setEnteredGraphs('');
+    setEnteredNumLang('');
+    setEnteredSites('');
+    setEnteredType('');
+    setOptionsVis(false);
   };
 
   const resetHandler = (e) => {
@@ -122,10 +147,11 @@ const Formularz = () => {
   return (
     <Card className={`${styles.wrap} grid`}>
       <section className={styles['left-section']}>
-        <form onSubmit={formHandler}>
+        <form onSubmit={formHandler} ref={formRef}>
           <div className={styles.group}>
             <input
               required='Imie i nazwisko'
+              name='user_name'
               type='text'
               id='name'
               autoComplete='false'
@@ -143,6 +169,7 @@ const Formularz = () => {
             <input
               required='Temat'
               id='topic'
+              name='user_topic'
               type='text'
               autoComplete='false'
               value={enteredTopic}
@@ -159,6 +186,7 @@ const Formularz = () => {
             <input
               required='Adres email'
               id='mail'
+              name='user_email'
               value={enteredMail}
               type='text'
               autoComplete='false'
@@ -175,6 +203,7 @@ const Formularz = () => {
             <textarea
               required='Twoja wiadomość'
               id='message'
+              name='message'
               autoComplete='false'
               value={enteredMessage}
               className={styles.input}
@@ -199,7 +228,7 @@ const Formularz = () => {
                 <label>
                   <input
                     type='radio'
-                    name='rodzajStrony'
+                    name='web_type'
                     value='Wizytówka'
                     checked={enteredType === 'Wizytówka'}
                     onChange={typeChangeFunction}
@@ -209,7 +238,7 @@ const Formularz = () => {
                 <label>
                   <input
                     type='radio'
-                    name='rodzajStrony'
+                    name='web_type'
                     value='Sklep ecommerce'
                     checked={enteredType === 'Sklep ecommerce'}
                     onChange={typeChangeFunction}
@@ -222,7 +251,7 @@ const Formularz = () => {
                 <label>
                   <input
                     type='radio'
-                    name='iloscPodstron'
+                    name='sites_amount'
                     value='Do 5'
                     checked={enteredSites === 'Do 5'}
                     onChange={sitesChangeFunction}
@@ -232,7 +261,7 @@ const Formularz = () => {
                 <label>
                   <input
                     type='radio'
-                    name='iloscPodstron'
+                    name='sites_amount'
                     value='Do 10'
                     checked={enteredSites === 'Do 10'}
                     onChange={sitesChangeFunction}
@@ -242,7 +271,7 @@ const Formularz = () => {
                 <label>
                   <input
                     type='radio'
-                    name='iloscPodstron'
+                    name='sites_amount'
                     value='Do 15'
                     checked={enteredSites === 'Do 15'}
                     onChange={sitesChangeFunction}
@@ -252,7 +281,7 @@ const Formularz = () => {
                 <label>
                   <input
                     type='radio'
-                    name='iloscPodstron'
+                    name='sites_amount'
                     value='Więcej niż 20'
                     checked={enteredSites === 'Więcej niż 20'}
                     onChange={sitesChangeFunction}
@@ -265,7 +294,7 @@ const Formularz = () => {
                 <label>
                   <input
                     type='radio'
-                    name='jezykStrony'
+                    name='leanguage_amount'
                     value='1'
                     checked={enteredNumLang === '1'}
                     onChange={numLangChangeFunction}
@@ -275,7 +304,7 @@ const Formularz = () => {
                 <label>
                   <input
                     type='radio'
-                    name='jezykStrony'
+                    name='leanguage_amount'
                     value='2'
                     checked={enteredNumLang === '2'}
                     onChange={numLangChangeFunction}
@@ -285,7 +314,7 @@ const Formularz = () => {
                 <label>
                   <input
                     type='radio'
-                    name='jezykStrony'
+                    name='leanguage_amount'
                     value='3'
                     checked={enteredNumLang === '3'}
                     onChange={numLangChangeFunction}
@@ -295,7 +324,7 @@ const Formularz = () => {
                 <label>
                   <input
                     type='radio'
-                    name='jezykStrony'
+                    name='leanguage_amount'
                     value='Więcej niż 3'
                     checked={enteredNumLang === 'Więcej niż 3'}
                     onChange={numLangChangeFunction}
@@ -311,7 +340,7 @@ const Formularz = () => {
                 <label>
                   <input
                     type='radio'
-                    name='materials'
+                    name='user_graphics'
                     value='Tak'
                     checked={enteredGraphs === 'Tak'}
                     onChange={graphsChangeFunction}
@@ -321,7 +350,7 @@ const Formularz = () => {
                 <label>
                   <input
                     type='radio'
-                    name='materials'
+                    name='user_graphics'
                     value='Nie'
                     checked={enteredGraphs === 'Nie'}
                     onChange={graphsChangeFunction}
@@ -334,7 +363,7 @@ const Formularz = () => {
                 <label>
                   <input
                     type='radio'
-                    name='budzet'
+                    name='user_budget'
                     value='Mniej niż 1000 zł'
                     checked={enteredBudget === 'Mniej niż 1000 zł'}
                     onChange={budgetChangeFunction}
@@ -344,7 +373,7 @@ const Formularz = () => {
                 <label>
                   <input
                     type='radio'
-                    name='budzet'
+                    name='user_budget'
                     value='1000 - 2000 zł'
                     checked={enteredBudget === '1000 - 2000 zł'}
                     onChange={budgetChangeFunction}
@@ -354,7 +383,7 @@ const Formularz = () => {
                 <label>
                   <input
                     type='radio'
-                    name='budzet'
+                    name='user_budget'
                     value='2000 - 5000 zł'
                     checked={enteredBudget === '2000 - 5000 zł'}
                     onChange={budgetChangeFunction}
@@ -364,7 +393,7 @@ const Formularz = () => {
                 <label>
                   <input
                     type='radio'
-                    name='budzet'
+                    name='user_budget'
                     value='Więcej niż 5000 zł'
                     checked={enteredBudget === 'Więcej niż 5000 zł'}
                     onChange={budgetChangeFunction}
@@ -378,7 +407,7 @@ const Formularz = () => {
                 <label>
                   <input
                     type='radio'
-                    name='Find'
+                    name='user_found'
                     value='Wyszukiwarka online'
                     checked={enteredFind === 'Wyszukiwarka online'}
                     onChange={findChangeFunction}
@@ -388,7 +417,7 @@ const Formularz = () => {
                 <label>
                   <input
                     type='radio'
-                    name='Find'
+                    name='user_found'
                     value='Media społecznościowe'
                     checked={enteredFind === 'Media społecznościowe'}
                     onChange={findChangeFunction}
@@ -398,7 +427,7 @@ const Formularz = () => {
                 <label>
                   <input
                     type='radio'
-                    name='Find'
+                    name='user_found'
                     value='Polecenie od znajomego'
                     checked={enteredFind === 'Polecenie od znajomego'}
                     onChange={findChangeFunction}
@@ -417,22 +446,28 @@ const Formularz = () => {
             >
               Reset
             </button>
-            <button type='submit' className={styles['submit-button']}>
+            <button
+              type='submit'
+              value='Send'
+              className={styles['submit-button']}
+            >
               Wyślij
             </button>
           </div>
-          {formIsSent && <div className={styles['mess-after-form']}>
-            <TickCircle variant='Bold' size='32'/>
-             <p>Dziękujemy za kontakt!</p></div>}
+          {formIsSent && (
+            <div className={styles['mess-after-form']}>
+              <TickCircle variant='Bold' size='32' />
+              <p>Dziękujemy za kontakt!</p>
+            </div>
+          )}
         </form>
       </section>
 
       <section className={styles['right-section']}>
         <h2>Skontaktuj się z nami!</h2>
         <h3>
-          Tworzymy strony internetowe z myślą o Tobie i Twoim biznesie.
-          Opowiedz nam o swoim projekcie,
-         a my przygotujemy wycenę dla Ciebie.
+          Tworzymy strony internetowe z myślą o Tobie i Twoim biznesie. Opowiedz
+          nam o swoim projekcie, a my przygotujemy wycenę dla Ciebie.
         </h3>
       </section>
     </Card>
