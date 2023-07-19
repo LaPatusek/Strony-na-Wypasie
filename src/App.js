@@ -5,6 +5,7 @@ import Footer from './Components/Footer/Footer';
 import Nav from './Components/Nav/Nav';
 import Privacy from './Components/PrivacyAndStatue/Privacy';
 import Regulamin from './Components/PrivacyAndStatue/Regulamin';
+import StripeContainer from './Components/Stripe/StripeContainer';
 import Formularz from './Pages/Formularz';
 import Kontakt from './Pages/Kontakt';
 import Main from './Pages/Main';
@@ -16,7 +17,7 @@ const App = () => {
   const [passIndexForward, setPassIndexForward] = useState();
 
   const PassForwardFunction = (index) => {
-    setPassIndexForward(index)
+    setPassIndexForward(index);
   };
 
   const { pathname, hash, key } = useLocation();
@@ -52,7 +53,7 @@ const App = () => {
             <Main />
           </Route>
           <Route path='/oferta'>
-            <Oferta message={passIndexForward}/>
+            <Oferta message={passIndexForward} />
           </Route>
           <Route path='/projekty'>
             <Projekty />
@@ -71,6 +72,9 @@ const App = () => {
           </Route>
           <Route path='/regulamin'>
             <Regulamin />
+          </Route>
+          <Route path='/payment-test'>
+            <StripeContainer />
           </Route>
           <Route path='/'>
             <Main />
