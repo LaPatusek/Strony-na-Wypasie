@@ -1,31 +1,105 @@
+.payment-wrap {
+  grid-template-columns: repeat(2, 1fr);
+  padding: 3rem 1rem;
+}
+
+.left-section {
+  padding: 0 4rem;
+}
+
+.left-section button {
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: "Pou";
+  text-transform: uppercase;
+  border-bottom: 1px solid transparent;
+  transition: all .3s;
+}
+
+.left-section button:hover {
+  border-bottom: 1px solid #1a1a1a;
+}
+
+.left-section button svg {
+  transform: translateY(2px) translateX(2px);
+  transition: all .3s;
+}
+
+.left-section button:hover svg {
+  transform: translateY(2px) translateX(-4px);
+}
+
+.product-wrap {
+  padding: 2rem 1rem;
+  max-width: fit-content;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 4rem;
+  border: 1px solid var(--secondary-brown);
+  border-radius: 5px;
+  box-shadow: 1px 3px 6px var(--secondary-brown);
+}
+
+.product-text {
+  justify-self: center;
+  align-self: center;
+  text-align: center;
+}
+
+.product-text h2 {
+  margin-bottom: 15px;
+  font-size: 28px;
+  letter-spacing: 1px;
+  font-family: "Pou";
+}
+
+.product-text h3 {
+  font-size: 22px;
+  font-family: "Pou";
+}
+
 .payment-form {
-  width: 70%;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 3rem 0;
+  width: 90%;
+  max-width: 600px;
 }
 
-.FormGroup {
-  margin: 0 15px 20px;
-  padding: 0;
-  border-style: none;
-  will-change: opacity, transform;
-  box-shadow: 0 6px 9px rgba(50, 50, 93, 0.06), 0 2px 5px rgba(0, 0, 0, 0.08);
-  border-radius: 4px;
-}
-
-.FormGroup {
-  padding: 5px;
+.upper-form {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  padding: 10px 8px;
   background-color: var(--bright-mid-green);
+  width: calc(100% - 30px);
+  margin-left: 15px;
 }
 
-.FormRow {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-left: 15px;
-  border-top: 1px solid var(--bright-green);
+.group label {
+  margin-bottom: 0.25rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.6px;
+  color: #1a1a1a;
+}
+
+.group input {
+  border-radius: 5px;
+  margin-bottom: 15px;
+  padding: 0.5rem;
+  box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.5);
+}
+
+.error input::placeholder {
+  color: #f25555;
+}
+
+.fieldset {
+  margin: 0 15px 0px;
+}
+
+.FormGroup {
+  box-shadow: 0 6px 9px rgba(50, 50, 93, 0.06), 0 2px 5px rgba(0, 0, 0, 0.08);
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  padding: 0 10px 10px 10px;
+  background-color: var(--bright-mid-green);
 }
 
 .StripeElement--webkit-autofill {
@@ -38,7 +112,6 @@
 }
 
 .payment-form button {
-  display: block;
   font-size: 17px;
   font-family: 'Pou';
   text-transform: uppercase;
@@ -49,11 +122,16 @@
   background-color: var(--bright-mid-green);
   box-shadow: 0 6px 9px rgba(50, 50, 93, 0.06), 0 2px 5px rgba(0, 0, 0, 0.08);
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-  border-radius: 4px;
+  border-radius: 10px;
   color: #fff;
   font-weight: 600;
   cursor: pointer;
   transition: all 100ms ease-in-out;
+}
+
+.payment-form button:hover {
+  transform: scale(1.02);
+  filter: brightness(1.1);
 }
 
 .payment-form button:active {
@@ -81,5 +159,5 @@
 .back-button {
   margin-top: 30px;
   margin-right: 40px;
-  justify-self: right;
+  justify-content: right;
 }
