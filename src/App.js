@@ -15,9 +15,14 @@ import Projekty from './Pages/Projekty';
 
 const App = () => {
   const [passIndexForward, setPassIndexForward] = useState();
+  const [passOptionsForward, setPassOptionsForward] = useState();
 
   const PassForwardFunction = (index) => {
     setPassIndexForward(index);
+  };
+
+  const passForwardOption = (opcje) => {
+    setPassOptionsForward(opcje);
   };
 
   const { pathname, hash, key } = useLocation();
@@ -53,7 +58,10 @@ const App = () => {
             <Main />
           </Route>
           <Route path='/oferta'>
-            <Oferta message={passIndexForward} />
+            <Oferta
+              message={passIndexForward}
+              optionPassFuntion={passForwardOption}
+            />
           </Route>
           <Route path='/projekty'>
             <Projekty />
@@ -73,8 +81,8 @@ const App = () => {
           <Route path='/regulamin'>
             <Regulamin />
           </Route>
-          <Route path='/payment-test'>
-            <StripeContainer />
+          <Route path='/platnosc'>
+            <StripeContainer optionMessage={passOptionsForward} />
           </Route>
           <Route path='/'>
             <Main />

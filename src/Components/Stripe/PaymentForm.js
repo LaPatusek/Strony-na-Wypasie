@@ -1,9 +1,8 @@
 import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
 import axios from 'axios';
 import { ArrowLeft } from 'iconsax-react';
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
-import cowBronze from '../../Assets/cow-bronze.webp';
 import GoBackButton from '../Elements/GoBackButton';
 import useInput from '../hooks/useInput';
 import styles from './PaymentForm.module.css';
@@ -30,8 +29,12 @@ const CARD_OPTIONS = {
   },
 };
 
-const PaymentForm = () => {
+const PaymentForm = (props) => {
   const [success, setSuccess] = useState(false);
+  const [title, setTitle] = useState();
+  const [price, setPrice] = useState();
+  const [image, setImage] = useState();
+
   const stripe = useStripe();
   const elements = useElements();
   const emailRef = useRef();
@@ -71,13 +74,15 @@ const PaymentForm = () => {
     hasError: firstAddHasError,
   } = useInput((value) => value.trim() !== '');
 
+  var postalCodePatern = /^\d{2}-\d{3}$/;
+
   const {
     value: enteredPostal,
     isValid: postalIsValid,
     valueChangeHandler: postalChangeHandler,
     inputBlurHandler: postalBlurHandler,
     hasError: postalHasError,
-  } = useInput((value) => value.trim() !== '');
+  } = useInput((value) => value.trim() !== '' && postalCodePatern.test(value));
 
   const {
     value: enteredCity,
@@ -108,6 +113,17 @@ const PaymentForm = () => {
     formIsValid = true;
   }
 
+  useEffect(() => {
+    const imageData = window.localStorage.getItem('IMAGE_STATE');
+    if (imageData !== null) setImage(imageData);
+
+    const priceData = window.localStorage.getItem('PRICE_STATE');
+    if (priceData !== null) setPrice(JSON.parse(priceData));
+
+    const titleData = window.localStorage.getItem('TITLE_STATE');
+    if (titleData !== null) setTitle(JSON.parse(titleData));
+  }, []);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!formIsValid) {
@@ -136,8 +152,9 @@ const PaymentForm = () => {
       try {
         const { id } = paymentMethod;
         const response = await axios.post('http://localhost:4000/payment', {
-          amount: 45000, //amount to grosze czyli 1000 = 10.00zł
+          amount: price + '00', //amount to grosze czyli 1000 = 10.00zł
           id,
+          description: title,
         });
         if (response.data.success) {
           console.log('Successfull payment');
@@ -151,6 +168,12 @@ const PaymentForm = () => {
     }
   };
 
+  let fixedImage;
+
+  if (image) {
+    fixedImage = image.replace(/^"|"$/g, '');
+  }
+
   return (
     <div>
       {!success ? (
@@ -160,10 +183,10 @@ const PaymentForm = () => {
               <ArrowLeft size='18' color='#000000' /> Powrót
             </button>
             <div className={`${styles['product-wrap']} grid`}>
-              <img src={cowBronze} alt='Mała Krówka' />
+              <img src={fixedImage} alt={title} />
               <div className={styles['product-text']}>
-                <h2>Mała krówka</h2>
-                <h3>450 PLN</h3>
+                <h2>{title}</h2>
+                <h3>{price} PLN</h3>
               </div>
             </div>
           </div>
@@ -287,7 +310,7 @@ const PaymentForm = () => {
                     id='phone'
                     required='Telefon'
                     autoComplete='false'
-                    placeholder='+48 000 000 000'
+                    placeholder='000 000 000'
                   />
                 </div>
               </div>

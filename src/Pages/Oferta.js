@@ -10,9 +10,64 @@ import targetIcon from '../Assets/target-icon.webp';
 import Faquestions from '../Components/FAQ/Faquestions';
 import styles from './Oferta.module.css';
 
+const offerOptions = [
+  {
+    src: bronzeCow,
+    title: 'Mała krówka',
+    option: 'Opcja ekonomiczna',
+    price: 450,
+    opis: ['Do 4 podstron', 'Poprawki w cenie', 'Hosting 6 miesięcy'],
+    circlePosition: 'left-circle-shape',
+  },
+  {
+    src: silverCow,
+    title: 'Dobra krowa',
+    option: 'Opcja rekomendowana',
+    price: 650,
+    opis: [
+      'Do 6 podstron',
+      'Poprawki w cenie',
+      'Roczny hosting',
+      'Logo w cenie',
+    ],
+    circlePosition: 'left-circle-shape',
+  },
+  {
+    src: goldCow,
+    title: 'Byk na wypasie',
+    option: 'Opcja premium',
+    price: 1000,
+    opis: [
+      'Do 10 podstron',
+      'Poprawki w cenie',
+      'Dwuletni hosting',
+      'Logo w cenie',
+      'Spersonalizowane grafiki',
+    ],
+    circlePosition: 'right-circle-shape',
+  },
+];
+
 const Oferta = (props) => {
   const iconSize = 76;
   const milkSize = 20;
+
+  const testFunction = (opcja) => {
+    props.optionPassFuntion(opcja);
+
+    window.localStorage.setItem(
+      'IMAGE_STATE',
+      JSON.stringify(opcja.src),
+    );
+    window.localStorage.setItem(
+      'PRICE_STATE',
+      JSON.stringify(opcja.price),
+    );
+    window.localStorage.setItem(
+      'TITLE_STATE',
+      JSON.stringify(opcja.title),
+    );
+  };
 
   return (
     <Fragment>
@@ -29,90 +84,49 @@ const Oferta = (props) => {
       <section className={styles['offer-section']} id='pakiety'>
         <h2>Oferowane pakiety</h2>
         <div className={`${styles['offer-wrap']} grid`}>
-          <div className={styles['offer-box']}>
-            <img src={bronzeCow} alt='' width='64px' height='64px' />
-            <h3>Mała krówka</h3>
-            <h4>Opcja ekonomiczna</h4>
-            <h5>Cena</h5>
-            <ol>
-              <li>
-                <Milk size={milkSize} color='#1a1a1a' variant='TwoTone' /> Do 4
-                podstron
-              </li>
-              <li>
-                <Milk size={milkSize} color='#1a1a1a' variant='TwoTone' />{' '}
-                Poprawki w cenie
-              </li>
-              <li>
-                <Milk size={milkSize} color='#1a1a1a' variant='TwoTone' />{' '}
-                Hosting 6 miesięcy
-              </li>
-            </ol>
-            <div className={styles['order-button']}>Zamów</div>
-            <div
-              className={`${styles['blur-circle-shape']} ${styles['left-circle-shape']}`}
-            />
-          </div>
-          <div className={styles['offer-box']}>
-            <img src={silverCow} alt='' width='64px' height='64px' />
-            <h3>Dobra krowa</h3>
-            <h4>Opcja rekomendowana</h4>
-            <h5>Cena</h5>
-            <ol>
-              <li>
-                <Milk size={milkSize} color='#1a1a1a' variant='TwoTone' /> Do 6
-                podstron
-              </li>
-              <li>
-                <Milk size={milkSize} color='#1a1a1a' variant='TwoTone' />{' '}
-                Poprawki w cenie
-              </li>
-              <li>
-                <Milk size={milkSize} color='#1a1a1a' variant='TwoTone' />{' '}
-                Roczny hosting
-              </li>
-              <li>
-                <Milk size={milkSize} color='#1a1a1a' variant='TwoTone' /> Logo
-                w cenie
-              </li>
-            </ol>
-            <div className={styles['order-button']}>Zamów</div>
-            <div
-              className={`${styles['blur-circle-shape']} ${styles['left-circle-shape']}`}
-            />
-          </div>
-          <div className={styles['offer-box']}>
-            <img src={goldCow} alt='' width='64px' height='64px' />
-            <h3>Byk na wypasie</h3>
-            <h4>Opcja premium</h4>
-            <h5>Cena</h5>
-            <ol>
-              <li>
-                <Milk size={milkSize} color='#1a1a1a' variant='TwoTone' /> Do 10
-                podstron
-              </li>
-              <li>
-                <Milk size={milkSize} color='#1a1a1a' variant='TwoTone' />{' '}
-                Poprawki w cenie
-              </li>
-              <li>
-                <Milk size={milkSize} color='#1a1a1a' variant='TwoTone' />{' '}
-                Dwuletni hosting
-              </li>
-              <li>
-                <Milk size={milkSize} color='#1a1a1a' variant='TwoTone' /> Logo
-                w cenie
-              </li>
-              <li>
-                <Milk size={milkSize} color='#1a1a1a' variant='TwoTone' />{' '}
-                Spersonalizowane grafiki
-              </li>
-            </ol>
-            <div className={styles['order-button']}>Zamów</div>
-            <div
-              className={`${styles['blur-circle-shape']} ${styles['right-circle-shape']}`}
-            />
-          </div>
+          {offerOptions.map((option) => {
+            const circleClass = option.circlePosition;
+            return (
+              <div className={styles['offer-box']} key={option.title}>
+                <img
+                  src={option.src}
+                  alt={option.title}
+                  width='64px'
+                  height='64px'
+                />
+                <h3>{option.title}</h3>
+                <h4>{option.option}</h4>
+                <h5>{option.price} PLN</h5>
+                <ol>
+                  {option.opis.map((liniaOpisu) => {
+                    let id =
+                      liniaOpisu + 'id' + Math.random().toString(16).slice(2);
+
+                    return (
+                      <li key={id}>
+                        <Milk
+                          size={milkSize}
+                          color='#1a1a1a'
+                          variant='TwoTone'
+                        />{' '}
+                        {liniaOpisu}
+                      </li>
+                    );
+                  })}
+                </ol>
+
+                <div onClick={() => testFunction(option)}>
+                  <Link to='/platnosc' className={styles['order-button']}>
+                    Zamów
+                  </Link>
+                </div>
+
+                <div
+                  className={`${styles['blur-circle-shape']} ${styles[circleClass]}`}
+                />
+              </div>
+            );
+          })}
           <div className={styles['offer-box']}>
             <img src={colorCow} alt='' width='64px' height='64px' />
             <h3>Wypasiona</h3>

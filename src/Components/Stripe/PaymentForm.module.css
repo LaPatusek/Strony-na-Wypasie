@@ -86,6 +86,10 @@
   box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.5);
 }
 
+.error label {
+  color: #f25555;
+}
+
 .error input::placeholder {
   color: #f25555;
 }

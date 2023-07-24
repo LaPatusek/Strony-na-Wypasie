@@ -7,10 +7,12 @@ const PUBLIC_KEY =
 
 const stripeTestPromise = loadStripe(PUBLIC_KEY);
 
-const StripeContainer = () => {
-  return <Elements stripe={stripeTestPromise}>
-    <PaymentForm />
-  </Elements>;
+const StripeContainer = (props) => {
+  return (
+    <Elements stripe={stripeTestPromise}>
+      <PaymentForm finalOptionMessage={props.optionMessage} />
+    </Elements>
+  );
 };
 
 export default StripeContainer;
