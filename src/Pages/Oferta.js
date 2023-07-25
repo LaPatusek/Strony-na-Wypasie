@@ -67,6 +67,10 @@ const Oferta = (props) => {
       'TITLE_STATE',
       JSON.stringify(opcja.title),
     );
+    window.localStorage.setItem(
+      'SUBTITLE_STATE',
+      JSON.stringify(opcja.option),
+    );
   };
 
   return (
