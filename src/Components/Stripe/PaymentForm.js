@@ -1,7 +1,7 @@
-import { CardElement, PaymentElement, useElements, useStripe } from '@stripe/react-stripe-js';
+import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
 import axios from 'axios';
 import { ArrowLeft } from 'iconsax-react';
-import { Fragment, useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import GoBackButton from '../Elements/GoBackButton';
 import useInput from '../hooks/useInput';
@@ -35,7 +35,6 @@ const PaymentForm = () => {
   const [subTitle, setSubTitle] = useState();
   const [price, setPrice] = useState();
   const [image, setImage] = useState();
-  // const [summary, setSummary] = useState(false);
 
   const stripe = useStripe();
   const elements = useElements();
@@ -129,26 +128,14 @@ const PaymentForm = () => {
     if (subTitleData !== null) setSubTitle(JSON.parse(subTitleData));
   }, []);
 
-  // const summaryFunction = () => {
-  //   if (!formIsValid) {
-  //     return;
-  //   }
-  //   setSummary(true);
-  // };
-
-  const paymentElementOptions = {
-    layout: "tabs"
-  }
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!formIsValid) {
       return;
     }
-
     const { error, paymentMethod } = await stripe.createPaymentMethod({
       type: 'card',
-      card: elements.getElement(PaymentElement),
+      card: elements.getElement(CardElement),
 
       billing_details: {
         address: {
@@ -209,180 +196,134 @@ const PaymentForm = () => {
           </div>
           <div className={styles['right-section']}>
             <form onSubmit={handleSubmit} className={styles['payment-form']}>
-              <Fragment>
-                {' '}
-                <div className={`${styles['upper-form']} grid`}>
-                  <div
-                    className={`${styles.group} grid ${
-                      nameHasError ? styles.error : ''
-                    }`}
-                  >
-                    <label htmlFor='name'>Imię i nazwisko</label>
-                    <input
-                      type='text'
-                      ref={nameRef}
-                      value={enteredName}
-                      onChange={nameChangeHandler}
-                      onBlur={nameBlurHandler}
-                      id='name'
-                      required='Imie i nazwisko'
-                      placeholder='Imię i nazwisko'
-                      autoComplete='false'
-                    />
-                  </div>
-
-                  <div
-                    className={`${styles.group} grid ${
-                      mailHasError ? styles.error : ''
-                    }`}
-                  >
-                    <label htmlFor='mail'>Email</label>
-                    <input
-                      type='email'
-                      ref={emailRef}
-                      value={enteredMail}
-                      onChange={mailChangeHandler}
-                      onBlur={mailBlurHandler}
-                      id='mail'
-                      required='mail'
-                      placeholder='Adres email'
-                      autoComplete='false'
-                    />
-                  </div>
-
-                  <div
-                    className={`${styles.group} grid ${
-                      firstAddHasError ? styles.error : ''
-                    }`}
-                  >
-                    <label htmlFor='addressFirst'>Wiersz adresu 1</label>
-                    <input
-                      type='text'
-                      ref={addressFirstRef}
-                      value={enteredFirstAdd}
-                      onChange={firstAddChangeHandler}
-                      onBlur={firstAddBlurHandler}
-                      id='addressFirst'
-                      placeholder='Ulica'
-                      required='Wiersz adresu'
-                    />
-                  </div>
-
-                  <div className={`${styles.group} grid`}>
-                    <label htmlFor='addressSecond'>Wiersz adresu 2*</label>
-                    <input
-                      type='text'
-                      ref={addressSecondRef}
-                      id='addressSecond'
-                      placeholder='Mieszkanie, numer budynku, itp. (opcjonalnie)'
-                    />
-                  </div>
-
-                  <div
-                    className={`${styles.group} grid ${
-                      postalHasError ? styles.error : ''
-                    }`}
-                  >
-                    <label htmlFor='postalCode'>Kod pocztowy</label>
-                    <input
-                      type='text'
-                      ref={postalCodeRef}
-                      value={enteredPostal}
-                      onChange={postalChangeHandler}
-                      onBlur={postalBlurHandler}
-                      id='postalCode'
-                      required='Kod pocztowy'
-                      placeholder='00-000'
-                    />
-                  </div>
-
-                  <div
-                    className={`${styles.group} grid ${
-                      cityHasError ? styles.error : ''
-                    }`}
-                  >
-                    <label htmlFor='city'>Miasto</label>
-                    <input
-                      type='text'
-                      ref={cityRef}
-                      id='city'
-                      required='Miasto'
-                      value={enteredCity}
-                      onChange={cityChangeHandler}
-                      onBlur={cityBlurHandler}
-                      placeholder='Miasto'
-                    />
-                  </div>
-
-                  <div
-                    className={`${styles.group} grid ${
-                      numberHasError ? styles.error : ''
-                    }`}
-                  >
-                    <label htmlFor='phone'>Numer telefonu</label>
-                    <input
-                      type='number'
-                      ref={telRef}
-                      value={enteredNumber}
-                      onChange={numberChangeHandler}
-                      onBlur={numberBlurHandler}
-                      id='phone'
-                      required='Telefon'
-                      autoComplete='false'
-                      placeholder='000 000 000'
-                    />
-                  </div>
+              <div className={`${styles['upper-form']} grid`}>
+                <div
+                  className={`${styles.group} grid ${
+                    nameHasError ? styles.error : ''
+                  }`}
+                >
+                  <label htmlFor='name'>Imię i nazwisko</label>
+                  <input
+                    type='text'
+                    ref={nameRef}
+                    value={enteredName}
+                    onChange={nameChangeHandler}
+                    onBlur={nameBlurHandler}
+                    id='name'
+                    required='Imie i nazwisko'
+                    placeholder='Imię i nazwisko'
+                    autoComplete='false'
+                  />
                 </div>
-                <fieldset className={styles.fieldset}>
-                  <div className={styles['FormGroup']}>
-                    {/* <CardElement options={CARD_OPTIONS} /> */}
-                    <PaymentElement  />
-                  </div>
-                </fieldset>
-                  <button>zapłać</button>
-              </Fragment>
 
-              {/* {summary && (
-                <div className={styles.summary}>
-                  <h3>Podsumowanie</h3>
-                  <ol>
-                    <li>
-                      Imię i nazwisko: <br /> {nameRef?.current.value}
-                    </li>
-                    <li>
-                      Adres Email: <br /> {emailRef?.current.value}
-                    </li>
-                    <li>
-                      Wiersz adresu 1: <br /> {addressFirstRef?.current.value}
-                    </li>
-                    <li>
-                      Wiersz adresu 2: <br /> {addressSecondRef?.current.value}
-                    </li>
-                    <li>
-                      Kod pocztowy: <br /> {postalCodeRef?.current.value}
-                    </li>
-                    <li>
-                      Miasto: <br /> {cityRef?.current.value}
-                    </li>
-                    <li>
-                      Numer telefonu: <br /> {telRef?.current.value}
-                    </li>
-                  </ol>
+                <div
+                  className={`${styles.group} grid ${
+                    mailHasError ? styles.error : ''
+                  }`}
+                >
+                  <label htmlFor='mail'>Email</label>
+                  <input
+                    type='email'
+                    ref={emailRef}
+                    value={enteredMail}
+                    onChange={mailChangeHandler}
+                    onBlur={mailBlurHandler}
+                    id='mail'
+                    required='mail'
+                    placeholder='Adres email'
+                    autoComplete='false'
+                  />
                 </div>
-              )}
-              {summary && (
-                <div className={styles['double-button']}>
-                  <div
-                    className={`${styles['summary-back-button']} grid`}
-                    onClick={() => {
-                      setSummary(false);
-                    }}
-                  >
-                    Powrót
-                  </div>{' '}
-                  <button>zapłać</button>
+
+                <div
+                  className={`${styles.group} grid ${
+                    firstAddHasError ? styles.error : ''
+                  }`}
+                >
+                  <label htmlFor='addressFirst'>Wiersz adresu 1</label>
+                  <input
+                    type='text'
+                    ref={addressFirstRef}
+                    value={enteredFirstAdd}
+                    onChange={firstAddChangeHandler}
+                    onBlur={firstAddBlurHandler}
+                    id='addressFirst'
+                    placeholder='Ulica'
+                    required='Wiersz adresu'
+                  />
                 </div>
-              )} */}
+
+                <div className={`${styles.group} grid`}>
+                  <label htmlFor='addressSecond'>Wiersz adresu 2*</label>
+                  <input
+                    type='text'
+                    ref={addressSecondRef}
+                    id='addressSecond'
+                    placeholder='Mieszkanie, numer budynku, itp. (opcjonalnie)'
+                  />
+                </div>
+
+                <div
+                  className={`${styles.group} grid ${
+                    postalHasError ? styles.error : ''
+                  }`}
+                >
+                  <label htmlFor='postalCode'>Kod pocztowy</label>
+                  <input
+                    type='text'
+                    ref={postalCodeRef}
+                    value={enteredPostal}
+                    onChange={postalChangeHandler}
+                    onBlur={postalBlurHandler}
+                    id='postalCode'
+                    required='Kod pocztowy'
+                    placeholder='00-000'
+                  />
+                </div>
+
+                <div
+                  className={`${styles.group} grid ${
+                    cityHasError ? styles.error : ''
+                  }`}
+                >
+                  <label htmlFor='city'>Miasto</label>
+                  <input
+                    type='text'
+                    ref={cityRef}
+                    id='city'
+                    required='Miasto'
+                    value={enteredCity}
+                    onChange={cityChangeHandler}
+                    onBlur={cityBlurHandler}
+                    placeholder='Miasto'
+                  />
+                </div>
+
+                <div
+                  className={`${styles.group} grid ${
+                    numberHasError ? styles.error : ''
+                  }`}
+                >
+                  <label htmlFor='phone'>Numer telefonu</label>
+                  <input
+                    type='number'
+                    ref={telRef}
+                    value={enteredNumber}
+                    onChange={numberChangeHandler}
+                    onBlur={numberBlurHandler}
+                    id='phone'
+                    required='Telefon'
+                    autoComplete='false'
+                    placeholder='000 000 000'
+                  />
+                </div>
+              </div>
+              <fieldset className={styles.fieldset}>
+                <div className={styles['FormGroup']}>
+                  <CardElement options={CARD_OPTIONS} />
+                </div>
+              </fieldset>
+              <button>zapłać</button>
             </form>
           </div>
         </div>
