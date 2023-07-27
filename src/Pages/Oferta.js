@@ -18,6 +18,7 @@ const offerOptions = [
     price: 450,
     opis: ['Do 4 podstron', 'Poprawki w cenie', 'Hosting 6 miesięcy'],
     circlePosition: 'left-circle-shape',
+    link: 'https://buy.stripe.com/test_bIY3eMaqNgJgda0288',
   },
   {
     src: silverCow,
@@ -31,6 +32,7 @@ const offerOptions = [
       'Logo w cenie',
     ],
     circlePosition: 'left-circle-shape',
+    link: 'https://buy.stripe.com/test_8wMdTqaqNdx48TK7su',
   },
   {
     src: goldCow,
@@ -45,33 +47,13 @@ const offerOptions = [
       'Spersonalizowane grafiki',
     ],
     circlePosition: 'right-circle-shape',
+    link: 'https://buy.stripe.com/test_14k6qY6axakS6LCbIJ',
   },
 ];
 
 const Oferta = (props) => {
   const iconSize = 76;
   const milkSize = 20;
-
-  const testFunction = (opcja) => {
-    props.optionPassFuntion(opcja);
-
-    window.localStorage.setItem(
-      'IMAGE_STATE',
-      JSON.stringify(opcja.src),
-    );
-    window.localStorage.setItem(
-      'PRICE_STATE',
-      JSON.stringify(opcja.price),
-    );
-    window.localStorage.setItem(
-      'TITLE_STATE',
-      JSON.stringify(opcja.title),
-    );
-    window.localStorage.setItem(
-      'SUBTITLE_STATE',
-      JSON.stringify(opcja.option),
-    );
-  };
 
   return (
     <Fragment>
@@ -119,10 +101,11 @@ const Oferta = (props) => {
                   })}
                 </ol>
 
-                <div onClick={() => testFunction(option)}>
-                  <Link to='/platnosc' className={styles['order-button']}>
+                <div>
+                  {/* <Link to='/platnosc' className={styles['order-button']}>
                     Zamów
-                  </Link>
+                  </Link> */}
+                  <a href={option.link} target='_blank' rel='noreferrer'>Zamów</a>
                 </div>
 
                 <div
