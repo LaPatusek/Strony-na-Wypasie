@@ -61,7 +61,7 @@ const Kontakt = () => {
 
     emailjs
       .sendForm(
-        process.env.REACT_APP_SERVICE_ID,
+        process.env.REACT_APP_SMTP_ID,
         process.env.REACT_APP_TEMPLATE_ID,
         formRef.current,
         process.env.REACT_APP_PUBLIC_KEY,
@@ -121,8 +121,8 @@ const Kontakt = () => {
             </svg>
             <h3>eMail</h3>
             <p>
-              <a href='mailto:stronynawypasie@gmail.com'>
-                stronynawypasie@gmail.com
+              <a href='mailto:kontakt@stronynawypasie.pl'>
+              kontakt@stronynawypasie.pl
               </a>
             </p>
             <p>

@@ -15,16 +15,16 @@ const offerOptions = [
     src: bronzeCow,
     title: 'Mała krówka',
     option: 'Opcja ekonomiczna',
-    price: 450,
+    price: 1000,
     opis: ['Do 4 podstron', 'Poprawki w cenie', 'Hosting 6 miesięcy'],
     circlePosition: 'left-circle-shape',
-    link: 'https://buy.stripe.com/test_bIY3eMaqNgJgda0288',
+    link: 'https://buy.stripe.com/dR6fZvbFw2jYciAfYY',
   },
   {
     src: silverCow,
     title: 'Dobra krowa',
     option: 'Opcja rekomendowana',
-    price: 650,
+    price: 2500,
     opis: [
       'Do 6 podstron',
       'Poprawki w cenie',
@@ -32,13 +32,13 @@ const offerOptions = [
       'Logo w cenie',
     ],
     circlePosition: 'left-circle-shape',
-    link: 'https://buy.stripe.com/test_8wMdTqaqNdx48TK7su',
+    link: 'https://buy.stripe.com/aEUbJf6lc7Ei82kfYZ',
   },
   {
     src: goldCow,
     title: 'Byk na wypasie',
     option: 'Opcja premium',
-    price: 1000,
+    price: 4500,
     opis: [
       'Do 10 podstron',
       'Poprawki w cenie',
@@ -47,7 +47,7 @@ const offerOptions = [
       'Spersonalizowane grafiki',
     ],
     circlePosition: 'right-circle-shape',
-    link: 'https://buy.stripe.com/test_14k6qY6axakS6LCbIJ',
+    link: 'https://buy.stripe.com/3cs5kReRI5wa3M4eUW',
   },
 ];
 
@@ -102,10 +102,9 @@ const Oferta = (props) => {
                 </ol>
 
                 <div>
-                  {/* <Link to='/platnosc' className={styles['order-button']}>
+                  <a href={option.link} target='_blank' rel='noreferrer'>
                     Zamów
-                  </Link> */}
-                  <a href={option.link} target='_blank' rel='noreferrer'>Zamów</a>
+                  </a>
                 </div>
 
                 <div

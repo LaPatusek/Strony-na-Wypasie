@@ -97,7 +97,7 @@ const Formularz = () => {
 
     emailjs
       .sendForm(
-        process.env.REACT_APP_SERVICE_ID,
+        process.env.REACT_APP_SMTP_ID,
         process.env.REACT_APP_FORM_TEMPLATE_ID,
         formRef.current,
         process.env.REACT_APP_PUBLIC_KEY,
