@@ -1,8 +1,10 @@
 import { Fragment, useEffect, useState } from 'react';
+import ReactGA from 'react-ga';
 import { Helmet } from 'react-helmet';
 import { Route, Switch, useLocation } from 'react-router-dom';
 import Footer from './Components/Footer/Footer';
 import Nav from './Components/Nav/Nav';
+import Cookies from './Components/PrivacyAndStatue/Cookies';
 import Privacy from './Components/PrivacyAndStatue/Privacy';
 import Regulamin from './Components/PrivacyAndStatue/Regulamin';
 import Formularz from './Pages/Formularz';
@@ -11,6 +13,10 @@ import Main from './Pages/Main';
 import Onas from './Pages/O nas';
 import Oferta from './Pages/Oferta';
 import Projekty from './Pages/Projekty';
+
+const TRACKING_ID = process.env.REACT_APP_TRACKING_ID;
+
+ReactGA.initialize(TRACKING_ID);
 
 const App = () => {
   const [passIndexForward, setPassIndexForward] = useState();
@@ -34,6 +40,13 @@ const App = () => {
       }, 0);
     }
   }, [pathname, hash, key]);
+
+  useEffect(() => {
+    const data = window.localStorage.getItem('COOKIES_STATE');
+    if (data) {
+      ReactGA.pageview(window.location.pathname + window.location.search);
+    }
+  });
 
   return (
     <Fragment>
@@ -82,6 +95,8 @@ const App = () => {
       </main>
 
       <Footer PassFunction={PassForwardFunction} />
+
+      <Cookies />
     </Fragment>
   );
 };
