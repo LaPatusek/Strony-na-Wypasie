@@ -42,10 +42,9 @@ const App = () => {
   }, [pathname, hash, key]);
 
   useEffect(() => {
-    const data = window.localStorage.getItem('COOKIES_STATE');
-    if (data) {
-      ReactGA.pageview(window.location.pathname + window.location.search);
-    }
+    // const data = window.localStorage.getItem('COOKIES_STATE');
+
+    ReactGA.pageview(window.location.pathname + window.location.search);
   });
 
   return (
