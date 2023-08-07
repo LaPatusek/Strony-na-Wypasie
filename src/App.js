@@ -1,5 +1,5 @@
 import { Fragment, useEffect, useState } from 'react';
-import ReactGA from 'react-ga';
+import ReactGA from 'react-ga4';
 import { Helmet } from 'react-helmet';
 import { Route, Switch, useLocation } from 'react-router-dom';
 import Footer from './Components/Footer/Footer';
@@ -41,9 +41,10 @@ const App = () => {
     }
   }, [pathname, hash, key]);
 
-  useEffect(() => {
-    // const data = window.localStorage.getItem('COOKIES_STATE');
-    ReactGA.pageview(window.location.hash + window.location.search);
+  ReactGA.send({
+    hitType: 'pageview',
+    page: window.location.hash,
+    title: window.location.hash,
   });
 
   return (
