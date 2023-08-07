@@ -43,8 +43,7 @@ const App = () => {
 
   useEffect(() => {
     // const data = window.localStorage.getItem('COOKIES_STATE');
-
-    ReactGA.pageview(window.location.pathname + window.location.search);
+    ReactGA.pageview(window.location.hash + window.location.search);
   });
 
   return (
