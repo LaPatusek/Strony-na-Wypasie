@@ -12,7 +12,7 @@
 
 .footer > .upper-footer h3 {
   font-size: 22px;
-  font-family: "Pou";
+  font-family: 'Pou';
   margin-bottom: 20px;
   color: var(--bright-green);
   font-weight: bold;
@@ -106,24 +106,24 @@
   margin-right: 5px;
 }
 
-.socials svg {
+.socials svg,
+.socials img {
   margin-right: 4px;
   transition: all 0.5s;
   color: white;
 }
 
+.socials img {
+  transform: scale(1.4);
+}
+
 .Linkedin svg,
-.Twitter svg,
 .Instagram svg {
   fill: white;
 }
 
 .Linkedin svg:hover {
   fill: #0077b5;
-}
-
-.Twitter svg:hover {
-  fill: #1da1f2;
 }
 
 .Facebook svg:hover {
@@ -166,6 +166,10 @@
 
   .socials svg {
     transform: translateY(7px);
+  }
+
+  .socials img {
+    transform: translateY(7px) scale(1.4);
   }
 
   .Twitter::after,

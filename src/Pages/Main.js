@@ -30,7 +30,10 @@ const Main = () => {
               i o Twoim biznesie
             </h3>
             <div className={`${styles['button-container']} grid`}>
-              <Link to='/oferta#pakiety' className={styles['learn-more-button']}>
+              <Link
+                to='/oferta#pakiety'
+                className={styles['learn-more-button']}
+              >
                 <span className={styles.circle} aria-hidden='true'>
                   <span className={`${styles.icon} ${styles.arrow}`}></span>
                 </span>
@@ -45,7 +48,12 @@ const Main = () => {
             <div className={`${styles['offers-container']} grid`}>
               <div className={styles.container}>
                 <div className={`${styles['container-title']} grid`}>
-                  <img src={bronzeCow} alt='' width='32px' height='32px' />
+                  <img
+                    src={bronzeCow}
+                    alt='Opcja ekonomiczna'
+                    width='32px'
+                    height='32px'
+                  />
                   <h4>MAŁA KRÓWKA</h4>
                 </div>
 
@@ -66,7 +74,12 @@ const Main = () => {
               </div>
               <div className={styles.container}>
                 <div className={`${styles['container-title']} grid`}>
-                  <img src={silverCow} alt='' width='32px' height='32px' />
+                  <img
+                    src={silverCow}
+                    alt='Opcja rekomendowana'
+                    width='32px'
+                    height='32px'
+                  />
                   <h4>DOBRA KROWA</h4>
                 </div>
                 <ol>
@@ -90,7 +103,12 @@ const Main = () => {
               </div>
               <div className={styles.container}>
                 <div className={`${styles['container-title']} grid`}>
-                  <img src={goldCow} alt='' width='32px' height='32px' />
+                  <img
+                    src={goldCow}
+                    alt='Opcja premium'
+                    width='32px'
+                    height='32px'
+                  />
                   <h4>BYK NA WYPASIE</h4>
                 </div>
                 <ol>
@@ -118,7 +136,12 @@ const Main = () => {
               </div>
               <div className={styles.container}>
                 <div className={`${styles['container-title']} grid`}>
-                  <img src={colorCow} alt='' width='32px' height='32px' />
+                  <img
+                    src={colorCow}
+                    alt='Opcja niestandardowa'
+                    width='32px'
+                    height='32px'
+                  />
                   <h4>wypasiona</h4>
                 </div>
                 <p>
@@ -210,7 +233,7 @@ const Main = () => {
         </section>
 
         <section className={`${styles['o-nas']} grid`}>
-          <img src={codingImg} alt='' width='100%' />
+          <img src={codingImg} alt='Strona internetowa' width='100%' />
           <div className={styles.wrap}>
             <p>
               Jesteśmy młodym i kreatywnym zespołem programistów oraz grafików.

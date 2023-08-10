@@ -76,7 +76,7 @@ const Oferta = (props) => {
               <div className={styles['offer-box']} key={option.title}>
                 <img
                   src={option.src}
-                  alt={option.title}
+                  alt={option.option}
                   width='64px'
                   height='64px'
                 />
@@ -114,7 +114,12 @@ const Oferta = (props) => {
             );
           })}
           <div className={styles['offer-box']}>
-            <img src={colorCow} alt='' width='64px' height='64px' />
+            <img
+              src={colorCow}
+              alt='Opcja niestandardowa'
+              width='64px'
+              height='64px'
+            />
             <h3>Wypasiona</h3>
             <h4>Opcja spersonalizowana</h4>
             <p>
@@ -270,7 +275,12 @@ const Oferta = (props) => {
               strony
             </p>
           </div>
-          <img src={targetIcon} width={iconSize} height={iconSize} alt='' />
+          <img
+            src={targetIcon}
+            width={iconSize}
+            height={iconSize}
+            alt='Sprawdzone metody'
+          />
         </div>
 
         <div className={styles['seo-container']}>
@@ -278,7 +288,7 @@ const Oferta = (props) => {
             <h4>SEO</h4>
             <p>Poprawimy widoczność Twojej strony w wyniakch wyszukiwania</p>
           </div>
-          <img src={seoIcon} width={iconSize} height={iconSize} alt='' />
+          <img src={seoIcon} width={iconSize} height={iconSize} alt='SEO' />
         </div>
       </section>
 

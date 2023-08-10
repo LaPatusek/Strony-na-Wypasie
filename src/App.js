@@ -1,6 +1,5 @@
 import { Fragment, useEffect, useState } from 'react';
 import ReactGA from 'react-ga4';
-import { Helmet } from 'react-helmet';
 import { Route, Switch, useLocation } from 'react-router-dom';
 import Footer from './Components/Footer/Footer';
 import Nav from './Components/Nav/Nav';
@@ -49,14 +48,9 @@ const App = () => {
 
   return (
     <Fragment>
-      <Helmet>
-        <meta
-          name='keywords'
-          content='strony, web, www, Rzeszów, Strzyżów, tworzenie stron WWW, tworzenie stron'
-        />
-      </Helmet>
-
-      <Nav />
+      <header>
+        <Nav />
+      </header>
 
       <main>
         <Switch>
@@ -93,7 +87,9 @@ const App = () => {
         </Switch>
       </main>
 
-      <Footer PassFunction={PassForwardFunction} />
+      <footer>
+        <Footer PassFunction={PassForwardFunction} />
+      </footer>
 
       <Cookies />
     </Fragment>
