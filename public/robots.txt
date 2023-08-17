@@ -1,3 +1,16 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Disallow:
+Disallow: /elementor-414/
+Disallow: /feed/
+Disallow: /regulamin/
+Disallow: /produkt/
+Disallow: /category/
+Disallow: /tag-produktu/
+Disallow: /zamowienie/
+Disallow: /koszyk/
+Disallow: /moje-konto/
+Disallow: /sklep/
+Disallow: /przykladowa-pusta/
+Disallow: /kategoria-produktu/
+Disallow: /wp-login.php
+Allow: /#/
