@@ -11,6 +11,7 @@ import Kontakt from './Pages/Kontakt';
 import Main from './Pages/Main';
 import Onas from './Pages/O nas';
 import Oferta from './Pages/Oferta';
+import PageNotFound from './Pages/PageNotFound';
 import Projekty from './Pages/Projekty';
 
 const TRACKING_ID = process.env.REACT_APP_TRACKING_ID;
@@ -78,11 +79,11 @@ const App = () => {
           <Route path='/regulamin'>
             <Regulamin />
           </Route>
-          <Route path='/'>
+          <Route exact path='/'>
             <Main />
           </Route>
           <Route path='*'>
-            <Main />
+            <PageNotFound />
           </Route>
         </Switch>
       </main>
