@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet';
 import { useHistory } from 'react-router-dom';
 import GoBackButton from '../Elements/GoBackButton';
 import Card from '../UI/Card';
@@ -12,6 +13,12 @@ const Privacy = () => {
 
   return (
     <Card className={`${styles.privacy} grid`}>
+      <Helmet>
+        <link
+          rel='canonical'
+          href='https://stronynawypasie.pl/#/polityka-prywatnosci'
+        />
+      </Helmet>
       <div className={styles.title}>
         <h2>Polityka prywatności</h2>
         <hr />
@@ -73,7 +80,9 @@ const Privacy = () => {
         Wszelkie zmiany w naszej polityce prywatności zostaną opublikowane na
         naszej stronie internetowej.
       </h4>
-      <div onClick={navigationFunction} className={styles['back-button']}><GoBackButton /></div>
+      <div onClick={navigationFunction} className={styles['back-button']}>
+        <GoBackButton />
+      </div>
     </Card>
   );
 };

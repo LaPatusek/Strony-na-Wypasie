@@ -1,5 +1,6 @@
 import { Milk } from 'iconsax-react';
 import { Fragment, useRef } from 'react';
+import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import stonks from '../Assets/TrendUp-Bulk.svg';
 import codingImg from '../Assets/coding.webp';
@@ -7,7 +8,6 @@ import bronzeCow from '../Assets/cow-bronze.webp';
 import colorCow from '../Assets/cow-colors.webp';
 import goldCow from '../Assets/cow-gold.webp';
 import silverCow from '../Assets/cow-silver.webp';
-
 import Header from '../Components/Header/Header';
 import useObserver from '../Components/hooks/useObserver';
 import styles from './Main.module.css';
@@ -20,6 +20,9 @@ const Main = () => {
 
   return (
     <Fragment>
+      <Helmet>
+        <link rel='canonical' href='https://stronynawypasie.pl/' />
+      </Helmet>
       <Header />
       <div className={styles.main}>
         <section className={`${styles['main-offer']} grid`}>

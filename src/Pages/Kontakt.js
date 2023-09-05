@@ -1,6 +1,7 @@
 import emailjs from '@emailjs/browser';
 import { Call, Location, TickCircle } from 'iconsax-react';
 import { Fragment, useRef, useState } from 'react';
+import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import Card from '../Components/UI/Card';
 import useInput from '../Components/hooks/useInput';
@@ -93,6 +94,9 @@ const Kontakt = () => {
 
   return (
     <Fragment>
+      <Helmet>
+        <link rel='canonical' href='https://stronynawypasie.pl/#/kontakt' />
+      </Helmet>
       <div className={styles.title}>
         <h2>Kontakt</h2>
         <section className={`${styles['first-section']} grid`}>
@@ -122,7 +126,7 @@ const Kontakt = () => {
             <h3>eMail</h3>
             <p>
               <a href='mailto:kontakt@stronynawypasie.pl'>
-              kontakt@stronynawypasie.pl
+                kontakt@stronynawypasie.pl
               </a>
             </p>
             <p>

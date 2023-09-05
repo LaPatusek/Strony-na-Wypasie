@@ -1,5 +1,6 @@
 import { Link21, Milk, PresentionChart } from 'iconsax-react';
 import { Fragment } from 'react';
+import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 import bronzeCow from '../Assets/cow-bronze.webp';
 import colorCow from '../Assets/cow-colors.webp';
@@ -57,6 +58,9 @@ const Oferta = (props) => {
 
   return (
     <Fragment>
+      <Helmet>
+        <link rel='canonical' href='https://stronynawypasie.pl/#/oferta' />
+      </Helmet>
       <div className={styles.title}>
         <h1>Tworzymy aplikację frontend</h1>
         <h2>
@@ -66,7 +70,6 @@ const Oferta = (props) => {
           są responsywne, dostosowując się do różnych urządzeń.
         </h2>
       </div>
-
       <section className={styles['offer-section']} id='pakiety'>
         <h2>Oferowane pakiety</h2>
         <div className={`${styles['offer-wrap']} grid`}>
@@ -133,7 +136,6 @@ const Oferta = (props) => {
           </div>
         </div>
       </section>
-
       <div className={styles.heading}>
         <h3> Rozwój strony krok po kroku</h3>
       </div>
@@ -291,7 +293,6 @@ const Oferta = (props) => {
           <img src={seoIcon} width={iconSize} height={iconSize} alt='SEO' />
         </div>
       </section>
-
       <Faquestions id='faq' forwardMessage={props.message} />
     </Fragment>
   );

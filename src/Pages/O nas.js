@@ -1,4 +1,5 @@
 import { ProgrammingArrow } from 'iconsax-react';
+import { Helmet } from 'react-helmet';
 import challenge from '../Assets/challenge-icon.webp';
 import target from '../Assets/target.webp';
 import Card from '../Components/UI/Card';
@@ -7,6 +8,9 @@ import styles from './AboutUs.module.css';
 const Onas = () => {
   return (
     <Card className={styles['aboutUs']}>
+      <Helmet>
+        <link rel='canonical' href='https://stronynawypasie.pl/#/o-nas' />
+      </Helmet>
       <div className={styles['title-aboutUs']}>
         <h1>
           Strony na wypasie <br /> Razem możemy więcej!

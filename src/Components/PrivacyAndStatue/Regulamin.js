@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet';
 import { useHistory } from 'react-router-dom';
 import GoBackButton from '../Elements/GoBackButton';
 import Card from '../UI/Card';
@@ -12,6 +13,9 @@ const Regulamin = () => {
 
   return (
     <Card className={`${styles.regulamin} grid`}>
+      <Helmet>
+        <link rel='canonical' href='https://stronynawypasie.pl/#/regulamin' />
+      </Helmet>
       <div className={styles.title}>
         <h1>Regulamin</h1>
         <hr />
@@ -20,7 +24,6 @@ const Regulamin = () => {
         Regulamin sklepu online pełniącego usługi projektowania stron
         internetowych StronyNaWypasie.pl:
       </h2>
-
       <ol>
         <h3>Postanowienia ogólne</h3>
 
@@ -163,7 +166,6 @@ const Regulamin = () => {
           </ol>
         </li>
       </ol>
-
       <h4>
         Wszelkie zmiany w regulaminie zostaną opublikowane na naszej stronie
         internetowej.

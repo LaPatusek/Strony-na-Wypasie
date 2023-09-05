@@ -1,6 +1,7 @@
 import emailjs from '@emailjs/browser';
 import { ArrowUp2, TickCircle } from 'iconsax-react';
 import { useEffect, useRef, useState } from 'react';
+import { Helmet } from 'react-helmet';
 import Card from '../Components/UI/Card';
 import useInput from '../Components/hooks/useInput';
 import styles from './Formularz.module.css';
@@ -146,6 +147,12 @@ const Formularz = () => {
 
   return (
     <Card className={`${styles.wrap} grid`}>
+      <Helmet>
+        <link
+          rel='canonical'
+          href='https://stronynawypasie.pl/#/formularz-kontaktowy'
+        />
+      </Helmet>
       <section className={styles['left-section']}>
         <form onSubmit={formHandler} ref={formRef}>
           <div className={styles.group}>
