@@ -150,7 +150,7 @@ const Formularz = () => {
       <Helmet>
         <link
           rel='canonical'
-          href='https://stronynawypasie.pl/#/formularz-kontaktowy'
+          href='https://www.stronynawypasie.pl/#/formularz-kontaktowy'
         />
       </Helmet>
       <section className={styles['left-section']}>

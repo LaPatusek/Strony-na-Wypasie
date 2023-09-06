@@ -14,7 +14,7 @@ const PageNotFound = () => {
   return (
     <div className={`${styles.wrap} grid`}>
       <Helmet>
-        <link rel='canonical' href='https://stronynawypasie.pl/' />
+        <link rel='canonical' href='https://www.stronynawypasie.pl/' />
       </Helmet>
       <div className={`${styles['page-not-found']} grid`}>
         <img src={logo} alt='Strony Internetowe' />

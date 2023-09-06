@@ -16,7 +16,7 @@ const Privacy = () => {
       <Helmet>
         <link
           rel='canonical'
-          href='https://stronynawypasie.pl/#/polityka-prywatnosci'
+          href='https://www.stronynawypasie.pl/#/polityka-prywatnosci'
         />
       </Helmet>
       <div className={styles.title}>

@@ -9,7 +9,7 @@ const Onas = () => {
   return (
     <Card className={styles['aboutUs']}>
       <Helmet>
-        <link rel='canonical' href='https://stronynawypasie.pl/#/o-nas' />
+        <link rel='canonical' href='https://www.stronynawypasie.pl/#/o-nas' />
       </Helmet>
       <div className={styles['title-aboutUs']}>
         <h1>

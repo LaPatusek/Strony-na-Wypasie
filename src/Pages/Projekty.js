@@ -6,7 +6,7 @@ const Projekty = () => {
   return (
     <div className={styles.projekty}>
       <Helmet>
-        <link rel='canonical' href='https://stronynawypasie.pl/#/projekty' />
+        <link rel='canonical' href='https://www.stronynawypasie.pl/#/projekty' />
       </Helmet>
       <img
         src={pastwisko}

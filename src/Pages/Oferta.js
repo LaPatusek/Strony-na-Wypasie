@@ -59,7 +59,7 @@ const Oferta = (props) => {
   return (
     <Fragment>
       <Helmet>
-        <link rel='canonical' href='https://stronynawypasie.pl/#/oferta' />
+        <link rel='canonical' href='https://www.stronynawypasie.pl/#/oferta' />
       </Helmet>
       <div className={styles.title}>
         <h1>Tworzymy aplikację frontend</h1>

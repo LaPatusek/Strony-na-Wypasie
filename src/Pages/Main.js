@@ -21,7 +21,7 @@ const Main = () => {
   return (
     <Fragment>
       <Helmet>
-        <link rel='canonical' href='https://stronynawypasie.pl/' />
+        <link rel='canonical' href='https://www.stronynawypasie.pl/' />
       </Helmet>
       <Header />
       <div className={styles.main}>

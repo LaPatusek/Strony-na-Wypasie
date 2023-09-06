@@ -14,7 +14,10 @@ const Regulamin = () => {
   return (
     <Card className={`${styles.regulamin} grid`}>
       <Helmet>
-        <link rel='canonical' href='https://stronynawypasie.pl/#/regulamin' />
+        <link
+          rel='canonical'
+          href='https://www.stronynawypasie.pl/#/regulamin'
+        />
       </Helmet>
       <div className={styles.title}>
         <h1>Regulamin</h1>
