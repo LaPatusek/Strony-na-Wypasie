@@ -163,7 +163,7 @@ const Main = () => {
 
         <section className={styles['offer-section-right']}>
           <div className={styles['seo-title']}>
-            <img src={stonks} alt='' width='66px' />
+            <img src={stonks} alt='Skuteczne strony internetowe' width='66px' />
             <h3>Tworzymy skuteczne strony</h3>
             <hr />
             <h4>Zoptymalizujemy Twoją stronę pod każdym względem!</h4>

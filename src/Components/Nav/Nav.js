@@ -33,7 +33,7 @@ const Nav = () => {
       <div className={`${styles.navbar} grid`}>
         <div className={`${styles.logo} grid`}>
           <Link to='/main' aria-label='Strona Główna'>
-            <img src={logo} alt=''/>
+            <img src={logo} alt='Strony Internetowe Rzeszów' />
           </Link>
         </div>
 
@@ -81,18 +81,28 @@ const Nav = () => {
 
       <div className={`${styles['navbar-800']}`}>
         <div className={styles.logo}>
-          <img src={logo} alt='' />
+          <img src={logo} alt='Strony Internetowe Rzeszów' />
         </div>
 
         <div className={styles['ham-menu']}>
           {!menuState && <HambergerMenu size='40' onClick={menuHandler} />}
-          {menuState && <Add size='60' className={styles['exit-button']} onClick={menuHandler}/>}
+          {menuState && (
+            <Add
+              size='60'
+              className={styles['exit-button']}
+              onClick={menuHandler}
+            />
+          )}
         </div>
         {menuState && (
           <Fragment>
             <div className={`${styles.nav}`} ref={menuRef}>
               <div className={`${styles['link-container']}`}>
-                <img src={logo} height='70px' alt='' />
+                <img
+                  src={logo}
+                  height='70px'
+                  alt='Strony Internetowe Rzeszów'
+                />
               </div>
               <div className={styles['link-container']}>
                 <NavLink
