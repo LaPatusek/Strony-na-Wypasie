@@ -81,7 +81,12 @@ const Nav = () => {
 
       <div className={`${styles['navbar-800']}`}>
         <div className={styles.logo}>
-          <img src={logo} alt='Strony Internetowe Rzeszów' />
+          <img
+            src={logo}
+            alt='Strony Internetowe Rzeszów'
+            width={'126px'}
+            height={'150px'}
+          />
         </div>
 
         <div className={styles['ham-menu']}>

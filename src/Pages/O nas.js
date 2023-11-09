@@ -46,8 +46,8 @@ const Onas = () => {
               <img src={target} width='88px' height='88px' alt='' />
               <h3>Spełnimy Twoje oczekiwania</h3>
               <p>
-                Strony dopracowujemy i dopasowujemy do Twoich i Twojej firmy
-                potrzeb
+                Dostosowujemy strony do Twoich potrzeb <br /> i specyfiki
+                Twojego biznesu
               </p>
             </div>
           </div>
