@@ -134,6 +134,12 @@
     transform: translateY(10px);
     max-height: 200px;
     height: 200px;
+    width: fit-content;
+  }
+
+  .logo img {
+    height: 150px;
+    width: 126.5px;
   }
 
   .nav {
