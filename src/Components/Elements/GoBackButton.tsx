@@ -1,6 +1,7 @@
+import React from 'react';
 import styles from './GoBackButton.module.css';
 
-const GoBackButton = () => {
+const GoBackButton: React.FC = () => {
   return (
     <button className={styles.cta}>
       <svg viewBox='0 0 13 10' height='10px' width='15px'>

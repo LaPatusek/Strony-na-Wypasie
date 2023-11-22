@@ -1,10 +1,11 @@
+import React from 'react';
 import { Helmet } from 'react-helmet';
 import { useHistory } from 'react-router-dom';
-import GoBackButton from '../Elements/GoBackButton';
-import Card from '../UI/Card';
+import GoBackButton from '../Elements/GoBackButton.tsx';
+import Card from '../UI/Card.tsx';
 import styles from './Privacy.module.css';
 
-const Privacy = () => {
+const Privacy: React.FC = () => {
   const history = useHistory();
 
   const navigationFunction = () => {
@@ -19,6 +20,7 @@ const Privacy = () => {
           href='https://www.stronynawypasie.pl/#/polityka-prywatnosci'
         />
       </Helmet>
+
       <div className={styles.title}>
         <h2>Polityka prywatności</h2>
         <hr />

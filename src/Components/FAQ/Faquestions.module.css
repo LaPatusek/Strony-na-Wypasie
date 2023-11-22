@@ -37,7 +37,7 @@
   text-align: left;
   cursor: pointer;
   color: #1a1a1a;
-  transition: 0.25s ease;
+  transition: all 0.25s ease;
 }
 
 .buttons button:hover {

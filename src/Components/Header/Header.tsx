@@ -1,13 +1,13 @@
-import { useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import laptop from '../../Assets/Laptop.mp4';
 import minature from '../../Assets/LaptopMiniaturka.webp';
 import styles from './Header.module.css';
 
-const Header = () => {
-  const videoRef = useRef();
+const Header: React.FC = () => {
+  const videoRef = useRef<HTMLVideoElement>(null);
   useEffect(() => {
-    const video = videoRef?.current;
+    const video = videoRef.current!;
 
     const handleCanPlayThrough = () => {
       video.preload = 'auto';

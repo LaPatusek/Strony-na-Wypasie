@@ -1,49 +1,57 @@
 import emailjs from '@emailjs/browser';
 import { ArrowUp2, TickCircle } from 'iconsax-react';
-import { useEffect, useRef, useState } from 'react';
+import React, { ChangeEvent, useEffect, useRef, useState } from 'react';
 import { Helmet } from 'react-helmet';
-import Card from '../Components/UI/Card';
-import useInput from '../Components/hooks/useInput';
+import Card from '../Components/UI/Card.tsx';
+import useInput from '../Components/hooks/useInput.tsx';
 import styles from './Formularz.module.css';
 
-const Formularz = () => {
-  const [optionsVis, setOptionsVis] = useState(false);
+declare var process: {
+  env: {
+    REACT_APP_SMTP_ID: string;
+    REACT_APP_FORM_TEMPLATE_ID: string;
+    REACT_APP_PUBLIC_KEY: string;
+  };
+};
+
+const Formularz: React.FC = () => {
+  const [optionsVis, setOptionsVis] = useState<boolean>(false);
   const [enteredType, setEnteredType] = useState('');
   const [enteredSites, setEnteredSites] = useState('');
   const [enteredNumLang, setEnteredNumLang] = useState('');
   const [enteredGraphs, setEnteredGraphs] = useState('');
   const [enteredBudget, setEnteredBudget] = useState('');
   const [enteredFind, setEnteredFind] = useState('');
-  const [formIsSent, setFormIsSent] = useState(false);
-  const iconRef = useRef();
-  const formRef = useRef();
+  const [formIsSent, setFormIsSent] = useState<boolean>(false);
+  const iconRef = useRef<SVGSVGElement>(null);
+  const formRef = useRef(null);
 
-  const typeChangeFunction = (e) => {
+  const typeChangeFunction = (e: ChangeEvent<HTMLInputElement>) => {
     setEnteredType(e.target.defaultValue);
   };
 
-  const sitesChangeFunction = (e) => {
+  const sitesChangeFunction = (e: ChangeEvent<HTMLInputElement>) => {
     setEnteredSites(e.target.defaultValue);
   };
 
-  const numLangChangeFunction = (e) => {
+  const numLangChangeFunction = (e: ChangeEvent<HTMLInputElement>) => {
     setEnteredNumLang(e.target.defaultValue);
   };
 
-  const graphsChangeFunction = (e) => {
+  const graphsChangeFunction = (e: ChangeEvent<HTMLInputElement>) => {
     setEnteredGraphs(e.target.defaultValue);
   };
 
-  const budgetChangeFunction = (e) => {
+  const budgetChangeFunction = (e: ChangeEvent<HTMLInputElement>) => {
     setEnteredBudget(e.target.defaultValue);
   };
 
-  const findChangeFunction = (e) => {
+  const findChangeFunction = (e: ChangeEvent<HTMLInputElement>) => {
     setEnteredFind(e.target.defaultValue);
   };
 
   useEffect(() => {
-    const icon = iconRef?.current;
+    const icon = iconRef?.current!;
     icon.classList.toggle(styles.active);
   }, [optionsVis]);
 
@@ -54,7 +62,9 @@ const Formularz = () => {
     inputBlurHandler: nameBlurHandler,
     hasError: nameHasError,
     reset: nameReset,
-  } = useInput((value) => value.trim() !== '');
+  } = useInput({
+    validateValue: (value: string) => value.trim() !== '',
+  });
 
   const {
     value: enteredTopic,
@@ -63,7 +73,9 @@ const Formularz = () => {
     inputBlurHandler: topicBlurHandler,
     hasError: topicHasError,
     reset: topicReset,
-  } = useInput((value) => value.trim() !== '');
+  } = useInput({
+    validateValue: (value: string) => value.trim() !== '',
+  });
 
   const {
     value: enteredMail,
@@ -72,7 +84,9 @@ const Formularz = () => {
     inputBlurHandler: mailBlurHandler,
     hasError: mailHasError,
     reset: mailReset,
-  } = useInput((value) => value.trim().includes('@'));
+  } = useInput({
+    validateValue: (value: string) => value.trim().includes('@'),
+  });
 
   const {
     value: enteredMessage,
@@ -81,7 +95,9 @@ const Formularz = () => {
     inputBlurHandler: messageBlurHandler,
     hasError: messageHasError,
     reset: messageReset,
-  } = useInput((value) => value.trim() !== '');
+  } = useInput({
+    validateValue: (value: string) => value.trim() !== '',
+  });
 
   let formIsValid = false;
 
@@ -89,7 +105,7 @@ const Formularz = () => {
     formIsValid = true;
   }
 
-  const formHandler = (e) => {
+  const formHandler = (e: React.FormEvent) => {
     e.preventDefault();
 
     if (!formIsValid) {
@@ -100,7 +116,7 @@ const Formularz = () => {
       .sendForm(
         process.env.REACT_APP_SMTP_ID,
         process.env.REACT_APP_FORM_TEMPLATE_ID,
-        formRef.current,
+        formRef.current!,
         process.env.REACT_APP_PUBLIC_KEY,
       )
       .then(
@@ -157,7 +173,7 @@ const Formularz = () => {
         <form onSubmit={formHandler} ref={formRef}>
           <div className={styles.group}>
             <input
-              required='Imie i nazwisko'
+              required
               name='user_name'
               type='text'
               id='name'
@@ -174,7 +190,7 @@ const Formularz = () => {
 
           <div className={styles.group}>
             <input
-              required='Temat'
+              required
               id='topic'
               name='user_topic'
               type='text'
@@ -191,7 +207,7 @@ const Formularz = () => {
 
           <div className={styles.group}>
             <input
-              required='Adres email'
+              required
               id='mail'
               name='user_email'
               value={enteredMail}
@@ -208,13 +224,13 @@ const Formularz = () => {
 
           <div className={styles.group}>
             <textarea
-              required='Twoja wiadomość'
+              required
               id='message'
               name='message'
               autoComplete='false'
               value={enteredMessage}
               className={styles.input}
-              rows='6'
+              rows={6}
               onChange={messageChangeHandler}
               onBlur={messageBlurHandler}
             />

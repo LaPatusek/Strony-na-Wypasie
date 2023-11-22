@@ -1,12 +1,12 @@
 import { Add, HambergerMenu } from 'iconsax-react';
-import { Fragment, useEffect, useRef, useState } from 'react';
+import React, { Fragment, useEffect, useRef, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import logo from '../../Assets/logo3.webp';
 import styles from './Nav.module.css';
 
-const Nav = () => {
-  const [menuState, setMenuState] = useState(false);
-  const menuRef = useRef(null);
+const Nav: React.FC = () => {
+  const [menuState, setMenuState] = useState<boolean>(false);
+  const menuRef = useRef<HTMLDivElement>(null);
 
   const menuHandler = () => {
     setMenuState((s) => !s);
@@ -21,7 +21,7 @@ const Nav = () => {
     }
 
     if (menuState) {
-      const menu = menuRef?.current;
+      const menu = menuRef.current!;
       setTimeout(() => {
         menu.classList.toggle(styles.active);
       });

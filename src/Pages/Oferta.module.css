@@ -1,17 +1,14 @@
 .title {
-  background-color: var(--bright-mid-green);
-  border-radius: 30px;
-  border: 2px solid #1a1a1a;
-  box-shadow: 4px 4px 10px #1a1a1a;
   padding: 2.5rem;
-  margin: 35px 0 60px 12%;
-  max-width: 700px;
 }
 
 .title h1 {
-  font-size: 34px;
+  font-size: 44px;
   letter-spacing: 0.6px;
   font-weight: bold;
+  font-family: 'Pou';
+  text-align: center;
+  user-select: none;
   margin-bottom: 25px;
 }
 
@@ -20,6 +17,9 @@
   line-height: 24px;
   letter-spacing: 0.6px;
   color: #1a1a1a;
+  text-align: center;
+  width: 50%;
+  margin: 0 auto;
 }
 
 .offer-section {
@@ -308,10 +308,7 @@
 @media screen and (max-width: 800px) {
   .title {
     margin: 50px 20px;
-  }
-
-  .title h1 {
-    text-align: center;
+    padding: 0;
   }
 
   .title h2 {
@@ -319,7 +316,7 @@
   }
 
   .offer-wrap {
-    grid-template-columns: repeat(1, 100%);
+    grid-template-columns: repeat(1, 1fr);
   }
 
   .offer-box {
@@ -333,8 +330,7 @@
   .heading {
     width: 50%;
     line-height: 25px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
   }
 
   .design-section {

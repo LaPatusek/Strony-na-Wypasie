@@ -1,28 +1,34 @@
-import { Fragment, useEffect, useState } from 'react';
+import React, { Fragment, useEffect, useState } from 'react';
 import ReactGA from 'react-ga4';
 import { Route, Switch, useLocation } from 'react-router-dom';
-import Footer from './Components/Footer/Footer';
-import Nav from './Components/Nav/Nav';
+import Footer from './Components/Footer/Footer.tsx';
+import Nav from './Components/Nav/Nav.tsx';
 import Cookies from './Components/PrivacyAndStatue/Cookies';
-import Privacy from './Components/PrivacyAndStatue/Privacy';
-import Regulamin from './Components/PrivacyAndStatue/Regulamin';
-import Formularz from './Pages/Formularz';
-import Kontakt from './Pages/Kontakt';
-import Main from './Pages/Main';
-import Onas from './Pages/O nas';
-import Oferta from './Pages/Oferta';
-import PageNotFound from './Pages/PageNotFound';
-import Projekty from './Pages/Projekty';
+import Privacy from './Components/PrivacyAndStatue/Privacy.tsx';
+import Regulamin from './Components/PrivacyAndStatue/Regulamin.tsx';
+import Formularz from './Pages/Formularz.tsx';
+import Kontakt from './Pages/Kontakt.tsx';
+import Main from './Pages/Main.tsx';
+import Onas from './Pages/O nas.tsx';
+import Oferta from './Pages/Oferta.tsx';
+import PageNotFound from './Pages/PageNotFound.tsx';
+import Projekty from './Pages/Projekty.tsx';
+
+declare var process: {
+  env: {
+    REACT_APP_TRACKING_ID: string;
+  };
+};
 
 const TRACKING_ID = process.env.REACT_APP_TRACKING_ID;
 
 ReactGA.initialize(TRACKING_ID);
 
-const App = () => {
-  const [passIndexForward, setPassIndexForward] = useState();
+const App: React.FC<{ PassFunction: (index: number) => void }> = () => {
+  const [passIndexForward, setPassIndexForward] = useState<string>('');
 
-  const PassForwardFunction = (index) => {
-    setPassIndexForward(index);
+  const PassForwardFunction = (index: number) => {
+    setPassIndexForward(index.toString());
   };
 
   const { pathname, hash, key } = useLocation();

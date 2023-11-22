@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import Card from '../UI/Card';
+import React, { useState } from 'react';
+import Card from '../UI/Card.tsx';
 import styles from './Faquestions.module.css';
 
 const buttons = [
@@ -9,7 +9,7 @@ const buttons = [
   'Ile kosztuje utrzymanie strony?',
 ];
 
-const Faquestions = (props) => {
+const Faquestions: React.FC<{ forwardMessage: string }> = (props) => {
   let activeProp = +props.forwardMessage;
   if (!activeProp) {
     activeProp = 0;
@@ -17,7 +17,7 @@ const Faquestions = (props) => {
 
   const [activeBlock, setActiveBlock] = useState(activeProp);
 
-  const toggleMenuBlock = (index) => {
+  const toggleMenuBlock = (index: number) => {
     setActiveBlock(index);
   };
 

@@ -1,12 +1,16 @@
+import React from 'react';
 import { Helmet } from 'react-helmet';
 import pastwisko from '../Assets/cow-pasture.webp';
 import styles from './Projekty.module.css';
 
-const Projekty = () => {
+const Projekty: React.FC = () => {
   return (
     <div className={styles.projekty}>
       <Helmet>
-        <link rel='canonical' href='https://www.stronynawypasie.pl/#/projekty' />
+        <link
+          rel='canonical'
+          href='https://www.stronynawypasie.pl/#/projekty'
+        />
       </Helmet>
       <img
         src={pastwisko}

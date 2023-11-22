@@ -29,7 +29,6 @@
 
 .first-section {
   grid-template-columns: repeat(3, 1fr);
-  text-align: center;
   padding-bottom: 40px;
   line-height: 28px;
 }
@@ -39,7 +38,7 @@
 }
 
 .container a {
-  color: white;
+  color: #fff;
   text-decoration: underline;
 }
 
@@ -61,8 +60,7 @@
 .left-section h3 {
   color: green;
   font-family: 'Pou';
-  margin-bottom: 50px;
-  margin-top: 30px;
+  margin: 30px 0 50px 0;
   font-size: 33px;
 }
 
@@ -110,7 +108,6 @@
 .group > label {
   color: #999;
   font-size: 18px;
-  font-weight: normal;
   position: absolute;
   pointer-events: none;
   left: 5px;
@@ -160,7 +157,6 @@
 }
 
 .buttons {
-  display: flex;
   justify-content: center;
   width: 90%;
 }
@@ -271,6 +267,14 @@
     justify-content: center;
   }
 
+  .right-section h4,
+  .kontakt input,
+  .kontakt textarea,
+  .buttons,
+  .mess-after-form {
+    width: 100%;
+  }
+
   .right-section {
     width: 90%;
     padding: 0 !important;
@@ -293,5 +297,13 @@
   .right-section {
     padding-right: 0;
     padding-left: 2rem;
+  }
+
+  .buttons {
+    padding-bottom: 20px;
+  }
+
+  .mess-after-form {
+    padding-bottom: 30px;
   }
 }

@@ -1,9 +1,10 @@
+import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import logo from '../Assets/logo3.webp';
 import styles from './PageNotFound.module.css';
 
-const PageNotFound = () => {
+const PageNotFound: React.FC = () => {
   return (
     <div className={`${styles.wrap} grid`}>
       <Helmet>

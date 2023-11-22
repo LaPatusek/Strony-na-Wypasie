@@ -1,5 +1,5 @@
 import { Milk } from 'iconsax-react';
-import { Fragment, useRef } from 'react';
+import React, { Fragment, useRef } from 'react';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import stonks from '../Assets/TrendUp-Bulk.svg';
@@ -8,12 +8,12 @@ import bronzeCow from '../Assets/cow-bronze.webp';
 import colorCow from '../Assets/cow-colors.webp';
 import goldCow from '../Assets/cow-gold.webp';
 import silverCow from '../Assets/cow-silver.webp';
-import Header from '../Components/Header/Header';
-import useObserver from '../Components/hooks/useObserver';
+import Header from '../Components/Header/Header.tsx';
+import useObserver from '../Components/hooks/useObserver.tsx';
 import styles from './Main.module.css';
 
-const Main = () => {
-  const circleRef = useRef();
+const Main: React.FC = () => {
+  const circleRef = useRef<HTMLDivElement>(null);
   const iconSize = 20;
 
   const isVisible = useObserver(circleRef);
@@ -47,7 +47,7 @@ const Main = () => {
             </div>
           </div>
           <div className={styles['right-main-offer']}>
-            <div className={styles.background} />
+            {/* <div className={styles.background} /> */}
             <div className={`${styles['offers-container']} grid`}>
               <div className={styles.container}>
                 <div className={`${styles['container-title']} grid`}>
@@ -238,6 +238,7 @@ const Main = () => {
         <section className={`${styles['o-nas']} grid`}>
           <img src={codingImg} alt='Strona internetowa' width='100%' />
           <div className={styles.wrap}>
+            <h3>O nas</h3>
             <p>
               Jesteśmy młodym i kreatywnym zespołem programistów oraz grafików.
               Wierzymy, że dzięki współpracy stworzymy coś wartościowego.

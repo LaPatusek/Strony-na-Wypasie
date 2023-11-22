@@ -5,11 +5,12 @@ import {
   Facebook,
   Location,
 } from 'iconsax-react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Footer.module.css';
 
-const Footer = (props) => {
-  const pickIndexFunction = (index) => {
+const Footer: React.FC<{ PassFunction: (index: number) => void }> = (props) => {
+  const pickIndexFunction = (index: number) => {
     props.PassFunction(index);
   };
 

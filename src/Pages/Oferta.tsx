@@ -1,5 +1,5 @@
 import { Link21, Milk, PresentionChart } from 'iconsax-react';
-import { Fragment } from 'react';
+import React, { Fragment } from 'react';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 import bronzeCow from '../Assets/cow-bronze.webp';
@@ -8,7 +8,7 @@ import goldCow from '../Assets/cow-gold.webp';
 import silverCow from '../Assets/cow-silver.webp';
 import seoIcon from '../Assets/seo-icon.webp';
 import targetIcon from '../Assets/target-icon.webp';
-import Faquestions from '../Components/FAQ/Faquestions';
+import Faquestions from '../Components/FAQ/Faquestions.tsx';
 import styles from './Oferta.module.css';
 
 const offerOptions = [
@@ -16,7 +16,7 @@ const offerOptions = [
     src: bronzeCow,
     title: 'Mała krówka',
     option: 'Opcja ekonomiczna',
-    price: 1000,
+    price: 1200,
     opis: ['Do 4 podstron', 'Poprawki w cenie', 'Hosting 6 miesięcy'],
     circlePosition: 'left-circle-shape',
     link: 'https://buy.stripe.com/dR6fZvbFw2jYciAfYY',
@@ -25,7 +25,7 @@ const offerOptions = [
     src: silverCow,
     title: 'Dobra krowa',
     option: 'Opcja rekomendowana',
-    price: 2500,
+    price: 1900,
     opis: [
       'Do 6 podstron',
       'Poprawki w cenie',
@@ -39,7 +39,7 @@ const offerOptions = [
     src: goldCow,
     title: 'Byk na wypasie',
     option: 'Opcja premium',
-    price: 4500,
+    price: 3000,
     opis: [
       'Do 10 podstron',
       'Poprawki w cenie',
@@ -52,7 +52,7 @@ const offerOptions = [
   },
 ];
 
-const Oferta = (props) => {
+const Oferta: React.FC<{ message: string }> = (props) => {
   const iconSize = 76;
   const milkSize = 20;
 
@@ -293,7 +293,9 @@ const Oferta = (props) => {
           <img src={seoIcon} width={iconSize} height={iconSize} alt='SEO' />
         </div>
       </section>
-      <Faquestions id='faq' forwardMessage={props.message} />
+      <div id='faq'>
+        <Faquestions forwardMessage={props.message} />
+      </div>
     </Fragment>
   );
 };

@@ -8,22 +8,20 @@
 
 .title-aboutUs h1 {
   font-size: 60px;
+  letter-spacing: 0.6px;
   font-family: 'Pou';
-  margin-bottom: 40px;
-  text-align: center;
-  width: 660px;
+  margin-bottom: 30px;
   user-select: none;
 }
 
 .title-aboutUs h2 {
-  font-size: 40px;
-  font-weight: bold;
-  width: 90%;
+  font-size: 34px;
+  width: 65%;
+  margin: 0 auto;
   color: #1a1a1a;
 }
 
 .boxes-in-row {
-  display: grid;
   justify-content: space-between;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 50px;
@@ -45,16 +43,16 @@
   z-index: -1;
   background-image: url('../Assets/Cow Pattern-01.svg');
   background-size: cover;
+  opacity: 0.5;
 }
 
 .filter {
   z-index: 0;
-  background-color: rgba(240, 240, 240, 0.6);
+  background-color: rgba(240, 240, 240, 0.5);
   height: 400px;
 }
 
 .container-content {
-  display: grid;
   justify-content: center;
   align-content: center;
   height: 90%;
@@ -80,20 +78,19 @@
 
 .container-content p {
   width: 70%;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   font-size: 20px;
+  line-height: 22px;
   font-weight: bold;
 }
 
 @media screen and (max-width: 800px) {
   .aboutUs {
-    padding: 2rem;
+    padding: 2rem 1rem;
   }
 
   .title-aboutUs h1 {
     font-size: 40px;
-    width: fit-content;
     margin-bottom: 20px;
   }
 
