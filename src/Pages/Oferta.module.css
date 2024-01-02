@@ -23,10 +23,8 @@
 }
 
 .offer-section {
-  margin-left: auto;
-  margin-right: auto;
+  margin: 4rem auto 6rem auto;
   width: 90%;
-  padding: 4rem 0 6rem 0;
 }
 
 .offer-section h2 {
@@ -44,16 +42,15 @@
 }
 
 .offer-box {
-  position: relative;
   overflow: hidden;
   border: 2px solid var(--secondary-brown);
   border-radius: 20px;
   padding: 25px;
   max-width: 300px;
   width: 100%;
-  box-shadow: 5px 5px 15px var(--secondary-brown);
+  box-shadow: 3px 3px 15px var(--secondary-brown);
   z-index: 1;
-  transition: all 0.5s;
+  transition: all 500ms;
 }
 
 .blur-circle-shape {
@@ -82,9 +79,7 @@
 
 .offer-box img {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 10px;
+  margin: 0 auto 10px auto;
 }
 
 .offer-box h3 {
@@ -131,23 +126,21 @@
   position: absolute;
   bottom: 0;
   left: 50%;
-  color: white;
-  cursor: pointer;
   transform: translateX(-50%);
+  color: #fff;
+  cursor: pointer;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-family: 'Pou';
   font-size: 18px;
   padding: 5px 35px;
+  margin: 0 auto 15px auto;
   background-color: var(--secondary-brown);
   border-radius: 15px;
   border: 2px solid var(--secondary-brown);
   width: fit-content;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 15px;
-  transition: all 0.4s;
+  transition: all 400ms;
 }
 
 .offer-box > .order-button:hover,
@@ -193,7 +186,7 @@
   display: flex;
   background: #1f1f1f;
   box-shadow: 4px 4px 10px #1a1a1a;
-  color: white;
+  color: #fff;
   padding: 1.5rem;
   border-radius: 6px;
   transform: translateY(-33px);
@@ -252,8 +245,7 @@
 }
 
 .seo {
-  padding-top: 2rem;
-  margin-bottom: 4rem;
+  margin: 2rem 0 4rem 0;
 }
 
 .seo h3 {
@@ -268,11 +260,7 @@
 
 .seo-container {
   width: 60%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 45px;
-  margin-top: 20px;
-  display: grid;
+  margin: 20px auto 45px auto;
   grid-template-columns: calc(100% - 64px) 64px;
 }
 

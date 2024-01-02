@@ -8,7 +8,7 @@ import goldCow from '../Assets/cow-gold.webp';
 import silverCow from '../Assets/cow-silver.webp';
 import seoIcon from '../Assets/seo-icon.webp';
 import targetIcon from '../Assets/target-icon.webp';
-import Faquestions from '../Components/FAQ/Faquestions.tsx';
+import Faquestions from '../Components/FAQ/Faquestions';
 import styles from './Oferta.module.css';
 
 const offerOptions = [
@@ -60,6 +60,7 @@ const Oferta: React.FC<{ message: string }> = (props) => {
     <Fragment>
       <Helmet>
         <link rel='canonical' href='https://www.stronynawypasie.pl/#/oferta' />
+        <meta name='robots' content='index, follow' />
       </Helmet>
       <div className={styles.title}>
         <h1>Tworzymy aplikację frontend</h1>
@@ -76,7 +77,10 @@ const Oferta: React.FC<{ message: string }> = (props) => {
           {offerOptions.map((option) => {
             const circleClass = option.circlePosition;
             return (
-              <div className={styles['offer-box']} key={option.title}>
+              <div
+                className={`${styles['offer-box']} relative`}
+                key={option.title}
+              >
                 <img
                   src={option.src}
                   alt={option.option}
@@ -116,7 +120,7 @@ const Oferta: React.FC<{ message: string }> = (props) => {
               </div>
             );
           })}
-          <div className={styles['offer-box']}>
+          <div className={`${styles['offer-box']} relative`}>
             <img
               src={colorCow}
               alt='Opcja niestandardowa'
@@ -248,7 +252,7 @@ const Oferta: React.FC<{ message: string }> = (props) => {
       </section>
       <section id='seo' className={styles.seo}>
         <h3>Tworzymy skuteczne strony</h3>
-        <div className={styles['seo-container']}>
+        <div className={`${styles['seo-container']} grid`}>
           <div className={styles['tekst-seo']}>
             <h4>Wydajność</h4>
             <p>
@@ -258,7 +262,7 @@ const Oferta: React.FC<{ message: string }> = (props) => {
           <PresentionChart variant='Bulk' size={iconSize} />
         </div>
 
-        <div className={styles['seo-container']}>
+        <div className={`${styles['seo-container']} grid`}>
           <div className={styles['tekst-seo']}>
             <h4>Ułatwienia dostępu</h4>
             <p>
@@ -269,7 +273,7 @@ const Oferta: React.FC<{ message: string }> = (props) => {
           <Link21 size={iconSize} variant='Bold' />
         </div>
 
-        <div className={styles['seo-container']}>
+        <div className={`${styles['seo-container']} grid`}>
           <div className={styles['tekst-seo']}>
             <h4>Sprawdzone metody</h4>
             <p>
@@ -285,7 +289,7 @@ const Oferta: React.FC<{ message: string }> = (props) => {
           />
         </div>
 
-        <div className={styles['seo-container']}>
+        <div className={`${styles['seo-container']} grid`}>
           <div className={styles['tekst-seo']}>
             <h4>SEO</h4>
             <p>Poprawimy widoczność Twojej strony w wyniakch wyszukiwania</p>

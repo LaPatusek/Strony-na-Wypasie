@@ -57,6 +57,10 @@ code {
   text-align: center;
 }
 
+.relative {
+  position: relative;
+}
+
 @font-face {
   font-family: 'Pou';
   font-style: normal;

@@ -27,7 +27,6 @@
 
 .container {
   padding-bottom: 20px;
-  position: relative;
 }
 
 .container svg {
@@ -49,10 +48,10 @@
 .strony li,
 .strony a {
   position: relative;
-  color: white;
+  color: #fff;
   margin-bottom: 8px;
   font-size: 18px;
-  transition: color 0.3s;
+  transition: color 300ms;
 }
 
 .strony a:hover {
@@ -70,7 +69,6 @@
 
 .arrow-on-hover {
   display: none;
-  position: relative;
   top: 0;
   margin-left: 5px;
   fill: none;
@@ -85,13 +83,13 @@
 .faq a {
   margin-bottom: 8px;
   cursor: pointer;
-  transition: color 0.3s;
-  color: white;
+  transition: color 300ms;
+  color: #fff;
 }
 
 .book {
-  fill: white;
-  transition: fill 0.15s;
+  fill: #fff;
+  transition: fill 150ms;
 }
 
 .faq a:hover,
@@ -109,17 +107,16 @@
 .socials svg,
 .socials img {
   margin-right: 4px;
-  transition: all 0.5s;
-  color: white;
+  transition: all 500ms;
+  color: #fff;
 }
 
 .socials img {
   transform: scale(1.4);
 }
 
-.Linkedin svg,
-.Instagram svg {
-  fill: white;
+.Linkedin svg {
+  fill: #fff;
 }
 
 .Linkedin svg:hover {
@@ -135,7 +132,7 @@
 }
 
 .copyright a {
-  color: white;
+  color: #fff;
   text-decoration: underline;
 }
 
@@ -145,12 +142,16 @@
 
 @media screen and (max-width: 800px) {
   .footer {
-    padding: 3rem;
+    padding: 3rem 2rem;
   }
 
   .footer > .upper-footer {
     grid-template-columns: repeat(1, 1fr);
     row-gap: 35px;
+  }
+
+  .container p {
+    line-height: 17px;
   }
 
   .socials {
@@ -164,46 +165,24 @@
     transform: translateY(7px);
   }
 
-  .socials img {
-    transform: translateY(7px) scale(1.4);
-  }
-
-  .Twitter::after,
   .Facebook::after,
-  .Instagram::after,
   .Linkedin::after {
-    color: white;
+    color: #fff;
     font-size: 22px;
     margin-left: 5px;
-    letter-spacing: 0.7px;
+    letter-spacing: 0.4px;
   }
 
   .Linkedin svg {
     fill: #0077b5;
   }
 
-  .Twitter svg {
-    fill: #1da1f2;
-  }
-
   .Facebook svg {
     color: #3b5998;
   }
 
-  .Instagram svg {
-    fill: #f15245;
-  }
-
-  .Twitter::after {
-    content: 'Twitter';
-  }
-
   .Facebook::after {
     content: 'FaceBook';
-  }
-
-  .Instagram::after {
-    content: 'Instagram';
   }
 
   .Linkedin::after {

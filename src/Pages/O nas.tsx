@@ -3,7 +3,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import challenge from '../Assets/challenge-icon.webp';
 import target from '../Assets/target.webp';
-import Card from '../Components/UI/Card.tsx';
+import Card from '../Components/UI/Card';
 import styles from './AboutUs.module.css';
 
 const Onas: React.FC = () => {
@@ -11,6 +11,7 @@ const Onas: React.FC = () => {
     <Card className={styles['aboutUs']}>
       <Helmet>
         <link rel='canonical' href='https://www.stronynawypasie.pl/#/o-nas' />
+        <meta name='robots' content='index, follow' />
       </Helmet>
       <div className={`${styles['title-aboutUs']} font-center`}>
         <h1>

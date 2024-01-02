@@ -37,14 +37,13 @@ textarea {
 .group label {
   color: #999;
   font-size: 18px;
-  font-weight: normal;
   position: absolute;
   pointer-events: none;
   left: 5px;
   top: 10px;
-  transition: 0.2s ease all;
-  -moz-transition: 0.2s ease all;
-  -webkit-transition: 0.2s ease all;
+  transition: 200ms ease all;
+  -moz-transition: 200ms ease all;
+  -webkit-transition: 200ms ease all;
 }
 
 .group > .input:focus ~ label,
@@ -68,9 +67,9 @@ textarea {
   bottom: 1px;
   position: absolute;
   background: var(--bright-mid-green);
-  transition: 0.2s ease all;
-  -moz-transition: 0.2s ease all;
-  -webkit-transition: 0.2s ease all;
+  transition: 200ms ease all;
+  -moz-transition: 200ms ease all;
+  -webkit-transition: 200ms ease all;
 }
 
 .bar:before {
@@ -99,10 +98,10 @@ textarea {
   border-radius: 20px;
   border: 1px solid var(--bright-mid-green);
   background-color: var(--bright-mid-green);
-  color: white;
+  color: #fff;
   user-select: none;
   cursor: pointer;
-  transition: 0.5s;
+  transition: all 500ms;
 }
 
 .active {
@@ -110,7 +109,7 @@ textarea {
 }
 
 .left-section h3:hover {
-  background-color: white;
+  background-color: #fff;
   color: var(--bright-mid-green);
 }
 
@@ -131,15 +130,15 @@ textarea {
   position: relative;
   overflow: hidden;
   border: 2px solid var(--color);
-  transition: color 0.5s;
+  transition: color 500ms;
   z-index: 1;
   font-size: 18px;
   border-radius: 6px;
   cursor: pointer;
   color: var(--color);
-  font-family: "Pou";
+  font-family: 'Pou';
   text-transform: uppercase;
-  letter-spacing: 0.7px;
+  letter-spacing: 0.5px;
 }
 
 .buttons button:before {
@@ -216,7 +215,7 @@ textarea {
 
 .radio-container label input:checked + span {
   background-color: green;
-  color: white;
+  color: #fff;
 }
 
 .radio-container label input:checked + span:before {
@@ -228,7 +227,7 @@ textarea {
   align-items: center;
   padding: 0.375em 0.75em 0.375em 0.375em;
   border-radius: 99em;
-  transition: 0.25s ease;
+  transition: 250ms ease;
   color: var(--bright-mid-green);
 }
 
@@ -245,7 +244,7 @@ textarea {
   height: 1.5em;
   border-radius: 50%;
   margin-right: 0.375em;
-  transition: 0.25s ease;
+  transition: 250ms ease;
   box-shadow: inset 0 0 0 0.125em green;
 }
 
@@ -255,7 +254,7 @@ textarea {
 
 .right-section h2 {
   font-size: 33px;
-  font-family: "Pou";
+  font-family: 'Pou';
   margin-bottom: 20px;
   color: #1a1a1a;
 }
@@ -282,7 +281,7 @@ textarea {
   font-size: 20px;
   color: var(--bright-mid-green);
   font-weight: bold;
-  letter-spacing: .7px;
+  letter-spacing: 0.7px;
 }
 
 @media screen and (max-width: 800px) {

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Card from '../UI/Card.tsx';
+import Card from '../UI/Card';
 import styles from './Faquestions.module.css';
 
 const buttons = [
@@ -41,7 +41,7 @@ const Faquestions: React.FC<{ forwardMessage: string }> = (props) => {
             </button>
           ))}
         </div>
-        <div className={styles.wrapper}>
+        <div className={`${styles.wrapper} relative`}>
           <div
             className={styles.content}
             style={{

@@ -1,11 +1,6 @@
 .cta {
-  position: relative;
-  margin: auto;
   padding: 12px 18px;
-  transition: all 0.2s ease;
-  border: none;
-  background: none;
-  cursor: pointer;
+  transition: all 200ms ease;
 }
 
 .cta:before {
@@ -18,14 +13,13 @@
   background: lightgreen;
   width: 45px;
   height: 45px;
-  transition: all 0.3s ease;
+  transition: all 300ms ease;
 }
 
 .cta span {
   position: relative;
   font-family: "Pou";
   font-size: 18px;
-  font-weight: 700;
   letter-spacing: 0.05em;
   color: green;
 }
@@ -40,7 +34,7 @@
   stroke: green;
   stroke-width: 2;
   transform: translateX(-5px) rotate(180deg);
-  transition: all 0.3s ease;
+  transition: all 300ms ease;
 }
 
 .cta:hover:before {

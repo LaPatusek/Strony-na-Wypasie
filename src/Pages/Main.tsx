@@ -8,8 +8,8 @@ import bronzeCow from '../Assets/cow-bronze.webp';
 import colorCow from '../Assets/cow-colors.webp';
 import goldCow from '../Assets/cow-gold.webp';
 import silverCow from '../Assets/cow-silver.webp';
-import Header from '../Components/Header/Header.tsx';
-import useObserver from '../Components/hooks/useObserver.tsx';
+import Header from '../Components/Header/Header';
+import useObserver from '../Components/hooks/useObserver';
 import styles from './Main.module.css';
 
 const Main: React.FC = () => {
@@ -22,6 +22,7 @@ const Main: React.FC = () => {
     <Fragment>
       <Helmet>
         <link rel='canonical' href='https://www.stronynawypasie.pl/' />
+        <meta name='robots' content='index, follow' />
       </Helmet>
       <Header />
       <div className={styles.main}>
@@ -35,7 +36,7 @@ const Main: React.FC = () => {
             <div className={`${styles['button-container']} grid`}>
               <Link
                 to='/oferta#pakiety'
-                className={styles['learn-more-button']}
+                className={`${styles['learn-more-button']} relative`}
               >
                 <span className={styles.circle} aria-hidden='true'>
                   <span className={`${styles.icon} ${styles.arrow}`}></span>
@@ -46,8 +47,7 @@ const Main: React.FC = () => {
               </Link>
             </div>
           </div>
-          <div className={styles['right-main-offer']}>
-            {/* <div className={styles.background} /> */}
+          <div className={`${styles['right-main-offer']} relative`}>
             <div className={`${styles['offers-container']} grid`}>
               <div className={styles.container}>
                 <div className={`${styles['container-title']} grid`}>
@@ -162,7 +162,7 @@ const Main: React.FC = () => {
         </section>
 
         <section className={styles['offer-section-right']}>
-          <div className={styles['seo-title']}>
+          <div className={`${styles['seo-title']} relative`}>
             <img src={stonks} alt='Skuteczne strony internetowe' width='66px' />
             <h3>Tworzymy skuteczne strony</h3>
             <hr />
@@ -240,8 +240,9 @@ const Main: React.FC = () => {
           <div className={styles.wrap}>
             <h3>O nas</h3>
             <p>
-              Jesteśmy młodym i kreatywnym zespołem programistów oraz grafików.
-              Wierzymy, że dzięki współpracy stworzymy coś wartościowego.
+              Jesteśmy młodym i kre&shy;atywnym zespołem programistów oraz
+              grafików. Wierzymy, że dzięki współpracy stworzymy coś
+              wartościowego.
               <br /> Razem możemy więcej!
             </p>
             <Link to='/o-nas'>Więcej o nas</Link>

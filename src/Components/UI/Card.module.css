@@ -1,11 +1,10 @@
 .card {
-    position: relative;
-    padding: 4rem 2rem;
-    width: 100%;
+  padding: 4rem 2rem;
+  width: 100%;
 }
 
 @media screen and (max-width: 800px) {
-    .card {
-        padding: 0rem;
-    }
+  .card {
+    padding: 0rem;
+  }
 }

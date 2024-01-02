@@ -3,8 +3,8 @@ import { Call, Location, TickCircle } from 'iconsax-react';
 import React, { Fragment, useRef, useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
-import Card from '../Components/UI/Card.tsx';
-import useInput from '../Components/hooks/useInput.tsx';
+import Card from '../Components/UI/Card';
+import useInput from '../Components/hooks/useInput';
 import styles from './Kontakt.module.css';
 
 declare var process: {

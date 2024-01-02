@@ -5,13 +5,11 @@
 .title,
 .back-button {
   width: 50%;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
 }
 
 .privacy h2 {
   font-size: 35px;
-  letter-spacing: 0.7px;
   font-weight: bolder;
 }
 

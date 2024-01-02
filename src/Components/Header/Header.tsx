@@ -21,7 +21,7 @@ const Header: React.FC = () => {
   }, []);
 
   return (
-    <div className={`${styles.header} grid font-center`}>
+    <div className={`${styles.header} relative grid font-center`}>
       <video
         ref={videoRef}
         src={laptop}

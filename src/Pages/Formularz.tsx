@@ -2,8 +2,8 @@ import emailjs from '@emailjs/browser';
 import { ArrowUp2, TickCircle } from 'iconsax-react';
 import React, { ChangeEvent, useEffect, useRef, useState } from 'react';
 import { Helmet } from 'react-helmet';
-import Card from '../Components/UI/Card.tsx';
-import useInput from '../Components/hooks/useInput.tsx';
+import Card from '../Components/UI/Card';
+import useInput from '../Components/hooks/useInput';
 import styles from './Formularz.module.css';
 
 declare var process: {
@@ -142,7 +142,7 @@ const Formularz: React.FC = () => {
     setOptionsVis(false);
   };
 
-  const resetHandler = (e) => {
+  const resetHandler = (e: React.FormEvent) => {
     e.preventDefault();
 
     nameReset();
@@ -168,6 +168,7 @@ const Formularz: React.FC = () => {
           rel='canonical'
           href='https://www.stronynawypasie.pl/#/formularz-kontaktowy'
         />
+        <meta name='robots' content='index, follow' />
       </Helmet>
       <section className={styles['left-section']}>
         <form onSubmit={formHandler} ref={formRef}>

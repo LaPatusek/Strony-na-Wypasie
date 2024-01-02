@@ -1,8 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { useHistory } from 'react-router-dom';
-import GoBackButton from '../Elements/GoBackButton.tsx';
-import Card from '../UI/Card.tsx';
+import GoBackButton from '../Elements/GoBackButton';
+import Card from '../UI/Card';
 import styles from './Privacy.module.css';
 
 const Privacy: React.FC = () => {

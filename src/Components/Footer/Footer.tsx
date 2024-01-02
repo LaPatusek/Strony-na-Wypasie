@@ -19,7 +19,7 @@ const Footer: React.FC<{ PassFunction: (index: number) => void }> = (props) => {
       <div className={`${styles['upper-footer']} grid`}>
         <div className={styles.kontakt}>
           <h3>Kontakt</h3>
-          <div className={`${styles.container} flex`}>
+          <div className={`${styles.container} relative flex`}>
             <div className={styles['pin-container']}>
               <Location variant='Bold' size='26px' />
             </div>
@@ -30,10 +30,10 @@ const Footer: React.FC<{ PassFunction: (index: number) => void }> = (props) => {
               38-114 Niebylec
             </p>
           </div>
-          <div className={`${styles.container} flex`}>
+          <div className={`${styles.container} relative flex`}>
             <Call variant='Bold' size='26px' /> <p> +48 531 771 944</p>
           </div>
-          <div className={`${styles.container} flex`}>
+          <div className={`${styles.container} relative flex`}>
             <svg
               xmlns='http://www.w3.org/2000/svg'
               width='26'
@@ -59,7 +59,7 @@ const Footer: React.FC<{ PassFunction: (index: number) => void }> = (props) => {
                   viewBox='0 0 13 10'
                   height='10px'
                   width='15px'
-                  className={styles['arrow-on-hover']}
+                  className={`${styles['arrow-on-hover']} relative`}
                 >
                   <path d='M1,5 L11,5'></path>
                   <polyline points='8 1 12 5 8 9'></polyline>
@@ -73,7 +73,7 @@ const Footer: React.FC<{ PassFunction: (index: number) => void }> = (props) => {
                   viewBox='0 0 13 10'
                   height='10px'
                   width='15px'
-                  className={styles['arrow-on-hover']}
+                  className={`${styles['arrow-on-hover']} relative`}
                 >
                   <path d='M1,5 L11,5'></path>
                   <polyline points='8 1 12 5 8 9'></polyline>
@@ -87,7 +87,7 @@ const Footer: React.FC<{ PassFunction: (index: number) => void }> = (props) => {
                   viewBox='0 0 13 10'
                   height='10px'
                   width='15px'
-                  className={styles['arrow-on-hover']}
+                  className={`${styles['arrow-on-hover']} relative`}
                 >
                   <path d='M1,5 L11,5'></path>
                   <polyline points='8 1 12 5 8 9'></polyline>
@@ -101,7 +101,7 @@ const Footer: React.FC<{ PassFunction: (index: number) => void }> = (props) => {
                   viewBox='0 0 13 10'
                   height='10px'
                   width='15px'
-                  className={styles['arrow-on-hover']}
+                  className={`${styles['arrow-on-hover']} relative`}
                 >
                   <path d='M1,5 L11,5'></path>
                   <polyline points='8 1 12 5 8 9'></polyline>
@@ -115,7 +115,7 @@ const Footer: React.FC<{ PassFunction: (index: number) => void }> = (props) => {
                   viewBox='0 0 13 10'
                   height='10px'
                   width='15px'
-                  className={styles['arrow-on-hover']}
+                  className={`${styles['arrow-on-hover']} relative`}
                 >
                   <path d='M1,5 L11,5'></path>
                   <polyline points='8 1 12 5 8 9'></polyline>
@@ -203,7 +203,7 @@ const Footer: React.FC<{ PassFunction: (index: number) => void }> = (props) => {
       <hr />
       <div className={styles['down-footer']}>
         <div className={styles.copyright}>
-          <Copyright size='18' className={styles.icon} /> StronyNaWypasie 2023.
+          <Copyright size='18' className={styles.icon} /> StronyNaWypasie 2024.
           Wszystkie prawa zastrzeżone.{' '}
           <Link to='/polityka-prywatnosci'> Polityka prywatności </Link>
         </div>
