@@ -22,8 +22,6 @@ declare var process: {
 
 const TRACKING_ID = process.env.REACT_APP_TRACKING_ID;
 
-ReactGA.initialize(TRACKING_ID);
-
 const App: React.FC = () => {
   const [passIndexForward, setPassIndexForward] = useState<string>('');
 
@@ -47,11 +45,17 @@ const App: React.FC = () => {
     }
   }, [pathname, hash, key]);
 
-  ReactGA.send({
-    hitType: 'pageview',
-    page: window.location.hash,
-    title: window.location.hash,
-  });
+  useEffect(() => {
+    ReactGA.initialize(TRACKING_ID);
+  }, []);
+
+  useEffect(() => {
+    ReactGA.send({
+      hitType: 'pageview',
+      page: pathname,
+      title: pathname,
+    });
+  }, [pathname]);
 
   return (
     <Fragment>
