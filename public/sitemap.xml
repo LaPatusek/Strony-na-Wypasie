@@ -7,25 +7,25 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.stronynawypasie.pl/#/oferta</loc>
+    <loc>https://www.stronynawypasie.pl/oferta</loc>
     <lastmod>2023-09-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.stronynawypasie.pl/#/formularz-kontaktowy</loc>
+    <loc>https://www.stronynawypasie.pl/formularz-kontaktowy</loc>
     <lastmod>2023-09-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
     <url>
-    <loc>https://www.stronynawypasie.pl/#/kontakt</loc>
+    <loc>https://www.stronynawypasie.pl/kontakt</loc>
     <lastmod>2023-09-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
       <url>
-    <loc>https://www.stronynawypasie.pl/#/o-nas</loc>
+    <loc>https://www.stronynawypasie.pl/o-nas</loc>
     <lastmod>2023-09-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.2</priority>

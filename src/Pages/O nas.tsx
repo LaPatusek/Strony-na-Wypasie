@@ -10,7 +10,7 @@ const Onas: React.FC = () => {
   return (
     <Card className={styles['aboutUs']}>
       <Helmet>
-        <link rel='canonical' href='https://www.stronynawypasie.pl/#/o-nas' />
+        <link rel='canonical' href='https://www.stronynawypasie.pl/o-nas' />
         <meta name='robots' content='index, follow' />
       </Helmet>
       <div className={`${styles['title-aboutUs']} font-center`}>

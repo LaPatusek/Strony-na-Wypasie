@@ -9,7 +9,7 @@ const Projekty: React.FC = () => {
       <Helmet>
         <link
           rel='canonical'
-          href='https://www.stronynawypasie.pl/#/projekty'
+          href='https://www.stronynawypasie.pl/projekty'
         />
       </Helmet>
       <img

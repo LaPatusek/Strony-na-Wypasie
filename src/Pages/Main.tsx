@@ -236,7 +236,12 @@ const Main: React.FC = () => {
         </section>
 
         <section className={`${styles['o-nas']} grid`}>
-          <img src={codingImg} alt='Strona internetowa' width='100%' />
+          <img
+            src={codingImg}
+            alt='Strona internetowa'
+            width={'100%'}
+            height={'100%'}
+          />
           <div className={styles.wrap}>
             <h3>O nas</h3>
             <p>

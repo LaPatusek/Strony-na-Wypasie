@@ -53,7 +53,7 @@ const Footer: React.FC<{ PassFunction: (index: number) => void }> = (props) => {
           <h3> Strony </h3>
           <ul>
             <li>
-              <Link to='/main'>
+              <Link to='/'>
                 <ArrowRight3 variant='Broken' size='20' /> Strona główna{' '}
                 <svg
                   viewBox='0 0 13 10'

@@ -59,7 +59,7 @@ const Oferta: React.FC<{ message: string }> = (props) => {
   return (
     <Fragment>
       <Helmet>
-        <link rel='canonical' href='https://www.stronynawypasie.pl/#/oferta' />
+        <link rel='canonical' href='https://www.stronynawypasie.pl/oferta' />
         <meta name='robots' content='index, follow' />
       </Helmet>
       <div className={styles.title}>

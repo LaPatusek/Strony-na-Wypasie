@@ -166,7 +166,7 @@ const Formularz: React.FC = () => {
       <Helmet>
         <link
           rel='canonical'
-          href='https://www.stronynawypasie.pl/#/formularz-kontaktowy'
+          href='https://www.stronynawypasie.pl/formularz-kontaktowy'
         />
         <meta name='robots' content='index, follow' />
       </Helmet>

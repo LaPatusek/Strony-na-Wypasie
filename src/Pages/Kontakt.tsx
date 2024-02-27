@@ -111,7 +111,7 @@ const Kontakt: React.FC = () => {
   return (
     <Fragment>
       <Helmet>
-        <link rel='canonical' href='https://www.stronynawypasie.pl/#/kontakt' />
+        <link rel='canonical' href='https://www.stronynawypasie.pl/kontakt' />
       </Helmet>
       <div className={styles.title}>
         <h2>Kontakt</h2>

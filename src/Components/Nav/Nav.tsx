@@ -32,7 +32,7 @@ const Nav: React.FC = () => {
     <Fragment>
       <div className={`${styles.navbar} grid`}>
         <div className={`${styles.logo} grid`}>
-          <Link to='/main' aria-label='Strona Główna'>
+          <Link to='/' aria-label='Strona Główna'>
             <img src={logo} alt='Strony Internetowe Rzeszów' />
           </Link>
         </div>
@@ -123,7 +123,7 @@ const Nav: React.FC = () => {
               </div>
               <div className={styles['link-container']}>
                 <NavLink
-                  to='/main'
+                  to='/'
                   className={styles['nav-link']}
                   activeClassName={styles['active-nav-link']}
                   onClick={menuHandler}

@@ -52,8 +52,8 @@ const App: React.FC = () => {
   useEffect(() => {
     ReactGA.send({
       hitType: 'pageview',
-      page: pathname,
-      title: pathname,
+      page: window.location.pathname,
+      title: window.location.pathname,
     });
   }, [pathname]);
 
