@@ -114,10 +114,12 @@ const Kontakt: React.FC = () => {
         <link rel='canonical' href='https://www.stronynawypasie.pl/kontakt' />
       </Helmet>
       <div className={styles.title}>
-        <h2>Kontakt</h2>
+        <h1>Kontakt</h1>
         <section className={`${styles['first-section']} grid font-center`}>
           <div className={styles.container}>
-            <Location variant='Bold' size='40px' /> <h3>Adres</h3>
+            <div className={styles['label-wrap']}>
+              <Location variant='Bold' size='40px' /> <label>Adres</label>
+            </div>
             <p>
               Strony Na Wypasie
               <br /> Selenbit Eryk Trojanowski
@@ -126,26 +128,29 @@ const Kontakt: React.FC = () => {
             </p>
           </div>
           <div className={styles.container}>
-            <Call variant='Bold' size='40px' /> <h3>Telefon</h3>{' '}
+            <div className={styles['label-wrap']}>
+              <Call variant='Bold' size='40px' /> <label>Telefon</label>
+            </div>
             <p> +48 531 771 944</p>
           </div>
           <div className={styles.container}>
-            <svg
-              xmlns='http://www.w3.org/2000/svg'
-              width='40'
-              height='40'
-              fill='white'
-              viewBox='0 0 512 512'
-            >
-              <path d='M424 80H88a56.06 56.06 0 00-56 56v240a56.06 56.06 0 0056 56h336a56.06 56.06 0 0056-56V136a56.06 56.06 0 00-56-56zm-14.18 92.63l-144 112a16 16 0 01-19.64 0l-144-112a16 16 0 1119.64-25.26L256 251.73l134.18-104.36a16 16 0 0119.64 25.26z' />
-            </svg>
-            <h3>eMail</h3>
+            <div className={styles['label-wrap']}>
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                width='40'
+                height='40'
+                fill='white'
+                viewBox='0 0 512 512'
+              >
+                <path d='M424 80H88a56.06 56.06 0 00-56 56v240a56.06 56.06 0 0056 56h336a56.06 56.06 0 0056-56V136a56.06 56.06 0 00-56-56zm-14.18 92.63l-144 112a16 16 0 01-19.64 0l-144-112a16 16 0 1119.64-25.26L256 251.73l134.18-104.36a16 16 0 0119.64 25.26z' />
+              </svg>
+              <label>Email</label>
+            </div>
             <p>
               <a href='mailto:kontakt@stronynawypasie.pl'>
                 kontakt@stronynawypasie.pl
               </a>
-            </p>
-            <p>
+              <br />
               <a href='mailto:eryktrojanowski@gmail.com'>
                 eryktrojanowski@gmail.com
               </a>
@@ -155,13 +160,13 @@ const Kontakt: React.FC = () => {
       </div>
       <Card className={`${styles.kontakt} grid`}>
         <section className={styles['left-section']}>
-          <h3>Skontaktuj się z nami!</h3>
-          <p>
+          <h2>Skontaktuj się z nami!</h2>
+          <h3>
             Chcesz aby Twoja strona internetowa była naprawdę efektywna?
             Zapraszamy do kontaktu, napisz czego potrzebujesz! My zajmiemy się
-            resztą. Prośby o wycenę prosimy kierować{' '}
+            resztą. Prośby o wy&shy;cenę prosimy kierować{' '}
             <Link to='/formularz-kontaktowy'>tutaj</Link>.
-          </p>
+          </h3>
         </section>
 
         <section className={styles['right-section']}>

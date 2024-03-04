@@ -50,7 +50,7 @@ const Footer: React.FC<{ PassFunction: (index: number) => void }> = (props) => {
         </div>
 
         <div className={styles.strony}>
-          <h3> Strony </h3>
+          <h3>Strony</h3>
           <ul>
             <li>
               <Link to='/'>
@@ -126,7 +126,7 @@ const Footer: React.FC<{ PassFunction: (index: number) => void }> = (props) => {
         </div>
 
         <div className={styles.faq}>
-          <h3>FAQ </h3>
+          <h3>FAQ</h3>
           <ul>
             <li>
               <Link to='/oferta#faq' onClick={() => pickIndexFunction(0)}>

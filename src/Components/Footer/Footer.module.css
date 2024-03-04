@@ -17,7 +17,6 @@
   color: var(--bright-green);
   font-weight: bold;
   letter-spacing: 1px;
-  user-select: none;
 }
 
 .kontakt a {

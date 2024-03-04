@@ -1,9 +1,9 @@
-import { Fragment, useEffect, useState } from 'react';
+import React, { Fragment, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 import styles from './Cookies.module.css';
 
-const Cookies = () => {
-  const [cookiesAccepted, setCookiesAccepted] = useState(false);
+const Cookies: React.FC = () => {
+  const [cookiesAccepted, setCookiesAccepted] = useState<boolean>(false);
 
   const essentialCookies = () => {
     setCookiesAccepted(true);
@@ -27,21 +27,18 @@ const Cookies = () => {
 
   return (
     <Fragment>
-      {!cookiesAccepted && (
+      {cookiesAccepted && (
         <div className={styles.cookies}>
-          <h2>Polityka prywatności</h2>
+          <span>Pliki Cookies</span>
           <p>
-            Chcemy zagwarantować Ci, że Twoje dane osobowe są u nas bezpieczne,
-            dlatego przed przeglądaniem naszej strony, prosimy o udzielenie
-            zgody na przetwarzanie Twoich danych osobowych oraz akceptację
-            plików cookies.
+            Nasza witryna wykorzystuje śledzące pliki cookie, aby zrozumieć, w
+            jaki sposób z nią współdziałasz. Zostaną włączone tylko wtedy, gdy
+            je zaakceptujesz.
             <br /> Oto{' '}
             <Link to='polityka-prywatnosci'>nasza polityka prywatności.</Link>
           </p>
           <div className={styles.buttons}>
-            <button onClick={essentialCookies}>
-              Zaakceptuj tylko wymagane
-            </button>
+            <button onClick={essentialCookies}>Zaakceptuj wymagane</button>
             <button onClick={allCookies}>Zaakceptuj wszystkie</button>
           </div>
         </div>

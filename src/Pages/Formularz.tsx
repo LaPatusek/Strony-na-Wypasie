@@ -488,11 +488,11 @@ const Formularz: React.FC = () => {
       </section>
 
       <section className={styles['right-section']}>
-        <h2>Skontaktuj się z nami!</h2>
-        <h3>
+        <h1>Skontaktuj się z nami!</h1>
+        <h2>
           Tworzymy strony internetowe z myślą o Tobie i Twoim biznesie. Opowiedz
           nam o swoim projekcie, a my przygotujemy wycenę dla Ciebie.
-        </h3>
+        </h2>
       </section>
     </Card>
   );

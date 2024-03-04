@@ -6,7 +6,7 @@
   max-height: 600px;
 }
 
-.title h2 {
+.title h1 {
   text-align: center;
   font-size: 36px;
   font-weight: bold;
@@ -17,24 +17,31 @@
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
-.title h3 {
+.label-wrap {
+  display: grid;
+}
+
+.label-wrap svg {
+  margin: 0 auto 5px auto;
+}
+
+.title label {
   font-weight: bold;
   font-size: 23px;
-  margin-bottom: 10px;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-family: 'Pou';
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
+.title p {
+  margin-top: 10px;
+}
+
 .first-section {
   grid-template-columns: repeat(3, 1fr);
   padding-bottom: 40px;
   line-height: 28px;
-}
-
-.first-section svg {
-  margin-bottom: 5px;
 }
 
 .container a {
@@ -57,15 +64,16 @@
   width: 90%;
 }
 
-.left-section h3 {
+.left-section h2 {
   color: green;
   font-family: 'Pou';
-  margin: 30px 0 50px 0;
+  margin: 30px 0;
   font-size: 33px;
 }
 
-.left-section p {
+.left-section h3 {
   font-weight: bold;
+  color: #1a1a1a;
   font-size: 24px;
   margin-bottom: 60px;
   line-height: 26px;
@@ -90,8 +98,8 @@
 }
 
 .input {
-  font-size: 16px;
-  padding: 10px 10px 10px 5px;
+  font-size: 18px;
+  padding: 10px 10px 6px 5px;
   display: block;
   width: 90%;
   border-bottom: 1px solid #515151;
@@ -107,11 +115,11 @@
 
 .group > label {
   color: #999;
-  font-size: 18px;
+  font-size: 20px;
   position: absolute;
   pointer-events: none;
   left: 5px;
-  top: 10px;
+  top: 11px;
   transition: 0.2s ease all;
   -moz-transition: 0.2s ease all;
   -webkit-transition: 0.2s ease all;
@@ -253,7 +261,7 @@
     max-height: unset;
   }
 
-  .title h2 {
+  .title h1 {
     padding-bottom: 50px;
   }
 
@@ -277,26 +285,22 @@
 
   .right-section {
     width: 90%;
-    padding: 0 !important;
     justify-self: center;
   }
 
   .left-section {
-    padding-left: 2rem;
-    padding-bottom: 0;
+    width: 100%;
+    padding: 3rem 1.5rem 0;
   }
 
-  .left-section h3 {
+  .left-section h2 {
     margin-bottom: 20px;
-  }
-
-  .left-section h4 {
-    margin-bottom: 25px;
+    width: 90%;
+    text-align: center;
   }
 
   .right-section {
-    padding-right: 0;
-    padding-left: 2rem;
+    padding: 0;
   }
 
   .buttons {

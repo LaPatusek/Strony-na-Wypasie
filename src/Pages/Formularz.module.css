@@ -6,21 +6,14 @@
   padding-left: 3rem;
 }
 
-.left-section h2 {
-  text-align: center;
-  margin-bottom: 40px;
-  font-size: 24px;
-  letter-spacing: 0.6px;
-}
-
 .group {
   position: relative;
   margin-bottom: 40px;
 }
 
 .input {
-  font-size: 16px;
-  padding: 10px 10px 10px 5px;
+  font-size: 18px;
+  padding: 10px 10px 6px 5px;
   display: block;
   width: 90%;
   border-bottom: 1px solid #515151;
@@ -36,11 +29,11 @@ textarea {
 
 .group label {
   color: #999;
-  font-size: 18px;
+  font-size: 20px;
   position: absolute;
   pointer-events: none;
   left: 5px;
-  top: 10px;
+  top: 11px;
   transition: 200ms ease all;
   -moz-transition: 200ms ease all;
   -webkit-transition: 200ms ease all;
@@ -252,19 +245,19 @@ textarea {
   padding: 0 1rem;
 }
 
-.right-section h2 {
+.right-section h1 {
   font-size: 33px;
   font-family: 'Pou';
   margin-bottom: 20px;
-  color: #1a1a1a;
+  color: green;
 }
 
-.right-section h3 {
+.right-section h2 {
   width: 400px;
-  font-size: 22px;
+  font-size: 24px;
   letter-spacing: 0.6px;
-  color: #8d8d8d;
-  line-height: 25px;
+  color: #1a1a1a;
+  line-height: 26px;
 }
 
 .mess-after-form {
@@ -287,29 +280,41 @@ textarea {
 @media screen and (max-width: 800px) {
   .wrap {
     grid-template-columns: repeat(1, 1fr);
-    grid-row-start: 3;
-    justify-content: center;
+    row-gap: 50px;
   }
 
   .left-section {
     width: 90%;
+    justify-self: center;
     padding: 0 !important;
     justify-self: center;
     order: 2;
   }
 
   .right-section {
-    padding: 2rem 1rem 2rem 1.5rem;
-    width: 90%;
+    padding: 3rem 1.5rem 0;
+    width: 100%;
     order: 1;
   }
 
-  .right-section h3 {
+  .group input,
+  .group textarea,
+  .buttons,
+  .left-section h3,
+  .mess-after-form {
+    width: 100%;
+  }
+
+  .right-section h1 {
+    text-align: center;
+  }
+
+  .right-section h2 {
     width: fit-content;
   }
 
   .options {
-    width: 90%;
+    width: 100%;
     padding: 1rem;
   }
 
