@@ -1,6 +1,7 @@
 .cta {
   padding: 12px 18px;
   transition: all 200ms ease;
+  cursor: pointer;
 }
 
 .cta:before {

@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import laptop from '../../Assets/Laptop.mp4';
 import minature from '../../Assets/LaptopMiniaturka.webp';
 import styles from './Header.module.css';
 
@@ -22,8 +21,8 @@ const Header: React.FC = () => {
 
   return (
     <div className={`${styles.header} relative grid font-center`}>
-      <video ref={videoRef} poster={minature} muted loop autoPlay>
-        <source src={laptop} type='video/mp4' />
+      <video ref={videoRef} poster={minature} muted loop autoPlay preload='auto'>
+        <source src={'video/Laptop.mp4'} type='video/mp4' />
       </video>
       <h1>
         Tworzymy strony, <br /> które przyciągają wzrok <br /> i przyciągają
