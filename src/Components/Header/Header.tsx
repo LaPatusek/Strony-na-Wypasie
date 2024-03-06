@@ -1,28 +1,20 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import minature from '../../Assets/LaptopMiniaturka.webp';
 import styles from './Header.module.css';
 
 const Header: React.FC = () => {
-  const videoRef = useRef<HTMLVideoElement>(null);
-  useEffect(() => {
-    const video = videoRef.current!;
-
-    const handleCanPlayThrough = () => {
-      video.preload = 'auto';
-    };
-
-    video.addEventListener('canplaythrough', handleCanPlayThrough);
-
-    return () => {
-      video.removeEventListener('canplaythrough', handleCanPlayThrough);
-    };
-  }, []);
-
   return (
     <div className={`${styles.header} relative grid font-center`}>
-      <video ref={videoRef} poster={minature} muted loop autoPlay preload='auto'>
+      <video
+        poster={'video/LaptopMiniaturka.webp'}
+        muted
+        loop
+        autoPlay
+        preload='auto'
+      >
         <source src={'video/Laptop.mp4'} type='video/mp4' />
+        <source src={'video/Laptop.webm'} type='video/webm' />
+        Your browser does not support the video tag.
       </video>
       <h1>
         Tworzymy strony, <br /> które przyciągają wzrok <br /> i przyciągają

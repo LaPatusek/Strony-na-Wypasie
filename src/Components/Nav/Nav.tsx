@@ -36,8 +36,6 @@ const Nav: React.FC = () => {
             <img
               src={logo}
               alt='Strony Internetowe Rzeszów - Strony na Wypasie'
-              height={'150px'}
-              width={'auto'}
             />
           </Link>
         </div>
