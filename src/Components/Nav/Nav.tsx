@@ -33,14 +33,19 @@ const Nav: React.FC = () => {
       <div className={`${styles.navbar} grid`}>
         <div className={`${styles.logo} grid`}>
           <Link to='/' aria-label='Strona Główna'>
-            <img src={logo} alt='Strony Internetowe Rzeszów' />
+            <img
+              src={logo}
+              alt='Strony Internetowe Rzeszów - Strony na Wypasie'
+              height={'150px'}
+              width={'auto'}
+            />
           </Link>
         </div>
 
-        <div className={`${styles.nav} grid relative`}>
+        <div className={`${styles.nav} grid`}>
           <NavLink
             to='/oferta'
-            className={styles['nav-link']}
+            className={`${styles['nav-link']} relative`}
             activeClassName={styles['active-nav-link']}
           >
             Oferta
@@ -48,7 +53,7 @@ const Nav: React.FC = () => {
 
           <NavLink
             to='/projekty'
-            className={styles['nav-link']}
+            className={`${styles['nav-link']} relative`}
             activeClassName={styles['active-nav-link']}
           >
             Projekty
@@ -56,7 +61,7 @@ const Nav: React.FC = () => {
 
           <NavLink
             to='/o-nas'
-            className={styles['nav-link']}
+            className={`${styles['nav-link']} relative`}
             activeClassName={styles['active-nav-link']}
           >
             O nas
@@ -64,19 +69,16 @@ const Nav: React.FC = () => {
 
           <NavLink
             to='/kontakt'
-            className={styles['nav-link']}
+            className={`${styles['nav-link']} relative`}
             activeClassName={styles['active-nav-link']}
           >
             Kontakt
           </NavLink>
         </div>
-        <div>
-          <Link to='/formularz-kontaktowy'>
-            <div className={styles['right-button']}>
-              <span>wyceń projekt</span>
-            </div>
-          </Link>
-        </div>
+
+        <Link to='/formularz-kontaktowy' className={styles['right-button']}>
+          <span>wyceń projekt</span>
+        </Link>
       </div>
 
       <div className={`${styles['navbar-800']}`}>
@@ -93,7 +95,7 @@ const Nav: React.FC = () => {
           {!menuState && <HambergerMenu size='40' onClick={menuHandler} />}
           {menuState && (
             <svg
-              fill='#000000'
+              fill='#1a1a1a'
               height='30px'
               width='30px'
               viewBox='0 0 492 492'
@@ -113,68 +115,70 @@ const Nav: React.FC = () => {
         </div>
         {menuState && (
           <Fragment>
-            <div className={`${styles.nav}`} ref={menuRef}>
-              <div className={`${styles['link-container']}`}>
+            <div className={`${styles.nav} grid`} ref={menuRef}>
+              <div className={styles['image-container']}>
                 <img
                   src={logo}
                   height='70px'
-                  alt='Strony Internetowe Rzeszów'
+                  width={'auto'}
+                  alt='Strony Internetowe Rzeszów - Strony na Wypasie'
                 />
               </div>
-              <div className={styles['link-container']}>
+              <div className={`grid`}>
                 <NavLink
                   to='/'
-                  className={styles['nav-link']}
+                  exact
+                  className={`${styles['nav-link']} relative`}
                   activeClassName={styles['active-nav-link']}
                   onClick={menuHandler}
                 >
                   Strona główna
                 </NavLink>
               </div>
-              <div className={`${styles['link-container']} ${styles.second}`}>
+              <div className={`${`grid`} ${styles.second}`}>
                 <NavLink
                   to='/projekty'
-                  className={styles['nav-link']}
+                  className={`${styles['nav-link']} relative`}
                   activeClassName={styles['active-nav-link']}
                   onClick={menuHandler}
                 >
                   Projekty
                 </NavLink>
               </div>
-              <div className={`${styles['link-container']} ${styles.third}`}>
+              <div className={`${`grid`} ${styles.third}`}>
                 <NavLink
                   to='/kontakt'
-                  className={styles['nav-link']}
+                  className={`${styles['nav-link']} relative`}
                   activeClassName={styles['active-nav-link']}
                   onClick={menuHandler}
                 >
                   Kontakt
                 </NavLink>
               </div>
-              <div className={`${styles['link-container']} ${styles.forth}`}>
+              <div className={`${`grid`} ${styles.forth}`}>
                 <NavLink
                   to='/oferta'
-                  className={styles['nav-link']}
+                  className={`${styles['nav-link']} relative`}
                   activeClassName={styles['active-nav-link']}
                   onClick={menuHandler}
                 >
                   Oferta
                 </NavLink>
               </div>
-              <div className={`${styles['link-container']} ${styles.fifth}`}>
+              <div className={`${`grid`} ${styles.fifth}`}>
                 <NavLink
                   to='/o-nas'
-                  className={styles['nav-link']}
+                  className={`${styles['nav-link']} relative`}
                   activeClassName={styles['active-nav-link']}
                   onClick={menuHandler}
                 >
                   O nas
                 </NavLink>
               </div>
-              <div className={styles['link-container']}>
+              <div className={`grid`}>
                 <div className={`${styles['right-button']}`}>
                   <Link to='/formularz-kontaktowy' onClick={menuHandler}>
-                    wyceń projekt
+                    <span>wyceń projekt</span>
                   </Link>
                 </div>
               </div>

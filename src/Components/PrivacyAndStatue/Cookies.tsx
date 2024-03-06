@@ -27,7 +27,7 @@ const Cookies: React.FC = () => {
 
   return (
     <Fragment>
-      {cookiesAccepted && (
+      {!cookiesAccepted && (
         <div className={styles.cookies}>
           <span>Pliki Cookies</span>
           <p>

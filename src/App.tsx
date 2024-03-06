@@ -89,7 +89,7 @@ const App: React.FC = () => {
           <Route path='/regulamin'>
             <Regulamin />
           </Route>
-          <Route exact path='/'>
+          <Route path='/' >
             <Main />
           </Route>
           <Route path='*'>

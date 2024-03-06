@@ -22,14 +22,9 @@ const Header: React.FC = () => {
 
   return (
     <div className={`${styles.header} relative grid font-center`}>
-      <video
-        ref={videoRef}
-        src={laptop}
-        poster={minature}
-        muted
-        loop
-        autoPlay
-      />
+      <video ref={videoRef} poster={minature} muted loop autoPlay>
+        <source src={laptop} type='video/mp4' />
+      </video>
       <h1>
         Tworzymy strony, <br /> które przyciągają wzrok <br /> i przyciągają
         klientów
