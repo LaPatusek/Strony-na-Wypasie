@@ -1,9 +1,4 @@
-.privacy h3,
-.privacy p,
-.privacy h4,
-.privacy hr,
-.title,
-.back-button {
+.privacy {
   width: 50%;
   margin: 0 auto;
 }
@@ -42,11 +37,7 @@
 }
 
 @media screen and (max-width: 800px) {
-  .privacy h3,
-  .privacy p,
-  .privacy h4,
-  .title,
-  .back-button {
+  .privacy {
     width: 80%;
   }
 

@@ -29,7 +29,7 @@ const Faquestions: React.FC<{ forwardMessage: string }> = (props) => {
     <Card className={`${styles.faq} grid`}>
       <h2>Najczęsciej zadawane pytania</h2>
 
-      <section className={`${styles.card} flex`}>
+      <section className={styles.card}>
         <div className={styles.buttons}>
           {buttons.map((button, index) => (
             <button

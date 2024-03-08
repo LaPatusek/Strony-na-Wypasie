@@ -119,15 +119,6 @@
   color: #fff;
 }
 
-.background {
-  position: absolute;
-  z-index: -1;
-  height: 132%;
-  width: 100%;
-  transform: translateY(-12.5%);
-  background-image: url('../Assets/Cow Pattern-01.svg');
-}
-
 .offers-container {
   grid-template-columns: repeat(2, 1fr);
   row-gap: 25px;
@@ -184,38 +175,42 @@
 
 .offers-container > .container p {
   font-size: 20px;
-  line-height: 20px;
   letter-spacing: 0.5px;
   text-align: center;
 }
 
-.offer-section-right {
-  height: 580px;
+.section-wrap {
+  padding: 4rem 0;
   background-color: #006d5a;
+}
+
+.offer-section-right {
+  width: 80%;
+  margin: 0 auto;
 }
 
 .offer-section-right h3 {
   color: var(--bright-green);
   font-size: 40px;
   letter-spacing: 0.6px;
-  padding-top: 4.5%;
-  width: 80%;
-  margin: 0 auto;
   user-select: none;
+}
+
+.seo-title img {
+  position: absolute;
+  top: -35px;
+  right: 0;
 }
 
 .offer-section-right hr {
   border: 0;
   background-color: var(--bright-green);
   height: 2px;
-  width: 80%;
-  margin: 20px auto;
+  margin: 20px 0;
 }
 
 .offer-section-right h4 {
   color: var(--bright-green);
-  width: 80%;
-  margin: 0 auto;
   letter-spacing: 0.6px;
   line-height: 24px;
   font-size: 1.5rem;
@@ -224,8 +219,6 @@
 .speed-circles {
   grid-template-columns: repeat(4, 1fr);
   padding-top: 5rem;
-  width: 80%;
-  margin: 0 auto;
 }
 
 .circle-container span {
@@ -349,13 +342,8 @@
   background-color: rgba(240, 240, 240, 0.15);
 }
 
-.seo-title img {
-  position: absolute;
-  top: 20%;
-  right: 10%;
-}
-
 .o-nas {
+  display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
 
@@ -431,14 +419,11 @@
     justify-self: left;
   }
 
-  .offer-section-right {
-    min-height: fit-content;
-    height: 800px;
+  .section-wrap {
+    padding: 2rem 0;
   }
 
-  .offer-section-right h3,
-  .offer-section-right hr,
-  .offer-section-right h4 {
+  .offer-section-right {
     width: 90%;
   }
 
@@ -455,16 +440,18 @@
   }
 
   .seo-title h3 {
-    font-size: 33px;
+    font-size: 44px;
+    font-weight: bold;
+    width: min-content;
   }
 
   .seo-title img {
-    top: 1rem;
-    right: 0;
+    top: 33px;
+    right: 0px;
   }
 
   .o-nas {
-    display: inline-block !important;
+    display: inline-block;
   }
 
   .o-nas img {

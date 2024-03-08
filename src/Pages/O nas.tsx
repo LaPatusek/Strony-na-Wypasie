@@ -72,8 +72,8 @@ const Onas: React.FC = () => {
               <ProgrammingArrow size='88px' />
               <h3>Szybko się dostosowujemy</h3>
               <p>
-                Korzystając z naszych usług możliwość elastycznego wprowadzania
-                zmian
+                Korzystając z naszych usług, masz możliwość elastycznego
+                wprowadzania zmian
               </p>
             </div>
           </div>

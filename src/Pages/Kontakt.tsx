@@ -3,6 +3,7 @@ import { Call, Location, TickCircle } from 'iconsax-react';
 import React, { Fragment, useRef, useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
+import background from '../Assets/ContactBackground.webp';
 import Card from '../Components/UI/Card';
 import useInput from '../Components/hooks/useInput';
 import styles from './Kontakt.module.css';
@@ -113,12 +114,19 @@ const Kontakt: React.FC = () => {
       <Helmet>
         <link rel='canonical' href='https://www.stronynawypasie.pl/kontakt' />
       </Helmet>
-      <div className={styles.title}>
+      <div className={`${styles.title} relative`}>
         <h1>Kontakt</h1>
+        <img
+            src={background}
+            className={styles.background}
+            alt='Strony Internetowe Rzeszów - Kontakt'
+            height={'100%'}
+            width={'100%'}
+          />
         <section className={`${styles['first-section']} grid font-center`}>
           <div className={styles.container}>
-            <div className={styles['label-wrap']}>
-              <Location variant='Bold' size='40px' /> <label>Adres</label>
+            <div className={`${styles['label-wrap']} grid`}>
+              <Location variant='Bold' size='40px' /> <span>Adres</span>
             </div>
             <p>
               Strony Na Wypasie
@@ -128,13 +136,13 @@ const Kontakt: React.FC = () => {
             </p>
           </div>
           <div className={styles.container}>
-            <div className={styles['label-wrap']}>
-              <Call variant='Bold' size='40px' /> <label>Telefon</label>
+            <div className={`${styles['label-wrap']} grid`}>
+              <Call variant='Bold' size='40px' /> <span>Telefon</span>
             </div>
             <p> +48 531 771 944</p>
           </div>
           <div className={styles.container}>
-            <div className={styles['label-wrap']}>
+            <div className={`${styles['label-wrap']} grid`}>
               <svg
                 xmlns='http://www.w3.org/2000/svg'
                 width='40'
@@ -144,7 +152,7 @@ const Kontakt: React.FC = () => {
               >
                 <path d='M424 80H88a56.06 56.06 0 00-56 56v240a56.06 56.06 0 0056 56h336a56.06 56.06 0 0056-56V136a56.06 56.06 0 00-56-56zm-14.18 92.63l-144 112a16 16 0 01-19.64 0l-144-112a16 16 0 1119.64-25.26L256 251.73l134.18-104.36a16 16 0 0119.64 25.26z' />
               </svg>
-              <label>Email</label>
+              <span>Email</span>
             </div>
             <p>
               <a href='mailto:kontakt@stronynawypasie.pl'>

@@ -7,7 +7,9 @@ interface Props {
 }
 
 const Card: React.FC<Props> = ({ children, className }) => {
-  return <div className={`${styles.card} ${className} relative`}>{children}</div>;
+  return (
+    <div className={`${styles.card} ${className} relative`}>{children}</div>
+  );
 };
 
 export default Card;

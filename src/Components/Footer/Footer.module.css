@@ -1,7 +1,7 @@
 .footer {
   padding: 3rem 5rem;
   background-color: rgb(26, 26, 26);
-  color: white;
+  color: #fff;
 }
 
 .footer > .upper-footer {
@@ -20,7 +20,7 @@
 }
 
 .kontakt a {
-  color: white;
+  color: #fff;
   text-decoration: underline;
 }
 
